@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.springmvc.dao.UserDao">
+    <select id="countAll" resultType="int">  <!-- 查询表中记录总数 -->
+        select count(*) c from User;
+    </select>
+
+    <select id="selectAll" resultType="cn.springmvc.model.User">    <!-- 查询表中的所有用户 -->
+        select * from User order by username asc
+    </select>
+
+    <insert id="insert" parameterType="cn.springmvc.model.User">    <!-- 向数据库中插入用户 -->
+        insert into User(username,password,email,sex,age) values(#{username},#{password},#{email},#{sex},#{age})
+    </insert>
+
+    <update id="update" parameterType="cn.springmvc.model.User">     <!-- 更新库中的用户 -->
+        update User set username=#{username},password=#{password},email=#{email},sex=#{sex},age=#{age} where username=#{username}
+    </update>
+
+    <delete id="delete" parameterType="String">    <!-- 删除用户 -->
+        delete from User where username=#{username}
+    </delete>
+
+    <select id="findByUserName" parameterType="String" resultType="cn.springmvc.model.User"> <!-- 根据用户名查找用户 -->
+        select * from User where username=#{username}
+    </select>
+</mapper>
