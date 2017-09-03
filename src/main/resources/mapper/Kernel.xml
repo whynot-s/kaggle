@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.springmvc.dao.UserLanguageDao">
+    <resultMap type="java.util.HashMap" id="userLanguageResult">
+        <result column="kernelAuthorId" property="kernelAuthorId" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+        <result column="COUNT(*)" property="COUNT(*)" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+        <result column="languages" property="languages" javaType="java.lang.String" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="userLanguage" resultMap="userLanguageResult">
+        select
+        kernelAuthorId,COUNT(*),languages
+        from
+        kernel
+        GROUP BY kernelAuthorName,languages
+    </select>
+
+    <select id="getKernel" parameterType="int" resultType="cn.springmvc.model.Kernel">
+        select
+        *
+        from
+        kernel
+        WHERE kernelId=#{kernelId}
+    </select>
+
+    <select id="getCompetitorId2"  resultType="INTEGER">
+        select
+        DISTINCT competitorId
+        from
+        competitor_2
+    </select>
+
+    <select id="getCompetitorId"  resultType="INTEGER">
+        select
+        DISTINCT competitorId
+        from
+        competitor
+    </select>
+
+    <update id="updateCompetitor2" >
+        UPDATE competitor_2 set languages=#{languages} where
+        competitorId=#{competitorId}
+    </update>
+
+    <update id="updateCompetitor" >
+        UPDATE competitor set languages=#{languages} where
+        competitorId=#{competitorId}
+    </update>
+</mapper>

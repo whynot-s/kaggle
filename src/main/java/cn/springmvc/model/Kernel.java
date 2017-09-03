@@ -7,7 +7,7 @@ public class Kernel {
     private int kernelId;
     private String kernelName;
     private String homeLink;
-    private String language;
+    private String languages;
     private int kernelAuthorId;
     private String kernelAuthorName;
     private String postDate;
@@ -44,11 +44,11 @@ public class Kernel {
     }
 
     public String getLanguage() {
-        return language;
+        return languages;
     }
 
     public void setLanguage(String language) {
-        this.language = language;
+        this.languages = language;
     }
 
     public int getKernelAuthorId() {

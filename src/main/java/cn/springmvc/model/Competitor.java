@@ -1,7 +1,5 @@
 package cn.springmvc.model;
 
-import java.util.Date;
-
 /**
  * Created by YLT on 2017/8/24.
  */
