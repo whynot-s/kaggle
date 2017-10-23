@@ -25,26 +25,26 @@
         WHERE kernelId=#{kernelId}
     </select>
 
-    <select id="getCompetitorId2"  resultType="INTEGER">
+    <select id="getCompetitorId2" resultType="INTEGER">
         select
         DISTINCT competitorId
         from
         competitor_2
     </select>
 
-    <select id="getCompetitorId"  resultType="INTEGER">
+    <select id="getCompetitorId" resultType="INTEGER">
         select
         DISTINCT competitorId
         from
         competitor
     </select>
 
-    <update id="updateCompetitor2" >
+    <update id="updateCompetitor2">
         UPDATE competitor_2 set languages=#{languages} where
         competitorId=#{competitorId}
     </update>
 
-    <update id="updateCompetitor" >
+    <update id="updateCompetitor">
         UPDATE competitor set languages=#{languages} where
         competitorId=#{competitorId}
     </update>

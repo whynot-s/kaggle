@@ -13,6 +13,15 @@ public class CompetitionLeaderboard {
     private double score;
     private int entries;
     private int changeFromPublic;
+    private String teamMemberId;
+
+    public String getTeamMemberId() {
+        return teamMemberId;
+    }
+
+    public void setTeamMemberId(String teamMemberId) {
+        this.teamMemberId = teamMemberId;
+    }
 
     public int getCompetitionId() {
         return competitionId;

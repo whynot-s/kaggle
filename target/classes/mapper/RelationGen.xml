@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.springmvc.dao.RelationGenDao">
+
+    <select id="getCollaborationRecord" resultType="java.lang.String">
+        select
+        teamMemberId
+        from
+        competitionleaderboard
+    </select>
+
+    <select id="getRelationTime" resultType="java.lang.Integer" statementType="STATEMENT">
+        select
+        ${relationName}
+        from
+        competitorRelation
+        WHERE competitorId1 = ${competitorId1} AND competitorId2 = ${competitorId2}
+    </select>
+
+    <insert id="insertRelation" statementType="STATEMENT">
+        insert into competitorRelation(
+        competitorId1,
+        competitorId2,
+        ${relationName}
+        ) values(
+        ${competitorId1},
+        ${competitorId2},
+        1)
+    </insert>
+
+    <update id="updateRelationTime" statementType="STATEMENT">
+        UPDATE competitorRelation set ${relationName} = ${times}
+        WHERE competitorId1 = ${competitorId1} AND competitorId2 = ${competitorId2}
+    </update>
+
+    <select id="recordExistOrNot" resultType="java.lang.Integer">
+        select count(*)
+        from competitorRelation
+        WHERE competitorId1 = #{competitorId1} AND competitorId2 = #{competitorId2}
+    </select>
+
+    <select id="getDiscussionComment" resultType="java.util.Map">
+        SELECT discussionId,discussionAuthorId,commenterId from discussioncomment
+    </select>
+
+    <select id="discussionKernelOrNot" resultType="java.lang.Integer">
+        SELECT discussionId from discussion where kernelOrNot = 1
+    </select>
+
+    <select id="getDiscussionReply" resultType="java.util.Map">
+        SELECT discussionId,discussionAuthorId,commentNo,replierId from discussionreply
+    </select>
+
+    <select id="findCommenterId" resultType="java.lang.Integer" statementType="STATEMENT">
+        SELECT commenterId from ${tableName} WHERE ${columnName} = ${Id} AND commentNo = ${commentNo}
+    </select>
+
+    <select id="getKernelComment" resultType="java.util.Map">
+        SELECT kernelAuthorId,commenterId from kernelcomment
+    </select>
+
+    <select id="getKernelReply" resultType="java.util.Map">
+        SELECT kernelId,kernelAuthorId,commentNo,replierId from kernelreply
+    </select>
+
+    <select id="getRelationMap" resultType="java.util.Map" statementType="STATEMENT">
+        SELECT ${column1},${column2} from ${tableName}
+    </select>
+
+    <select id="getOrganizationMember" resultType="int">
+        SELECT organizationMemberId from organization WHERE organizationId = #{organizationId}
+    </select>
+
+    <select id="getOrganizationMemberNumber" resultType="int">
+        SELECT count(*) from organization GROUP BY organizationId
+    </select>
+
+    <insert id="insertMapIdToName" parameterType="HashMap" useGeneratedKeys="true"
+            keyProperty="id">
+        insert into mapIdToName(competitorId,competitorName) values
+        <foreach collection="MAP" item="item" index="key" separator=",">
+            (#{key},#{item})
+        </foreach>
+    </insert>
+</mapper>

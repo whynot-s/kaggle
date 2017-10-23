@@ -47,11 +47,11 @@ public class GetUserLanguage {
             entry = iter.next();
             int id = entry.getKey();
             Object value = entry.getValue();
-            if(competitorId.contains(id)){
-                userLanguageDao.updateCompetitor(id,value.toString());
+            if (competitorId.contains(id)) {
+                userLanguageDao.updateCompetitor(id, value.toString());
             }
-            if(competitorId_2.contains(id)){
-                userLanguageDao.updateCompetitor2(id,value.toString());
+            if (competitorId_2.contains(id)) {
+                userLanguageDao.updateCompetitor2(id, value.toString());
             }
             System.out.println(id + value.toString());
         }

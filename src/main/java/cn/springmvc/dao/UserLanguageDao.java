@@ -16,13 +16,13 @@ public interface UserLanguageDao {
 
     void insertCompetitorLanguage(@Param("kernelAuthorId") int kernelAuthorId);
 
-     HashSet<Integer> getCompetitorId2();
+    HashSet<Integer> getCompetitorId2();
 
     HashSet<Integer> getCompetitorId();
 
-    void updateCompetitor(@Param("competitorId") int competitorId,@Param("languages") String languages);
+    void updateCompetitor(@Param("competitorId") int competitorId, @Param("languages") String languages);
 
-    void updateCompetitor2(@Param("competitorId") int competitorId,@Param("languages") String languages);
+    void updateCompetitor2(@Param("competitorId") int competitorId, @Param("languages") String languages);
 
     Kernel getKernel(@Param("kernelId") int kernelId);
 }
