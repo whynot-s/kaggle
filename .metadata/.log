@@ -1,0 +1,10 @@
+!SESSION 2017-10-24 08:43:14.952 -----------------------------------------------
+eclipse.buildId=4.7.0.I20170612-0950
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/Jack/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -data /Users/Jack/Documents/kaggle -product org.eclipse.epp.package.java.product -keyring /Users/Jack/.eclipse_keyring
+
+!ENTRY org.eclipse.oomph.setup.ui 1 0 2017-10-24 08:43:40.311
+!MESSAGE Setup tasks were performed during startup updating 5 preferences. See '/Applications/Eclipse.app/Contents/Eclipse/configuration/org.eclipse.oomph.setup/setup.log' for details
