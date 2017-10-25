@@ -57,7 +57,7 @@ public class CompetitorIntimacy {
 		return 1.0/sum;
 	}
 
-	//初始化操作时将TeamMemberIntimacy清空(若不存在则新建表)，并根据CompetitionLeaderBoard中的队伍信息按队伍每两个人加入记录，并加入两人团队中亲密度
+	//初始化操作时将TeamMemberIntimacy清空(表需要存在)，并根据CompetitionLeaderBoard中的队伍信息按队伍每两个人加入记录，并加入两人团队中亲密度
 	public void genTeamIntimacy() {
 		intimacyDao.truncateTeamIntimacy();
 		List<Map<String, Object>> teams = intimacyDao.getTeams();
