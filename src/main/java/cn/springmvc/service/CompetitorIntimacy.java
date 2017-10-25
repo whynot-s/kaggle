@@ -27,12 +27,14 @@ public class CompetitorIntimacy {
 		}
 	}
 	
+	//根据Map中各项参数计算亲密度
 	public double calcIntimacy(Map<String, Object> relationTimes) {
 		String[] relationName = {
 				"collaborationTime", "discussionCommentTime", "discussionVoteTime",
 				"followTime", "kernelCommentTime", "kernelForkTime",
 				"kernelVoteTime", "organizationTime"
 		};
+		//约定系数，与上方对应
 		double[] coefficient = {
 				1.0, 0.3, 0.3, 1.0, 0.4, 0.4, 0.4, 1.0
 		};
@@ -48,5 +50,7 @@ public class CompetitorIntimacy {
 		}
 		return 1.0/sum;
 	}
+
+	
 	
 }
