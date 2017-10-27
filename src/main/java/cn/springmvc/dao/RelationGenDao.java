@@ -11,13 +11,15 @@ import java.util.Map;
  */
 public interface RelationGenDao {
     List<String> getCollaborationRecord();
-
+    
     Integer getRelationTime(@Param("competitorId1") int competitorId1, @Param("competitorId2") int competitorId2, @Param("relationName") String relationName);
 
     void insertRelation(@Param("competitorId1") int competitorId1, @Param("competitorId2") int competitorId2, @Param("relationName") String relationName);
 
     void updateRelationTime(@Param("competitorId1") int competitorId1, @Param("competitorId2") int competitorId2, @Param("times") int times, @Param("relationName") String relationName);
 
+    void updateIntimacy(@Param("competitorId1") int competitorId1, @Param("competitorId2") int competitorId2, @Param("times") double times, @Param("relationName") String relationName);
+    
     int recordExistOrNot(@Param("competitorId1") int competitorId1, @Param("competitorId2") int competitorId2);
 
     List<Map<String, Integer>> getDiscussionComment();
@@ -39,4 +41,6 @@ public interface RelationGenDao {
     Integer[] getOrganizationMemberNumber();
 
     void insertMapIdToName(@Param("MAP") Map<Integer,String> MAP);
+    
+    Map<String, Object> getAllRelationTime(@Param("competitorId1") int competitorId1, @Param("competitorId2") int competitorId2);
 }

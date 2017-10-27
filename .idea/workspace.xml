@@ -2,11 +2,109 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56a70c35-45d3-4d10-b1da-8689b6a0ce5c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.mylyn/.taskListIndex/segments_1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.mylyn/.taskListIndex/write.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.mylyn/repositories.xml.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.mylyn/tasks.xml.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.version" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/1.tree" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/http-cache.lucene60/segments_1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/http-cache.lucene60/write.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history.lucene60/_0.cfe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history.lucene60/_0.cfs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history.lucene60/_0.si" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history.lucene60/segments_1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history.lucene60/write.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/index.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/_0.cfs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/segments.gen" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/segments_2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/write.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_0.cfs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/segments.gen" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/segments_2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/write.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/b6af85d660f331519849d7b29cdadb15/_0.cfs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/b6af85d660f331519849d7b29cdadb15/segments.gen" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/b6af85d660f331519849d7b29cdadb15/segments_2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/b6af85d660f331519849d7b29cdadb15/write.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/workspaceState.ser" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.classpath" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_nop_1_7_25.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.epp.logging.aeri.ide.prefs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.m2e.discovery.prefs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.context.core.prefs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.monitor.ui.prefs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.tasks.ui.prefs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.team.ui.prefs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.editors.prefs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/server-config.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core.ui/dialog_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.8.0.20170516-2043.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.oomph.setup.ui/dialog_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ui.intro/introstate" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.metadata/version.ini" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.project" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.m2e.core.prefs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/springmvc/dao/IntimacyDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/springmvc/service/CompetitorIntimacy.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/Intimacy.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/cn/springmvc/test/calculateIntimacyTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/dao/CompetitionDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/dao/CompetitionDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/dao/CompetitorAbilityDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/dao/CompetitorAbilityDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/dao/RelationGenDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/dao/RelationGenDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/dao/UserLanguageDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/dao/UserLanguageDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/Competition.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/Competition.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/CompetitionLeaderboard.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/CompetitionLeaderboard.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/Competitor.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/Competitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/CompetitorAbility.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/CompetitorAbility.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/Dataset.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/Dataset.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/Discussion.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/Discussion.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/DiscussionComment.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/DiscussionComment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/DiscussionReply.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/DiscussionReply.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/DiscussionVote.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/DiscussionVote.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/FollowRelation.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/FollowRelation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/Kernel.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/Kernel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/KernelComment.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/KernelComment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/KernelFork.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/KernelFork.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/KernelReply.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/KernelReply.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/KernelVote.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/KernelVote.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/Organization.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/Organization.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/service/CompetitorAbility.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/service/CompetitorAbility.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/service/CompetitorRelation.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/service/CompetitorRelation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/service/GetUserLanguage.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/service/GetUserLanguage.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/cn/springmvc/test/getUserLanguageTest.class" afterPath="$PROJECT_DIR$/target/test-classes/cn/springmvc/test/getUserLanguageTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/springmvc/service/CompetitorAbility.java" afterPath="$PROJECT_DIR$/src/main/java/cn/springmvc/service/CompetitorAbility.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/springmvc/service/CompetitorRelation.java" afterPath="$PROJECT_DIR$/src/main/java/cn/springmvc/service/CompetitorRelation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/cn/springmvc/test/getUserLanguageTest.java" afterPath="$PROJECT_DIR$/src/test/java/cn/springmvc/test/getUserLanguageTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kaggle.iml" afterPath="$PROJECT_DIR$/kaggle.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/springmvc/dao/RelationGenDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/springmvc/dao/RelationGenDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/conf/spring-mybatis.xml" afterPath="$PROJECT_DIR$/src/main/resources/conf/spring-mybatis.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/RelationGen.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RelationGen.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/conf/spring-mybatis.xml" afterPath="$PROJECT_DIR$/target/classes/conf/spring-mybatis.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/RelationGen.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/RelationGen.xml" />
     </list>
     <ignored path="kaggle.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,8 +130,8 @@
       <file leaf-file-name="getUserLanguageTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/cn/springmvc/test/getUserLanguageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-201">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="440">
+              <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -228,6 +326,22 @@
               <option name="myItemId" value="target" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test-classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="springmvc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -352,10 +466,6 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -460,10 +570,6 @@
               <option name="myItemId" value="springmvc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -492,32 +598,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kaggle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kaggle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="springmvc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1334,7 +1414,7 @@
       <workItem from="1506649900334" duration="88848000" />
       <workItem from="1508295500539" duration="12501000" />
       <workItem from="1508650332515" duration="3945000" />
-      <workItem from="1508826921309" duration="4326000" />
+      <workItem from="1508826921309" duration="4485000" />
     </task>
     <servers />
   </component>
@@ -1371,7 +1451,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="175698000" />
+    <option name="totallyTimeSpent" value="175857000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1616" height="876" extended-state="6" />
@@ -1455,13 +1535,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/model/DiscussionComment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cn/springmvc/test/UserServiceImplTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/model/DiscussionReply.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1804,20 +1877,20 @@
         <state relative-caret-position="433">
           <caret line="83" column="28" selection-start-line="83" selection-start-column="28" selection-end-line="83" selection-end-column="28" />
           <folding>
-            <marker date="1508748403242" expanded="true" signature="290:361" ph="select teamM... competitionleaderboard" />
-            <marker date="1508748403242" expanded="true" signature="476:630" ph="select ${rel... competitorRelation" />
-            <marker date="1508748403242" expanded="true" signature="713:895" ph="insert into competitorRelation... " />
-            <marker date="1508748403242" expanded="true" signature="982:1122" ph="UPDATE compe... " />
-            <marker date="1508748403242" expanded="true" signature="1212:1343" ph="select count... competitorRelation" />
-            <marker date="1508748403242" expanded="true" signature="1433:1506" ph="SELECT discu... discussioncomment" />
-            <marker date="1508748403242" expanded="true" signature="1601:1658" ph="SELECT discu... discussion" />
-            <marker date="1508748403242" expanded="true" signature="1746:1825" ph="SELECT discu... discussionreply" />
-            <marker date="1508748403242" expanded="true" signature="1940:2033" ph="SELECT comme... ${tableName}" />
-            <marker date="1508748403242" expanded="true" signature="2119:2171" ph="SELECT kerne... kernelcomment" />
-            <marker date="1508748403242" expanded="true" signature="2255:2322" ph="SELECT kerne... kernelreply" />
-            <marker date="1508748403242" expanded="true" signature="2432:2478" ph="SELECT ${col... ${tableName}" />
-            <marker date="1508748403242" expanded="true" signature="2559:2645" ph="SELECT organ... organization" />
-            <marker date="1508748403242" expanded="true" signature="2732:2789" ph="SELECT count... organization" />
+            <marker date="1509072140295" expanded="true" signature="290:361" ph="select teamM... competitionleaderboard" />
+            <marker date="1509072140295" expanded="true" signature="476:630" ph="select ${rel... competitorRelation" />
+            <marker date="1509072140295" expanded="true" signature="713:895" ph="insert into competitorRelation... " />
+            <marker date="1509072140295" expanded="true" signature="982:1122" ph="UPDATE compe... " />
+            <marker date="1509072140295" expanded="true" signature="1212:1343" ph="select count... competitorRelation" />
+            <marker date="1509072140295" expanded="true" signature="1433:1506" ph="SELECT discu... discussioncomment" />
+            <marker date="1509072140295" expanded="true" signature="1601:1658" ph="SELECT discu... discussion" />
+            <marker date="1509072140295" expanded="true" signature="1746:1825" ph="SELECT discu... discussionreply" />
+            <marker date="1509072140295" expanded="true" signature="1940:2033" ph="SELECT comme... ${tableName}" />
+            <marker date="1509072140295" expanded="true" signature="2119:2171" ph="SELECT kerne... kernelcomment" />
+            <marker date="1509072140295" expanded="true" signature="2255:2322" ph="SELECT kerne... kernelreply" />
+            <marker date="1509072140295" expanded="true" signature="2432:2478" ph="SELECT ${col... ${tableName}" />
+            <marker date="1509072140295" expanded="true" signature="2559:2645" ph="SELECT organ... organization" />
+            <marker date="1509072140295" expanded="true" signature="2732:2789" ph="SELECT count... organization" />
           </folding>
         </state>
       </provider>
@@ -1838,10 +1911,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/target/test-classes/cn/springmvc/test/getUserLanguageTest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#1022#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cn/springmvc/test/getUserLanguageTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-201">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="440">
+          <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
           <folding />
         </state>
       </provider>
