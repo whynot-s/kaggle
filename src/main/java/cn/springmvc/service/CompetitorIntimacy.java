@@ -59,18 +59,14 @@ public class CompetitorIntimacy {
 
 	//初始化操作时将TeamMemberIntimacy清空(表需要存在)，并根据CompetitionLeaderBoard中的队伍信息按队伍每两个人加入记录，并加入两人团队中亲密度
 	public void genTeamIntimacy() {
-		intimacyDao.truncateTeamIntimacy();
+		intimacyDao.truncateTeamMemberIntimacy();
 		List<Map<String, Object>> teams = intimacyDao.getTeams();
 		for(Map<String, Object> team : teams) {
 			int teamId = (Integer)(team.get("teamId"));
 			String[] teamMembers = ((String)team.get("memberIds")).split("&");
 			if(teamMembers.length > 1) {
-				//初始化Team矩阵
-				double[][] graphWeights = new double[teamMembers.length][teamMembers.length];
-				loadGraphWeights(teamMembers, graphWeights);
-				//计算Team中任意两个人的亲密度
 				double[][] teamIntimacy = new double[teamMembers.length][teamMembers.length];
-				calcTeamIntimacy(graphWeights, teamIntimacy);
+				teamMembersIntimacy(teamMembers, teamIntimacy);
 				//将Team中任意两人亲密度加入TeamMemberIntimacy中
 				for(int i = 0; i < teamMembers.length; i++) {
 					int competitorId1 = Integer.parseInt(teamMembers[i]);
@@ -88,8 +84,22 @@ public class CompetitorIntimacy {
 		}
 	}	
 
+	//团队亲密度计算函数，teamMembers为Id的字符串数组，teamIntimacy为求得亲密度方阵
+	//须保证teamMembers.length == teamIntimacy.length 
+	public void teamMembersIntimacy(String[] teamMembers, double[][] teamIntimacy) {
+		if(teamMembers.length != teamIntimacy.length) {
+			//错误，不等长
+			return;
+		}
+		//初始化Team矩阵
+		double[][] graphWeights = new double[teamMembers.length][teamMembers.length];
+		loadGraphWeights(teamMembers, graphWeights);
+		//计算Team中任意两个人的亲密度
+		calcTeamIntimacy(graphWeights, teamIntimacy);
+	}
+	
 	//根据TeamemberIds将CompetitorIntimacy中的两者亲密度取出并存入GraphWeights中
-	public void loadGraphWeights(String[] teamMembers, double[][] graphWeights) {
+	private void loadGraphWeights(String[] teamMembers, double[][] graphWeights) {
 		for(int i = 0; i < teamMembers.length; i++) {
 			graphWeights[i] = new double[teamMembers.length];
 			int competitorId1 = Integer.parseInt(teamMembers[i]);
@@ -100,8 +110,8 @@ public class CompetitorIntimacy {
 				}else {
 					int competitorId2 = Integer.parseInt(teamMembers[j]);
 					Double weights = intimacyDao.getPairIntimacy(competitorId1, competitorId2);
-					//若两个人亲密度在表中无记录，则设置为-1.0
-					graphWeights[i][j] = weights == null? -1.0 : weights;
+					//若两个人亲密度在表中无记录，则设置为4.0
+					graphWeights[i][j] = weights == null? 4.0 : weights;
 				}
 			}
 		}
@@ -123,7 +133,7 @@ public class CompetitorIntimacy {
 	}
 	
 	//广度优先计算start-->end的最短加权路径，权值为方阵表示
-	public double shortestWeightedPath(int start, int end, double[][] weights) {
+	private double shortestWeightedPath(int start, int end, double[][] weights) {
 		double minWeight = Double.MAX_VALUE;
 		Queue<Integer> subNodes = new LinkedList<Integer>();
 		Queue<Double> minWeights = new LinkedList<Double>();
@@ -134,7 +144,7 @@ public class CompetitorIntimacy {
 			double currentWeight = minWeights.poll();
 			for(int i = 0; i < weights[currentNode].length; i++) {
 				//回头路不走，不通的路不走，已经大于等于现有最小权值的路不走（不入队）
-				if(i == currentNode || weights[currentNode][i] == -1.0 || currentWeight >= minWeight) {
+				if(i == currentNode || currentWeight >= minWeight) {
 					continue;
 				//遇终点判断权值大小，不入队
 				}else if(i == end){
@@ -151,4 +161,31 @@ public class CompetitorIntimacy {
 		return minWeight;
 	}
 
+	//初始化操作时将TeamIntimacy清空(表需要存在)，计算每个Team的总亲密度（Team来自teamMemberIntimacy表）
+	public void allTeamTotalIntimacy() {
+		intimacyDao.truncateTeamIntimacy();
+		List<Integer> teamIds = intimacyDao.getTeamIds();
+		for(Integer teamId : teamIds) {
+			List<Map<String, Object>> team = intimacyDao.getTeamMemberIntimacyById(teamId);
+			int numberOfMembers = (int)Math.sqrt(team.size()) + 1;
+			double teamIntimacy = 0.0;
+			for(Map<String, Object> relation : team) {
+				teamIntimacy += (Double)(relation.get("Intimacy"));
+			}
+			teamIntimacy /= numberOfMembers * (numberOfMembers - 1);
+			intimacyDao.insertTeamTotalIntimacy(teamId, teamIntimacy, numberOfMembers);
+		}
+	}
+	
+	//计算一个Team的总亲密度: N阶方阵的各项和/(N*(N-1))
+	public double calcTeamTotalIntimacy(double[][] teamIntimacy) {
+		double result = 0.0;
+		for(int i = 0; i < teamIntimacy.length; i++) {
+			for(int j = 0; j < teamIntimacy.length; j++) {
+				result += teamIntimacy[i][j];
+			}
+		}
+		return result/(teamIntimacy.length * (teamIntimacy.length - 1));
+	}
+	
 }

@@ -11,7 +11,7 @@
         competitionLeaderboard
     </select>
 
-	<delete id="truncateTeamIntimacy">
+	<delete id="truncateTeamMemberIntimacy">
 		TRUNCATE TABLE
 		TeamMemberIntimacy
 	</delete>
@@ -24,7 +24,6 @@
 		where
 		competitorId1 = ${competitorId1} and competitorId2 = ${competitorId2}
 	</select>
-	
 	
 	<insert id="insertTeamPair">
 		INSERT INTO
@@ -41,5 +40,22 @@
 		where
 		teamId = ${teamId} and competitorId1 = ${competitorId1} and competitorId2 = ${competitorId2}
 	</update>
+
+	<select id="getTeamIds" resultType="java.lang.Integer">
+		SELECT DISTINCT(teamId) FROM teamMemberIntimacy
+	</select>
+	
+	<select id="getTeamMemberIntimacyById" resultType="java.util.Map">
+		SELECT * FROM teamMemberIntimacy WHERE teamId = ${teamId}
+	</select>
+
+	<select id="insertTeamTotalIntimacy">
+		INSERT INTO teamIntimacy VALUES(${teamId}, ${intimacy}, ${numOfMembers})
+	</select>
+
+	<delete id="truncateTeamIntimacy">
+		TRUNCATE TABLE
+		TeamIntimacy
+	</delete>
 
 </mapper>
