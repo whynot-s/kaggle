@@ -20,7 +20,8 @@ public class calculateIntimacyTest {
 	@Test
 	public void test() {
 //		competitorIntimacy.pairIntimacy();
-		competitorIntimacy.genTeamIntimacy();
+//		competitorIntimacy.genTeamIntimacy();
+		competitorIntimacy.allTeamTotalIntimacy();
 	}
 	
 //	测试最短路径计算正确性
