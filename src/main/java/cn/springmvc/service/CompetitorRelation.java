@@ -156,70 +156,13 @@ public class CompetitorRelation {
 
 
     public void testes() {
-        //relationGenDao.updateCollaboration(1,3,3);
-        //System.out.println(relationGenDao.recordExistOrNot(1, 55));
-        //判断discussionReply关系是否插入正确
-      /*  List<Integer> discussion = relationGenDao.discussionKernelOrNot();
-        List<Map<String, Integer>> reply = relationGenDao.getDiscussionReply();
-        int sum1 = 0;
-        int sum2 = 0;
-        int sum = 0;
-        for (Map<String, Integer> rep : reply
-                ) {
-            int discussionId = rep.get("discussionId");
-            int discussionAuthorId = rep.get("discussionAuthorId");
-            int commentNo = rep.get("commentNo");
-            int replierId = rep.get("replierId");
-            int commenterId = relationGenDao.findCommenterId(discussionId, commentNo, "discussioncomment", "discussionId");
-            if(discussion.contains(discussionId)){
-                sum++;
-                continue;
-            }
-            if (discussionAuthorId == replierId ) {
-                sum1++;
-            }
-            if(commenterId == replierId){
-                sum2++;
-            }
-        }
-        System.out.println(sum+"=="+sum1+"=="+sum2);*/
-        //判断organization关系是否插入正确
-      /* Integer[] organizations = relationGenDao.getOrganizationMemberNumber();
-        int sum = 0;
-        for (Integer or:organizations
-             ) {
-            sum += or*(or - 1);
-        }
-        System.out.println(sum);*/
-       /* List<Map<String, Integer>> reply = relationGenDao.getKernelReply();
-        int sum1 = 0;
-        int sum2 = 0;
-        for (Map<String, Integer> rep : reply
-                ) {
-            int kernelId = rep.get("kernelId");
-            int kernelAuthorId = rep.get("kernelAuthorId");
-            int commentNo = rep.get("commentNo");
-            int replierId = rep.get("replierId");
-            int commenterId = relationGenDao.findCommenterId(kernelId, commentNo, "kernelcomment", "kernelId");
-            if (kernelAuthorId == replierId ) {
-                sum1++;
-            }
-            if(commenterId == replierId){
-                sum2++;
-            }
-        }
-System.out.println(sum1+sum2);*/
-/*List<Map<String,Integer>> competitor_2 = relationGenDao.getRelationMap("competitorId","competitorName","competitor_2");
-    List<Map<String,Integer>> competitor = relationGenDao.getRelationMap("competitorId","competitorName","competitor");
-    List<Map<String,Integer>> discussion = relationGenDao.getRelationMap("discussionAuthorId","discussionAuthorName","discussion");
-    List<Map<String,Integer>> kernel = relationGenDao.getRelationMap("kernelAuthorId","kernelAuthorName","kernel");
-    List<Map<String,Integer>> discussionComment = relationGenDao.getRelationMap("commenterId","commenterName","discussioncomment");
-    List<Map<String,Integer>> kernelComment = relationGenDao.getRelationMap("commenterId","commenterName","kernelcomment");
-    List<Map<String,Integer>> discussionReply = relationGenDao.getRelationMap("replierId","replierName","discussionreply");
-    List<Map<String,Integer>> kernelReply = relationGenDao.getRelationMap("replierId","replierName","kernelreply");
-    List<Map<String,Integer>> discussionVote = relationGenDao.getRelationMap("discussionAuthorId","voterId","discussionvote");
-    List<Map<String,Integer>> kernelVote = relationGenDao.getRelationMap("kernelAuthorId","voterId","kernelvote");
-    List<Map<String,Integer>> kernelFork = relationGenDao.getRelationMap("kernelAuthorId","forkId","kernelfork");*/
+
+    }
+
+
+    //完善leaderboard表时，为了获得人名与id之间的对应关系
+    public void mapToId(){
+
         List<Map<String, Object>> competitor_2 = relationGenDao.getRelationMap("competitorId", "competitorName", "competitor_2");
         List<Map<String, Object>> competitor = relationGenDao.getRelationMap("competitorId", "competitorName", "competitor");
         List<Map<String, Object>> discussion = relationGenDao.getRelationMap("discussionAuthorId", "discussionAuthorName", "discussion");
@@ -247,7 +190,6 @@ System.out.println(sum1+sum2);*/
         relationGenDao.insertMapIdToName(MAP);
     }
 
-
     public void merge(Map<Integer, String> MAP, List<Map<String, Object>> map, String column1, String column2) {
         for (Map<String, Object> map1 : map
                 ) {
@@ -257,7 +199,6 @@ System.out.println(sum1+sum2);*/
             }
             MAP.put(id, (String) map1.get(column2));
         }
-
     }
 
 

@@ -38,8 +38,9 @@ public class getUserLanguageTest {
         System.out.println(duration);*/
         //System.out.println(50/500.0);
        // competitiorRelation.testes();
+        System.out.println();
        // competitiorRelation.insertCollaborationRelation();
-        competitorAbility.totalAbilityGen();
+      //  competitorAbility.totalAbilityGen();
       //  competitorAbility.test();
     }
 }

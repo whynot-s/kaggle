@@ -129,8 +129,4 @@ public class CompetitorAbility {
     }
 
 
-    public void test(){
-        System.out.println(competitorAbilityDao.getCompetitorAbility(111,"`binary classification`"));
-    }
-
 }
