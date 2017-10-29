@@ -6,6 +6,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56a70c35-45d3-4d10-b1da-8689b6a0ce5c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/service/PersonAbility.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/service/PersonAbility.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/service/Recommend.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/service/Recommend.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/cn/springmvc/test/getUserLanguageTest.class" afterPath="$PROJECT_DIR$/target/test-classes/cn/springmvc/test/getUserLanguageTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/springmvc/service/Recommend.java" afterPath="$PROJECT_DIR$/src/main/java/cn/springmvc/service/Recommend.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/cn/springmvc/test/getUserLanguageTest.java" afterPath="$PROJECT_DIR$/src/test/java/cn/springmvc/test/getUserLanguageTest.java" />
     </list>
@@ -46,8 +50,8 @@
       <file leaf-file-name="Recommend.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/service/Recommend.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="132" column="37" selection-start-line="132" selection-start-column="37" selection-end-line="132" selection-end-column="37" />
+            <state relative-caret-position="114">
+              <caret line="197" column="19" selection-start-line="197" selection-start-column="6" selection-end-line="197" selection-end-column="19" />
               <folding>
                 <element signature="docComment;class#Recommend#0" expanded="false" />
                 <element signature="e#2258#2267#0" expanded="true" />
@@ -1229,8 +1233,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/service/Recommend.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="132" column="37" selection-start-line="132" selection-start-column="37" selection-end-line="132" selection-end-column="37" />
+        <state relative-caret-position="114">
+          <caret line="197" column="19" selection-start-line="197" selection-start-column="6" selection-end-line="197" selection-end-column="19" />
           <folding>
             <element signature="docComment;class#Recommend#0" expanded="false" />
             <element signature="e#2258#2267#0" expanded="true" />
