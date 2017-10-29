@@ -3,7 +3,6 @@ package cn.springmvc.service;
 import cn.springmvc.dao.CompetitorAbilityDao;
 import cn.springmvc.model.Id_Tag;
 import cn.springmvc.model.competitorAbility;
-import org.apache.commons.logging.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,7 +30,9 @@ public class Recommend
     private Double tag1rate = 0.0;
     private Double tag2rate = 0.0;
     private Double totalrate = 0.0;
-
+    //测试性能
+    private Double time = 0.0;
+    private int count = 0;
 
     //range能力相近的上下选择的比例，range>0 && range<=1
     //要求传入的tags的length和tag的个数相同，也就是用split来生成tags，不要new
@@ -89,16 +90,14 @@ public class Recommend
         System.out.println("init: 1s到1.5s (相近人在11980的耗时)");
         dfs(results,teamsize-1,0,0,result.size());
         System.out.println("dfs:"+(System.currentTimeMillis()-start)/1000.0);
-        System.out.println("getTeamAbility:30s");
+        System.out.println("getTeamAbility:30s (相近人在11980的耗时)");
         System.out.println("res.add(map.get(Integer.parseInt(str[i]))) :"+time);
-        System.out.println("count:"+result.size()*result.size()/2);
+        System.out.println("count:"+count);
         //综上，结论：没有耗时的单步但是遍历的量太大（近亿级）
         System.out.println("result is "+t);
         return t;
     }
 
-    private Double time = 0.0;
-    private int count = 0;
     //这里的teamsize是组队人数-1，有一个人已经定了
     //生成组合数序列
     private void dfs(int[] result,int teamsize,int level,int cur,int n)
@@ -113,9 +112,9 @@ public class Recommend
             count++;
             ArrayList<competitorAbility> list = getTeamAbility(team);
             if (Qinmi(book)){
-                Long start = System.currentTimeMillis();
+//                Long start = System.currentTimeMillis();
                 UpdateProfit(team,teamsize,list);
-                time += (System.currentTimeMillis()-start)/1000.0;
+//                time += (System.currentTimeMillis()-start)/1000.0;
             }
             return;
         }
@@ -135,7 +134,6 @@ public class Recommend
     private void UpdateProfit(String team,int teamsize,ArrayList<competitorAbility> list)
     {
         Double sum = new Double(0);
-
         PersonAbility[] persons = new PersonAbility[teamsize+2];
         for (int i=0;i<teamsize+1;i++){
             persons[i] = new PersonAbility(list.get(i));
@@ -148,16 +146,18 @@ public class Recommend
                 for (int j=0;j<teamsize+1;j++){
                     if (persons[j].tag[i]==null)
                         continue;
-                    if (max<persons[j].tag[i])
+                    if (max<persons[j].tag[i]){
                         max = persons[j].tag[i];
+                    }
                 }
                 //循环作和
                 for (int j=0;j<teamsize+1;j++){
                     Double flesh = persons[j].tag[i];
                     if (flesh==null)
                         continue;
-                    if (i<7)
+                    if (i<7){
                         sum+=(max-flesh)*flesh*tag1rate;         //tag1
+                    }
                     else if (i==tagName.length-1)
                         sum+=(max-flesh)*flesh*totalrate;         //totalScore
                     else
@@ -200,27 +200,27 @@ class PersonAbility
     Double [] tag = new Double [21];
     PersonAbility(competitorAbility t)
     {
-        tag[0] = t.getAdversarial_learning();
-        tag[1] = t.getArtificial_intelligence();
-        tag[2] = t.getAudio();
-        tag[3] = t.getBinary_classification();
-        tag[4] = t.getDuplicate_detection();
-        tag[5] = t.getForecasting();
+        tag[7] = t.getAdversarial_learning();
+        tag[15] = t.getArtificial_intelligence();
+        tag[4] = t.getAudio();
+        tag[8] = t.getBinary_classification();
+        tag[14] = t.getDuplicate_detection();
+        tag[9] = t.getForecasting();
         tag[6] = t.getGraph();
-        tag[7] = t.getImage();
-        tag[8] = t.getMulticlass_classification();
-        tag[9] = t.getObject_detection();
-        tag[10] = t.getObject_identification();
-        tag[11] = t.getObject_labeling();
-        tag[12] = t.getObject_segmentation();
-        tag[13] = t.getOptimization();
-        tag[14] = t.getRanking();
-        tag[15] = t.getRegression();
-        tag[16] = t.getTabular();
-        tag[17] = t.getText();
-        tag[18] = t.getTime_series();
-        tag[19] = t.getTotalScore();
-        tag[20] = t.getWaft();
+        tag[0] = t.getImage();
+        tag[10] = t.getMulticlass_classification();
+        tag[12] = t.getObject_detection();
+        tag[11] = t.getObject_identification();
+        tag[17] = t.getObject_labeling();
+        tag[16] = t.getObject_segmentation();
+        tag[18] = t.getOptimization();
+        tag[19] = t.getRanking();
+        tag[13] = t.getRegression();
+        tag[2] = t.getTabular();
+        tag[1] = t.getText();
+        tag[5] = t.getTime_series();
+        tag[20] = t.getTotalScore();
+        tag[3] = t.getWaft();
     }
 
 }
