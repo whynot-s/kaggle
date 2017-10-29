@@ -6,56 +6,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56a70c35-45d3-4d10-b1da-8689b6a0ce5c" name="Default" comment="">
-<<<<<<< HEAD
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/dao/CompetitionDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/dao/CompetitionDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/dao/CompetitorAbilityDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/dao/CompetitorAbilityDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/dao/RelationGenDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/dao/RelationGenDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/dao/UserLanguageDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/dao/UserLanguageDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/Competition.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/Competition.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/CompetitionLeaderboard.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/CompetitionLeaderboard.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/Competitor.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/Competitor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/CompetitorAbility.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/CompetitorAbility.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/Dataset.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/Dataset.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/Discussion.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/Discussion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/DiscussionComment.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/DiscussionComment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/DiscussionReply.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/DiscussionReply.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/DiscussionVote.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/DiscussionVote.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/FollowRelation.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/FollowRelation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/Kernel.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/Kernel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/KernelComment.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/KernelComment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/KernelFork.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/KernelFork.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/KernelReply.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/KernelReply.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/KernelVote.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/KernelVote.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/Organization.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/Organization.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/service/CompetitorAbility.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/service/CompetitorAbility.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/service/CompetitorRelation.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/service/CompetitorRelation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/service/GetUserLanguage.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/service/GetUserLanguage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/springmvc/service/CompetitorIntimacy.java" afterPath="$PROJECT_DIR$/src/main/java/cn/springmvc/service/CompetitorIntimacy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/conf/spring-mybatis.xml" afterPath="$PROJECT_DIR$/target/classes/conf/spring-mybatis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/RelationGen.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/RelationGen.xml" />
-=======
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_nop_1_7_21.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/springmvc/model/Id_Tag.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/springmvc/service/Recommend.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/dao/CompetitorAbilityDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/dao/CompetitorAbilityDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/CompetitorAbility.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/CompetitorAbility.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/service/CompetitorAbility.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/service/CompetitorAbility.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/service/GetUserLanguage.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/service/GetUserLanguage.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/cn/springmvc/test/getUserLanguageTest.class" afterPath="$PROJECT_DIR$/target/test-classes/cn/springmvc/test/getUserLanguageTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kaggle.iml" afterPath="$PROJECT_DIR$/kaggle.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/springmvc/dao/CompetitorAbilityDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/springmvc/dao/CompetitorAbilityDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/springmvc/model/CompetitorAbility.java" afterPath="$PROJECT_DIR$/src/main/java/cn/springmvc/model/CompetitorAbility.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/springmvc/service/CompetitorAbility.java" afterPath="$PROJECT_DIR$/src/main/java/cn/springmvc/service/CompetitorAbility.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/conf/spring-mybatis.xml" afterPath="$PROJECT_DIR$/src/main/resources/conf/spring-mybatis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/CompetitorAbility.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CompetitorAbility.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/cn/springmvc/test/getUserLanguageTest.java" afterPath="$PROJECT_DIR$/src/test/java/cn/springmvc/test/getUserLanguageTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/conf/spring-mybatis.xml" afterPath="$PROJECT_DIR$/target/classes/conf/spring-mybatis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/CompetitorAbility.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/CompetitorAbility.xml" />
->>>>>>> div1
     </list>
     <ignored path="kaggle.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,69 +34,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-<<<<<<< HEAD
-      <file leaf-file-name="calculateIntimacyTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/cn/springmvc/test/calculateIntimacyTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
-              <folding />
-=======
-      <file leaf-file-name="getUserLanguageTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="getUserLanguageTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/cn/springmvc/test/getUserLanguageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
-              <folding>
-                <element signature="e#1301#1312#0" expanded="false" />
-              </folding>
->>>>>>> div1
+            <state relative-caret-position="312">
+              <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompetitorIntimacy.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Competitor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/model/Competitor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompetitorIntimacy.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/service/CompetitorIntimacy.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="-2476">
-              <caret line="62" column="38" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
-              <folding>
-                <element signature="method#pairIntimacy#0;class#CompetitorIntimacy#0" expanded="false" />
-                <element signature="method#calcIntimacy#0;class#CompetitorIntimacy#0" expanded="false" />
-                <element signature="e#4853#4862#0" expanded="true" />
-                <element signature="e#4909#4917#0" expanded="true" />
-=======
-            <state relative-caret-position="840">
-              <caret line="44" column="59" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
-              <folding>
-                <element signature="docComment;class#CompetitorAbilityDao#0" expanded="false" />
->>>>>>> div1
-              </folding>
+            <state relative-caret-position="836">
+              <caret line="44" column="54" selection-start-line="44" selection-start-column="54" selection-end-line="44" selection-end-column="54" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name="RelationGenDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/dao/RelationGenDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="44" column="42" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="42" />
-              <folding />
-=======
-      <file leaf-file-name="Recommend.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Recommend.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/service/Recommend.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="125" column="5" selection-start-line="125" selection-start-column="5" selection-end-line="125" selection-end-column="5" />
+            <state relative-caret-position="96">
+              <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
               <folding>
                 <element signature="docComment;class#Recommend#0" expanded="false" />
-                <element signature="e#1398#1415#0" expanded="true" />
                 <element signature="e#2229#2238#0" expanded="true" />
-                <element signature="e#6853#6872#0" expanded="true" />
               </folding>
->>>>>>> div1
             </state>
           </provider>
         </entry>
@@ -170,14 +101,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/model/KernelFork.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/model/KernelReply.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/model/KernelVote.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/model/Discussion.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/model/DiscussionComment.java" />
-=======
->>>>>>> div1
         <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/model/DiscussionReply.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/model/DiscussionVote.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/model/FollowRelation.java" />
@@ -205,23 +128,11 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/dao/UserLanguageDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/Kernel.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/service/GetUserLanguage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/model/CompetitorAbility.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/model/CompetitionLeaderboard.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/Competition.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/dao/CompetitionDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/service/CompetitiorRelation.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/dao/RelationGenDao.java" />
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/dao/CompetitorAbilityDao.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/CompetitorAbility.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/RelationGen.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/cn/springmvc/test/getUserLanguageTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/service/CompetitorAbility.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/service/CompetitorRelation.java" />
-        <option value="$PROJECT_DIR$/target/classes/conf/spring-mybatis.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/cn/springmvc/test/calculateIntimacyTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/service/CompetitorIntimacy.java" />
-=======
         <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/service/CompetitorRelation.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/RelationGen.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/service/CompetitorAbility.java" />
@@ -239,7 +150,8 @@
         <option value="$PROJECT_DIR$/src/test/java/cn/springmvc/test/getUserLanguageTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/model/Id_Tag.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/service/Recommend.java" />
->>>>>>> div1
+        <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/model/Competitor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/model/CompetitorAbility.java" />
       </list>
     </option>
   </component>
@@ -270,17 +182,10 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-<<<<<<< HEAD
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
-    <option name="width" value="1616" />
-    <option name="height" value="876" />
-=======
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1938" />
     <option name="height" value="1050" />
->>>>>>> div1
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -335,12 +240,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-<<<<<<< HEAD
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-=======
->>>>>>> div1
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -359,226 +258,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kaggle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kaggle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-<<<<<<< HEAD
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test-classes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="springmvc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kaggle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kaggle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generated-test-sources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kaggle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kaggle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generated-sources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kaggle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kaggle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kaggle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kaggle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kaggle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kaggle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-=======
->>>>>>> div1
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kaggle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kaggle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kaggle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kaggle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="springmvc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kaggle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kaggle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="springmvc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-<<<<<<< HEAD
-=======
       <pane id="Scratches" />
       <pane id="PackagesPane" />
->>>>>>> div1
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -615,10 +299,6 @@
       <recent name="D:\Workspace\kaggle\src\main\resources" />
     </key>
   </component>
-<<<<<<< HEAD
-  <component name="RunManager" selected="JUnit.calculateIntimacyTest.ShortestWeightedPathTest">
-    <configuration default="false" name="UserServiceImplTest.insert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-=======
   <component name="RunManager" selected="JUnit.getUserLanguageTest.main">
     <configuration default="false" name="getUserLanguageTest.testGetLanguages" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -647,7 +327,6 @@
       <method />
     </configuration>
     <configuration default="false" name="getUserLanguageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
->>>>>>> div1
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="cn.springmvc.test.*" />
@@ -754,68 +433,6 @@
       <patterns />
       <method />
     </configuration>
-<<<<<<< HEAD
-    <configuration default="false" name="getUserLanguageTest.testGetLanguages" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="test.cn.springmvc.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="kaggle" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="test.cn.springmvc.service" />
-      <option name="MAIN_CLASS_NAME" value="test.cn.springmvc.service.getUserLanguageTest" />
-      <option name="METHOD_NAME" value="testGetLanguages" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="false" name="calculateIntimacyTest.ShortestWeightedPathTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="cn.springmvc.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="kaggle" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="cn.springmvc.test" />
-      <option name="MAIN_CLASS_NAME" value="cn.springmvc.test.calculateIntimacyTest" />
-      <option name="METHOD_NAME" value="ShortestWeightedPathTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-=======
->>>>>>> div1
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -1073,21 +690,6 @@
       <method />
     </configuration>
     <list size="5">
-<<<<<<< HEAD
-      <item index="0" class="java.lang.String" itemvalue="JUnit.UserServiceImplTest.insert" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.getUserLanguageTest.testGetLanguages" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.getUserLanguageTest" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.getUserLanguageTest.testGetLanguages" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.calculateIntimacyTest.ShortestWeightedPathTest" />
-    </list>
-    <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.calculateIntimacyTest.ShortestWeightedPathTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.getUserLanguageTest.testGetLanguages" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.getUserLanguageTest" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.getUserLanguageTest.testGetLanguages" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.UserServiceImplTest.insert" />
-=======
       <item index="0" class="java.lang.String" itemvalue="JUnit.getUserLanguageTest.testGetLanguages" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.getUserLanguageTest" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.getUserLanguageTest.main" />
@@ -1101,7 +703,6 @@
         <item index="2" class="java.lang.String" itemvalue="JUnit.getUserLanguageTest" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.getUserLanguageTest.testGetLanguages" />
         <item index="4" class="java.lang.String" itemvalue="Maven.kaggle-recommendation [install]" />
->>>>>>> div1
       </list>
     </recent_temporary>
   </component>
@@ -1137,40 +738,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-<<<<<<< HEAD
-    <history-entry file="calculateIntimacyTest_ShortestWeightedPathTest - 2017.10.27 at 11h 18m 19s.xml">
-      <configuration name="calculateIntimacyTest.ShortestWeightedPathTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="calculateIntimacyTest_ShortestWeightedPathTest - 2017.10.27 at 11h 18m 42s.xml">
-      <configuration name="calculateIntimacyTest.ShortestWeightedPathTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="calculateIntimacyTest_ShortestWeightedPathTest - 2017.10.27 at 11h 27m 11s.xml">
-      <configuration name="calculateIntimacyTest.ShortestWeightedPathTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="calculateIntimacyTest_ShortestWeightedPathTest - 2017.10.27 at 11h 27m 29s.xml">
-      <configuration name="calculateIntimacyTest.ShortestWeightedPathTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="calculateIntimacyTest_ShortestWeightedPathTest - 2017.10.27 at 13h 20m 52s.xml">
-      <configuration name="calculateIntimacyTest.ShortestWeightedPathTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="calculateIntimacyTest_ShortestWeightedPathTest - 2017.10.27 at 13h 22m 11s.xml">
-      <configuration name="calculateIntimacyTest.ShortestWeightedPathTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="getUserLanguageTest_testGetLanguages - 2017.10.24 at 14h 37m 11s.xml">
-      <configuration name="getUserLanguageTest.testGetLanguages" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="getUserLanguageTest_testGetLanguages - 2017.10.27 at 10h 08m 38s.xml">
-      <configuration name="getUserLanguageTest.testGetLanguages" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="getUserLanguageTest_testGetLanguages - 2017.10.27 at 10h 45m 23s.xml">
-      <configuration name="getUserLanguageTest.testGetLanguages" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="getUserLanguageTest_testGetLanguages - 2017.10.27 at 10h 46m 36s.xml">
-      <configuration name="getUserLanguageTest.testGetLanguages" configurationId="JUnit" />
-=======
-    <history-entry file="getUserLanguageTest_main - 2017.10.29 at 10h 36m 45s.xml">
-      <configuration name="getUserLanguageTest.main" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="getUserLanguageTest_main - 2017.10.29 at 10h 37m 07s.xml">
       <configuration name="getUserLanguageTest.main" configurationId="JUnit" />
     </history-entry>
@@ -1197,49 +764,31 @@
     </history-entry>
     <history-entry file="getUserLanguageTest_main - 2017.10.29 at 11h 12m 23s.xml">
       <configuration name="getUserLanguageTest.main" configurationId="JUnit" />
->>>>>>> div1
+    </history-entry>
+    <history-entry file="getUserLanguageTest_main - 2017.10.29 at 12h 22m 15s.xml">
+      <configuration name="getUserLanguageTest.main" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="184709000" />
   </component>
   <component name="ToolWindowManager">
-<<<<<<< HEAD
-    <frame x="1912" y="-8" width="1616" height="876" extended-state="6" />
-=======
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
->>>>>>> div1
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32418302" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38941798" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.009150327" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45742357" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22489083" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38941798" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32751092" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40502185" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2265625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
->>>>>>> div1
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1249,10 +798,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-<<<<<<< HEAD
-=======
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
->>>>>>> div1
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1308,17 +854,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/model/Organization.java">
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/model/Kernel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/4.2.5.RELEASE/spring-test-4.2.5.RELEASE.jar!/org/springframework/test/context/junit4/SpringJUnit4ClassRunner.class" />
     <entry file="file://$PROJECT_DIR$/target/classes/mapper/Kernel.xml" />
     <entry file="file://$PROJECT_DIR$/target/classes/conf/mybatis-configuration.xml" />
     <entry file="file://$PROJECT_DIR$/target/test-classes/pom.xml" />
@@ -1348,7 +883,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/Discussion.xml">
->>>>>>> div1
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
@@ -1376,10 +910,6 @@
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/target/test-classes/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/target/classes/cn/springmvc/dao/UserLanguageDao.class">
-=======
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/KernelComment.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -1388,17 +918,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/Organization.xml">
->>>>>>> div1
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/test/cn/springmvc/service/getUserLanguageTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DiscussionReply.xml">
-=======
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CompetitorAbility" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DiscussionComment.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -1407,15 +932,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/model/Competitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-247">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/Competition.xml">
->>>>>>> div1
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
@@ -1436,9 +953,6 @@
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/Discussion.xml">
-=======
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/service/CompetitorRelation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -1461,7 +975,6 @@
       </provider>
     </entry>
     <entry file="jar://F:/jdk1.8_64/src.zip!/com/sun/org/apache/xerces/internal/parsers/DOMParser.java">
->>>>>>> div1
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="242" column="0" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
@@ -1514,22 +1027,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/model/CompetitionLeaderboard.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="247">
-          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <marker date="1508748403240" expanded="true" signature="689:759" ph="select from proc_getfuneral_info" />
-            <marker date="1508748403240" expanded="true" signature="689:809" ph="select kerne... kernel" />
-            <marker date="1508748403240" expanded="true" signature="920:999" ph="select * fro... kernel" />
-            <marker date="1508748403240" expanded="true" signature="1079:1149" ph="select DISTI... competitor_2" />
-            <marker date="1508748403240" expanded="true" signature="1228:1296" ph="select DISTI... competitor" />
-            <marker date="1508748403240" expanded="true" signature="1356:1445" ph="UPDATE compe... " />
-            <marker date="1508748403240" expanded="true" signature="1504:1591" ph="UPDATE compe... " />
-          </folding>
-=======
         <state relative-caret-position="264">
           <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
->>>>>>> div1
         </state>
       </provider>
     </entry>
@@ -1537,13 +1036,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-<<<<<<< HEAD
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/Competition.xml">
-=======
         </state>
       </provider>
     </entry>
@@ -1556,7 +1048,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/dao/RelationGenDao.java">
->>>>>>> div1
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
           <caret line="20" column="24" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="24" />
@@ -1567,7 +1058,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="20" column="54" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1599,88 +1089,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-<<<<<<< HEAD
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CompetitorAbility.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <marker date="1508748403237" expanded="true" signature="289:348" ph="select descr... competition" />
-            <marker date="1508748403237" expanded="true" signature="430:484" ph="UPDATE compe... " />
-            <marker date="1508748403237" expanded="true" signature="430:518" ph="UPDATE compe... " />
-            <marker date="1508748403237" expanded="true" signature="627:739" ph="select ${tag... competitorAbility_copy" />
-            <marker date="1508748403237" expanded="true" signature="866:959" ph="select compe... competitionleaderboard" />
-            <marker date="1508748403237" expanded="true" signature="866:1006" ph="select compe... competitionleaderboard" />
-            <marker date="1508748403237" expanded="true" signature="1108:1232" ph="select compe... competition" />
-            <marker date="1508748403237" expanded="true" signature="1325:1421" ph="select count... competitorAbility_copy" />
-            <marker date="1508748403237" expanded="true" signature="1513:1650" ph="insert into competitorAbility_copy... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/conf/mybatis-configuration.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="39" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/conf/spring-mybatis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1087">
-          <caret line="58" column="25" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
-=======
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/model/competitorAbility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="30" />
->>>>>>> div1
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/service/CompetitorAbility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#containsGraph#0;class#CompetitorAbility#0" expanded="false" />
-            <element signature="method#totalAbilityGen#0;class#CompetitorAbility#0" expanded="false" />
-            <element signature="method#eachCompetitionAbility#0;class#CompetitorAbility#0" expanded="false" />
-            <element signature="method#updateCompetitorAbilityScore#0;class#CompetitorAbility#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/conf/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="51" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/service/CompetitorRelation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="161" column="4" selection-start-line="161" selection-start-column="4" selection-end-line="161" selection-end-column="4" />
-          <folding>
-            <element signature="method#insertCollaborationRelation#0;class#CompetitorRelation#0" expanded="false" />
-            <element signature="method#updateRelation#0;class#CompetitorRelation#0" expanded="false" />
-            <element signature="method#insertOtherRelationTime#0;class#CompetitorRelation#0" expanded="false" />
-            <element signature="e#9784#9801#0" expanded="false" />
-          </folding>
-=======
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CompetitorAbility.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
@@ -1694,7 +1105,6 @@
         <state relative-caret-position="96">
           <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
           <folding />
->>>>>>> div1
         </state>
       </provider>
     </entry>
@@ -1702,179 +1112,59 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/dao/CompetitorAbilityDao.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="286">
-          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/dao/CompetitionDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/test-classes/cn/springmvc/test/getUserLanguageTest.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#1022#0" expanded="true" />
-=======
         <state relative-caret-position="840">
           <caret line="44" column="59" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
           <folding>
             <element signature="docComment;class#CompetitorAbilityDao#0" expanded="false" />
->>>>>>> div1
           </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/target/classes/conf/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/conf/mybatis-configuration.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="6" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2354">
-          <caret line="107" column="21" selection-start-line="107" selection-start-column="21" selection-end-line="107" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/conf/spring-mybatis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-763">
-          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/service/GetUserLanguage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/dao/IntimacyDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/springmvc/test/getUserLanguageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Assert.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="247" column="23" selection-start-line="247" selection-start-column="23" selection-end-line="247" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/dao/RelationGenDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="44" column="42" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/RelationGen.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="93" column="44" selection-start-line="93" selection-start-column="26" selection-end-line="93" selection-end-column="44" />
-          <folding>
-            <marker date="1509072140295" expanded="true" signature="290:361" ph="select teamM... competitionleaderboard" />
-            <marker date="1509072140295" expanded="true" signature="476:630" ph="select ${rel... competitorRelation" />
-            <marker date="1509072140295" expanded="true" signature="713:895" ph="insert into competitorRelation... " />
-            <marker date="1509072140295" expanded="true" signature="982:1122" ph="UPDATE compe... " />
-            <marker date="1509072140295" expanded="true" signature="1209:1349" ph="UPDATE compe... " />
-            <marker date="1509072140295" expanded="true" signature="1439:1570" ph="select count... competitorRelation" />
-            <marker date="1509072140295" expanded="true" signature="1660:1733" ph="SELECT discu... discussioncomment" />
-            <marker date="1509072140295" expanded="true" signature="1828:1885" ph="SELECT discu... discussion" />
-            <marker date="1509072140295" expanded="true" signature="1973:2052" ph="SELECT discu... discussionreply" />
-            <marker date="1509072140295" expanded="true" signature="2167:2260" ph="SELECT comme... ${tableName}" />
-            <marker date="1509072140295" expanded="true" signature="2346:2398" ph="SELECT kerne... kernelcomment" />
-            <marker date="1509072140295" expanded="true" signature="2482:2549" ph="SELECT kerne... kernelreply" />
-            <marker date="1509072140295" expanded="true" signature="2659:2705" ph="SELECT ${col... ${tableName}" />
-            <marker date="1509072140295" expanded="true" signature="2786:2872" ph="SELECT organ... organization" />
-            <marker date="1509072140295" expanded="true" signature="2959:3016" ph="SELECT count... organization" />
-            <marker date="1509072140295" expanded="true" signature="3423:3531" ph="SELECT * fro... competitorRelation" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/springmvc/test/getUserLanguageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
-          <folding>
-            <element signature="e#1301#1312#0" expanded="false" />
->>>>>>> div1
-          </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/springmvc/test/calculateIntimacyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/service/CompetitorIntimacy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2476">
-          <caret line="62" column="38" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
-          <folding>
-            <element signature="method#pairIntimacy#0;class#CompetitorIntimacy#0" expanded="false" />
-            <element signature="method#calcIntimacy#0;class#CompetitorIntimacy#0" expanded="false" />
-            <element signature="e#4853#4862#0" expanded="true" />
-            <element signature="e#4909#4917#0" expanded="true" />
-=======
+        <state relative-caret-position="836">
+          <caret line="44" column="54" selection-start-line="44" selection-start-column="54" selection-end-line="44" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/model/Competitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/service/Recommend.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="125" column="5" selection-start-line="125" selection-start-column="5" selection-end-line="125" selection-end-column="5" />
+        <state relative-caret-position="96">
+          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
           <folding>
             <element signature="docComment;class#Recommend#0" expanded="false" />
-            <element signature="e#1398#1415#0" expanded="true" />
             <element signature="e#2229#2238#0" expanded="true" />
-            <element signature="e#6853#6872#0" expanded="true" />
->>>>>>> div1
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/model/competitorAbility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cn/springmvc/test/getUserLanguageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>

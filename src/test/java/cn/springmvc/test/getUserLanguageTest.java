@@ -34,7 +34,23 @@ public class getUserLanguageTest {
     @Autowired
     private CompetitorAbilityDao competitorAbilityDao;
 
-//    @Test
+
+    @Test
+    public void main()
+    {
+        String[] tags = new String[]{"image", "tabular", "binary classification", "totalScore"};
+        recommend.getRecommendTeam(3757, 3, tags, 0.1, 0.3, 1.0, 0.1);
+    }
+
+    @Test
+    public void test()
+    {
+        System.out.println("test");
+    }
+
+
+
+    //    @Test
 //    public void testGetLanguages() throws Exception {
 //        //  getUserLanguage.getLanguages();
 //        //   competitorAbility.containsGraph();
@@ -53,19 +69,4 @@ public class getUserLanguageTest {
 //        //  competitorAbility.totalAbilityGen();
 //        //  competitorAbility.test();
 //    }
-
-
-    @Test
-    public void main()
-    {
-        String[] tags = new String[]{"image", "tabular", "binary classification", "totalScore"};
-        recommend.getRecommendTeam(3757, 3, tags, 0.1, 0.3, 1.0, 0.1);
-    }
-
-    @Test
-    public void test()
-    {
-        System.out.println("test");
-    }
-
 }
