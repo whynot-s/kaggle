@@ -16,6 +16,7 @@ import java.util.List;
 /**
  * Created by YLT on 2017/9/28.
  */
+
 @Service
 public class CompetitorAbility {
 
@@ -84,8 +85,7 @@ public class CompetitorAbility {
         }
         int Nteams = competition.getTeamsNum();
 
-        for (CompetitionLeaderboard leaderboardEach : leaderboards
-                ) {
+        for (CompetitionLeaderboard leaderboardEach : leaderboards) {
             if(leaderboardEach.getTeamMemberId().equals("")){
                 continue;
             }
