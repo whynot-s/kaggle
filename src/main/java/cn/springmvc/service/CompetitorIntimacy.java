@@ -187,5 +187,14 @@ public class CompetitorIntimacy {
 		}
 		return result/(teamIntimacy.length * (teamIntimacy.length - 1));
 	}
-	
+
+	//根据被推荐团队成员的ids，得到团队的亲密度
+	public double getTeamTotalIntimacy(String[] teamMembers){
+		int length = teamMembers.length;
+		double[][] graphWeights = new double[length][length];
+		double[][] teamIntimacy = new double[length][length];
+		loadGraphWeights(teamMembers,graphWeights);
+		calcTeamIntimacy(graphWeights,teamIntimacy);
+		return calcTeamTotalIntimacy(teamIntimacy);
+	}
 }

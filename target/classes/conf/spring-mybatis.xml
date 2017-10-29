@@ -12,7 +12,7 @@
                   value="jdbc:mysql://localhost:3306/kaggle?allowMultiQueries = true&amp;useUnicode=true&amp;characterEncoding=utf-8"/>
         <property name="username" value="root"/>
         <!-- <property name="password" value="123456"/> -->
-        <property name="password" value="whyNot0228"/>
+        <property name="password" value="123456"/>
 
         <!-- 配置初始化大小、最小、最大 -->
         <property name="initialSize" value="1"/>
