@@ -1,7 +1,6 @@
 package cn.springmvc.dao;
 
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Map;
@@ -11,7 +10,7 @@ import java.util.Map;
  */
 public interface RelationGenDao {
     List<String> getCollaborationRecord();
-    
+
     Integer getRelationTime(@Param("competitorId1") int competitorId1, @Param("competitorId2") int competitorId2, @Param("relationName") String relationName);
 
     void insertRelation(@Param("competitorId1") int competitorId1, @Param("competitorId2") int competitorId2, @Param("relationName") String relationName);
@@ -19,7 +18,7 @@ public interface RelationGenDao {
     void updateRelationTime(@Param("competitorId1") int competitorId1, @Param("competitorId2") int competitorId2, @Param("times") int times, @Param("relationName") String relationName);
 
     void updateIntimacy(@Param("competitorId1") int competitorId1, @Param("competitorId2") int competitorId2, @Param("times") double times, @Param("relationName") String relationName);
-    
+
     int recordExistOrNot(@Param("competitorId1") int competitorId1, @Param("competitorId2") int competitorId2);
 
     List<Map<String, Integer>> getDiscussionComment();
@@ -40,7 +39,7 @@ public interface RelationGenDao {
 
     Integer[] getOrganizationMemberNumber();
 
-    void insertMapIdToName(@Param("MAP") Map<Integer,String> MAP);
-    
+    void insertMapIdToName(@Param("MAP") Map<Integer, String> MAP);
+
     Map<String, Object> getAllRelationTime(@Param("competitorId1") int competitorId1, @Param("competitorId2") int competitorId2);
 }

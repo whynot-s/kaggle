@@ -34,7 +34,7 @@
         UPDATE competitorRelation set ${relationName} = ${times}
         WHERE competitorId1 = ${competitorId1} AND competitorId2 = ${competitorId2}
     </update>
-    
+
     <update id="updateIntimacy" statementType="STATEMENT">
         UPDATE competitorRelation set ${relationName} = ${times}
         WHERE competitorId1 = ${competitorId1} AND competitorId2 = ${competitorId2}
@@ -59,7 +59,7 @@
     </select>
 
     <select id="findCommenterId" resultType="java.lang.Integer" statementType="STATEMENT">
-        SELECT commenterId from ${tableName} WHERE ${columnName} = kaggle:kaggle-recommendation:jar:1.0-SNAPSHOT AND commentNo = ${commentNo}
+        SELECT commenterId from ${tableName} WHERE ${columnName} = ${Id} AND commentNo = ${commentNo}
     </select>
 
     <select id="getKernelComment" resultType="java.util.Map">
@@ -89,8 +89,8 @@
             (#{key},#{item})
         </foreach>
     </insert>
-    
+
     <select id="getAllRelationTime" resultType="java.util.Map">
-    		SELECT * from competitorRelation where competitorId1 = ${competitorId1} and competitorId2 = ${competitorId2}
+        SELECT * from competitorRelation where competitorId1 = ${competitorId1} and competitorId2 = ${competitorId2}
     </select>
 </mapper>

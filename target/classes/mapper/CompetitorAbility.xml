@@ -23,12 +23,40 @@
         where competitorId=${competitorId}
     </select>
 
+    <select id="getAllNotNullAbility" parameterType="String" resultType="cn.springmvc.model.Id_Tag"
+            statementType="STATEMENT">
+        select
+        competitorId,${tagName} tagScore
+        from
+        competitorAbility_copy
+        where ${tagName} != 0
+    </select>
+
+    <select id="getMaxTag" parameterType="String" resultType="Double">
+        select
+        max(${tagName})
+        from
+        competitorAbility_copy
+        where competitorId in ${list}
+    </select>
+
+
+    <select id="getCompetitorAbilityById" parameterType="int" resultType="cn.springmvc.model.CompetitorAbility">
+        select * from
+        competitorAbility_copy
+        where competitorId=${competitorId}
+    </select>
+
     <select id="getLeaderBoardByCompetitionId" resultType="cn.springmvc.model.CompetitionLeaderboard">
         select
-        competitionId,ranking,teamMemberId
+        competitionId,ranking
         from
         competitionleaderboard
         WHERE competitionId = #{competitionId}
+    </select>
+
+    <select id="getAllCompetitorAbility" resultType="cn.springmvc.model.CompetitorAbility">
+        select * from competitorAbility_copy
     </select>
 
     <select id="getCompetitions" resultType="cn.springmvc.model.Competition">
@@ -52,5 +80,11 @@
         ${competitorId},
         ${score})
     </insert>
+
+    <select id="getTeamAbility" parameterType="String" resultType="cn.springmvc.model.CompetitorAbility">
+        select * from
+        competitorAbility_copy
+        where competitorId in ${list}
+    </select>
 
 </mapper>
