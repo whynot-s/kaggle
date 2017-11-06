@@ -154,12 +154,6 @@ public class CompetitorRelation {
         }
     }
 
-
-    public void testes() {
-
-    }
-
-
     //完善leaderboard表时，为了获得人名与id之间的对应关系
     public void mapToId(){
 
@@ -200,6 +194,4 @@ public class CompetitorRelation {
             MAP.put(id, (String) map1.get(column2));
         }
     }
-
-
 }
