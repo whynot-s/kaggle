@@ -38,8 +38,9 @@ public class getUserLanguageTest {
     @Test
     public void main()
     {
-        String[] tags = new String[]{"image", "tabular", "binary classification", "totalScore"};
-        recommend.getRecommendTeam(3757, 2, tags, 0.1, 0.3, 1.0, 0.1);
+//        String[] tags = new String[]{"image", "tabular", "binary classification", "totalScore"};
+//        recommend.getRecommendTeam(3757, 2, tags, 0.1, 0.3, 1.0, 0.1);
+        System.out.println("hello");
     }
 
     @Test
