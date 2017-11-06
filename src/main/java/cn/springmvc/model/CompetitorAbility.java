@@ -1,7 +1,6 @@
 package cn.springmvc.model;
 
-public class competitorAbility
-{
+public class CompetitorAbility {
     private int competitorId;
     private String competitorName;
     private Double image;

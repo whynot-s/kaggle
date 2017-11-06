@@ -23,7 +23,8 @@
         where competitorId=${competitorId}
     </select>
 
-    <select id="getAllNotNullAbility" parameterType="String" resultType="cn.springmvc.model.Id_Tag" statementType="STATEMENT">
+    <select id="getAllNotNullAbility" parameterType="String" resultType="cn.springmvc.model.Id_Tag"
+            statementType="STATEMENT">
         select
         competitorId,${tagName} tagScore
         from
@@ -40,7 +41,7 @@
     </select>
 
 
-    <select id="getCompetitorAbilityById" parameterType="int" resultType="cn.springmvc.model.competitorAbility">
+    <select id="getCompetitorAbilityById" parameterType="int" resultType="cn.springmvc.model.CompetitorAbility">
         select * from
         competitorAbility_copy
         where competitorId=${competitorId}
@@ -54,7 +55,7 @@
         WHERE competitionId = #{competitionId}
     </select>
 
-    <select id="getAllCompetitorAbility" resultType="cn.springmvc.model.competitorAbility">
+    <select id="getAllCompetitorAbility" resultType="cn.springmvc.model.CompetitorAbility">
         select * from competitorAbility_copy
     </select>
 
@@ -80,7 +81,7 @@
         ${score})
     </insert>
 
-    <select id="getTeamAbility" parameterType="String" resultType="cn.springmvc.model.competitorAbility">
+    <select id="getTeamAbility" parameterType="String" resultType="cn.springmvc.model.CompetitorAbility">
         select * from
         competitorAbility_copy
         where competitorId in ${list}

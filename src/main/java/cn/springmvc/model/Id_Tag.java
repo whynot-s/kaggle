@@ -3,8 +3,7 @@ package cn.springmvc.model;
 /**
  * Created by wutiange on 2017/10/27.
  */
-public class Id_Tag
-{
+public class Id_Tag {
     private int competitorId;
     private double tagScore;
 

@@ -25,7 +25,7 @@ public class CompetitorRelation {
                 ) {
             //这里需要注意
             String[] members = record.split("&");
-            if(members.length > 1) {
+            if (members.length > 1) {
                 for (int i = 0; i < members.length - 1; i++) {
                     for (int j = i + 1; j < members.length; j++) {
                         updateRelation(Integer.parseInt(members[i]), Integer.parseInt(members[j]), "collaborationTime");
@@ -155,7 +155,7 @@ public class CompetitorRelation {
     }
 
     //完善leaderboard表时，为了获得人名与id之间的对应关系
-    public void mapToId(){
+    public void mapToId() {
 
         List<Map<String, Object>> competitor_2 = relationGenDao.getRelationMap("competitorId", "competitorName", "competitor_2");
         List<Map<String, Object>> competitor = relationGenDao.getRelationMap("competitorId", "competitorName", "competitor");

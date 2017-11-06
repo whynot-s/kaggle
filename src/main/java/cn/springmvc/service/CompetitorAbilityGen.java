@@ -18,7 +18,7 @@ import java.util.List;
  */
 
 @Service
-public class CompetitorAbility {
+public class CompetitorAbilityGen {
 
     @Autowired
     private CompetitorAbilityDao competitorAbilityDao;
@@ -39,7 +39,7 @@ public class CompetitorAbility {
         ArrayList<Competition> allCompetitions = competitorAbilityDao.getCompetitions();
         for (Competition competition : allCompetitions
                 ) {
-            if (competition.getCompetitionStatus().equals("closed") && !competition.getCompetitionType().equals("playground") && !competition.getCompetitionType().equals("getting started")&& !competition.getTag1().equals("")) {
+            if (competition.getCompetitionStatus().equals("closed") && !competition.getCompetitionType().equals("playground") && !competition.getCompetitionType().equals("getting started") && !competition.getTag1().equals("")) {
                 System.out.println(competition.getCompetitionId());
                 eachCompetitionAbility(competition);
             }
@@ -53,9 +53,9 @@ public class CompetitorAbility {
         //获取一个竞赛的所有标签集合
         List<String> tag1sMid = Arrays.asList(competition.getTag1().split(";"));
         List<String> tag1s = new ArrayList<String>();
-        for (String tag1:tag1sMid
-             ) {
-            if(tag1.contains(" ")){
+        for (String tag1 : tag1sMid
+                ) {
+            if (tag1.contains(" ")) {
                 tag1 = "`" + tag1 + "`";
             }
             System.out.println(tag1);
@@ -63,10 +63,10 @@ public class CompetitorAbility {
         }
         List<String> tag2sMid = Arrays.asList(competition.getTag2().split(";"));
         List<String> tag2s = new ArrayList<String>();
-        for (String tag2:tag2sMid
-             ) {
-            if(tag2.contains(" ")){
-                tag2 = "`" + tag2 +"`";
+        for (String tag2 : tag2sMid
+                ) {
+            if (tag2.contains(" ")) {
+                tag2 = "`" + tag2 + "`";
             }
             System.out.println(tag2);
             tag2s.add(tag2);
@@ -86,7 +86,7 @@ public class CompetitorAbility {
         int Nteams = competition.getTeamsNum();
 
         for (CompetitionLeaderboard leaderboardEach : leaderboards) {
-            if(leaderboardEach.getTeamMemberId().equals("")){
+            if (leaderboardEach.getTeamMemberId().equals("")) {
                 continue;
             }
             String[] members = leaderboardEach.getTeamMemberId().split("&");
@@ -102,27 +102,27 @@ public class CompetitorAbility {
                 for (String tag : tag1s
                         ) {
                     double score1 = score / Math.sqrt(tag1s.size());
-                    updateCompetitorAbilityScore(memberId,tag,score1);
+                    updateCompetitorAbilityScore(memberId, tag, score1);
                 }
                 for (String tag : tag2s
                         ) {
                     double score2 = score / Math.sqrt(tag2s.size());
-                    updateCompetitorAbilityScore(memberId,tag,score2);
+                    updateCompetitorAbilityScore(memberId, tag, score2);
                 }
-                updateCompetitorAbilityScore(memberId,"totalScore",score);
+                updateCompetitorAbilityScore(memberId, "totalScore", score);
             }
         }
         System.out.println(competition.getCompetitionId() + "end");
     }
 
-    public void updateCompetitorAbilityScore(int competitorId,String tagName,double score ){
-        if(competitorAbilityDao.userRecordExitOrNot(competitorId) == 0){
-            competitorAbilityDao.insertUserAbilityRecord(competitorId,tagName,score);
-        }else{
+    public void updateCompetitorAbilityScore(int competitorId, String tagName, double score) {
+        if (competitorAbilityDao.userRecordExitOrNot(competitorId) == 0) {
+            competitorAbilityDao.insertUserAbilityRecord(competitorId, tagName, score);
+        } else {
             Double preScore = competitorAbilityDao.getCompetitorAbility(competitorId, tagName);
-            if(preScore == null){
-                competitorAbilityDao.updateAbility(competitorId, tagName, score );
-            }else {
+            if (preScore == null) {
+                competitorAbilityDao.updateAbility(competitorId, tagName, score);
+            } else {
                 competitorAbilityDao.updateAbility(competitorId, tagName, score + preScore);
             }
         }
