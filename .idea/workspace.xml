@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56a70c35-45d3-4d10-b1da-8689b6a0ce5c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/Competition.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/Competition.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/model/CompetitionLeaderboard.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/model/CompetitionLeaderboard.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/springmvc/service/GetUserLanguage.class" afterPath="$PROJECT_DIR$/target/classes/cn/springmvc/service/GetUserLanguage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/cn/springmvc/test/getUserLanguageTest.class" afterPath="$PROJECT_DIR$/target/test-classes/cn/springmvc/test/getUserLanguageTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/springmvc/dao/UserLanguageDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/springmvc/dao/UserLanguageDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/springmvc/model/Competition.java" afterPath="$PROJECT_DIR$/src/main/java/cn/springmvc/model/Competition.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/springmvc/model/CompetitionLeaderboard.java" afterPath="$PROJECT_DIR$/src/main/java/cn/springmvc/model/CompetitionLeaderboard.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/springmvc/service/GetUserLanguage.java" afterPath="$PROJECT_DIR$/src/main/java/cn/springmvc/service/GetUserLanguage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/Competition.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/Competition.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/Kernel.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/Kernel.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/cn/springmvc/test/getUserLanguageTest.java" afterPath="$PROJECT_DIR$/src/test/java/cn/springmvc/test/getUserLanguageTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/Competition.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/Competition.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/Kernel.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/Kernel.xml" />
     </list>
     <ignored path="kaggle.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,27 +37,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RelationGen.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/RelationGen.xml">
+      <file leaf-file-name="IntimacyDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/dao/IntimacyDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="924">
-              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding>
-                <marker date="1508241897491" expanded="true" signature="290:361" ph="select teamM... competitionleaderboard" />
-                <marker date="1508241897491" expanded="true" signature="476:630" ph="select ${rel... competitorRelation" />
-                <marker date="1508241897491" expanded="true" signature="713:895" ph="insert into competitorRelation... " />
-                <marker date="1508241897491" expanded="true" signature="982:1122" ph="UPDATE compe... " />
-                <marker date="1508241897491" expanded="true" signature="1212:1343" ph="select count... competitorRelation" />
-                <marker date="1508241897491" expanded="true" signature="1433:1506" ph="SELECT discu... discussioncomment" />
-                <marker date="1508241897491" expanded="true" signature="1601:1658" ph="SELECT discu... discussion" />
-                <marker date="1508241897491" expanded="true" signature="1746:1825" ph="SELECT discu... discussionreply" />
-                <marker date="1508241897491" expanded="true" signature="1940:2033" ph="SELECT comme... ${tableName}" />
-                <marker date="1508241897491" expanded="true" signature="2119:2171" ph="SELECT kerne... kernelcomment" />
-                <marker date="1508241897491" expanded="true" signature="2255:2322" ph="SELECT kerne... kernelreply" />
-                <marker date="1508241897491" expanded="true" signature="2432:2478" ph="SELECT ${col... ${tableName}" />
-                <marker date="1508241897491" expanded="true" signature="2559:2645" ph="SELECT organ... organization" />
-                <marker date="1508241897491" expanded="true" signature="2732:2789" ph="SELECT count... organization" />
-              </folding>
+            <state relative-caret-position="154">
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompetitorIntimacy.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/service/CompetitorIntimacy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="792">
+              <caret line="189" column="4" selection-start-line="189" selection-start-column="4" selection-end-line="189" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -81,39 +63,13 @@
             <state relative-caret-position="528">
               <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding>
-                <marker date="1508295752101" expanded="true" signature="289:348" ph="select descr... competition" />
-                <marker date="1508295752101" expanded="true" signature="430:484" ph="UPDATE compe... " />
-                <marker date="1508295752101" expanded="true" signature="430:518" ph="UPDATE compe... " />
-                <marker date="1508295752101" expanded="true" signature="627:739" ph="select ${tag... competitorAbility_copy" />
-                <marker date="1508295752101" expanded="true" signature="866:959" ph="select compe... competitionleaderboard" />
-                <marker date="1508295752101" expanded="true" signature="866:1006" ph="select compe... competitionleaderboard" />
-                <marker date="1508295752101" expanded="true" signature="1108:1232" ph="select compe... competition" />
-                <marker date="1508295752101" expanded="true" signature="1325:1421" ph="select count... competitorAbility_copy" />
-                <marker date="1508295752101" expanded="true" signature="1513:1650" ph="insert into competitorAbility_copy... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CompetitorAbilityDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/dao/CompetitorAbilityDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getUserLanguageTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/cn/springmvc/test/getUserLanguageTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="false" />
+                <marker date="1508748403237" expanded="true" signature="289:348" ph="select descr... competition" />
+                <marker date="1508748403237" expanded="true" signature="430:518" ph="UPDATE compe... " />
+                <marker date="1508748403237" expanded="true" signature="627:739" ph="select ${tag... competitorAbility_copy" />
+                <marker date="1508748403237" expanded="true" signature="866:1006" ph="select compe... competitionleaderboard" />
+                <marker date="1508748403237" expanded="true" signature="1108:1232" ph="select compe... competition" />
+                <marker date="1508748403237" expanded="true" signature="1325:1421" ph="select count... competitorAbility_copy" />
+                <marker date="1508748403237" expanded="true" signature="1513:1650" ph="insert into competitorAbility_copy... " />
               </folding>
             </state>
           </provider>
@@ -143,7 +99,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/model/Dataset.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/model/KernelComment.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/model/KernelFork.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/model/KernelReply.java" />
@@ -194,6 +149,7 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/dao/CompetitorAbilityDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/CompetitorAbility.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/service/CompetitorAbility.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/springmvc/service/CompetitorIntimacy.java" />
       </list>
     </option>
   </component>
@@ -274,7 +230,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -601,8 +557,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1414,6 +1370,7 @@
       <workItem from="1506649900334" duration="88848000" />
       <workItem from="1508295500539" duration="12501000" />
       <workItem from="1508650332515" duration="1975000" />
+      <workItem from="1509934471553" duration="42000" />
     </task>
     <servers />
   </component>
@@ -1450,7 +1407,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169402000" />
+    <option name="totallyTimeSpent" value="169444000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -1462,8 +1419,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38941798" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23703703" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1534,14 +1491,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/model/DiscussionComment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/springmvc/test/UserServiceImplTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/model/DiscussionReply.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1553,13 +1502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/model/FollowRelation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -1730,15 +1672,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <marker date="1507619169203" expanded="true" signature="689:759" ph="select from proc_getfuneral_info" />
-            <marker date="1507619169203" expanded="true" signature="689:809" ph="select kerne... kernel" />
-            <marker date="1507619169203" expanded="true" signature="920:999" ph="select * fro... kernel" />
-            <marker date="1507619169203" expanded="true" signature="1079:1149" ph="select DISTI... competitor_2" />
-            <marker date="1507619169203" expanded="true" signature="1228:1296" ph="select DISTI... competitor" />
-            <marker date="1507619169203" expanded="true" signature="1356:1445" ph="UPDATE compe... " />
-            <marker date="1507619169203" expanded="true" signature="1504:1591" ph="UPDATE compe... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1844,8 +1778,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/dao/CompetitorAbilityDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2354">
+          <caret line="107" column="21" selection-start-line="107" selection-start-column="21" selection-end-line="107" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/model/FollowRelation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#226#227#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1855,34 +1813,39 @@
         <state relative-caret-position="528">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <marker date="1508295752101" expanded="true" signature="289:348" ph="select descr... competition" />
-            <marker date="1508295752101" expanded="true" signature="430:484" ph="UPDATE compe... " />
-            <marker date="1508295752101" expanded="true" signature="430:518" ph="UPDATE compe... " />
-            <marker date="1508295752101" expanded="true" signature="627:739" ph="select ${tag... competitorAbility_copy" />
-            <marker date="1508295752101" expanded="true" signature="866:959" ph="select compe... competitionleaderboard" />
-            <marker date="1508295752101" expanded="true" signature="866:1006" ph="select compe... competitionleaderboard" />
-            <marker date="1508295752101" expanded="true" signature="1108:1232" ph="select compe... competition" />
-            <marker date="1508295752101" expanded="true" signature="1325:1421" ph="select count... competitorAbility_copy" />
-            <marker date="1508295752101" expanded="true" signature="1513:1650" ph="insert into competitorAbility_copy... " />
+            <marker date="1508748403237" expanded="true" signature="289:348" ph="select descr... competition" />
+            <marker date="1508748403237" expanded="true" signature="430:518" ph="UPDATE compe... " />
+            <marker date="1508748403237" expanded="true" signature="627:739" ph="select ${tag... competitorAbility_copy" />
+            <marker date="1508748403237" expanded="true" signature="866:1006" ph="select compe... competitionleaderboard" />
+            <marker date="1508748403237" expanded="true" signature="1108:1232" ph="select compe... competition" />
+            <marker date="1508748403237" expanded="true" signature="1325:1421" ph="select count... competitorAbility_copy" />
+            <marker date="1508748403237" expanded="true" signature="1513:1650" ph="insert into competitorAbility_copy... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/dao/CompetitorAbilityDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/RelationGen.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+        <state relative-caret-position="424">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <marker date="1509072140295" expanded="true" signature="290:361" ph="select teamM... competitionleaderboard" />
+            <marker date="1509072140295" expanded="true" signature="476:630" ph="select ${rel... competitorRelation" />
+            <marker date="1509072140295" expanded="true" signature="713:895" ph="insert into competitorRelation... " />
+            <marker date="1509072140295" expanded="true" signature="982:1122" ph="UPDATE compe... " />
+            <marker date="1509072140295" expanded="true" signature="1209:1349" ph="UPDATE compe... " />
+            <marker date="1509072140295" expanded="true" signature="1439:1570" ph="select count... competitorRelation" />
+            <marker date="1509072140295" expanded="true" signature="1660:1733" ph="SELECT discu... discussioncomment" />
+            <marker date="1509072140295" expanded="true" signature="1828:1885" ph="SELECT discu... discussion" />
+            <marker date="1509072140295" expanded="true" signature="1973:2052" ph="SELECT discu... discussionreply" />
+            <marker date="1509072140295" expanded="true" signature="2167:2260" ph="SELECT comme... ${tableName}" />
+            <marker date="1509072140295" expanded="true" signature="2346:2398" ph="SELECT kerne... kernelcomment" />
+            <marker date="1509072140295" expanded="true" signature="2482:2549" ph="SELECT kerne... kernelreply" />
+            <marker date="1509072140295" expanded="true" signature="2659:2705" ph="SELECT ${col... ${tableName}" />
+            <marker date="1509072140295" expanded="true" signature="2786:2872" ph="SELECT organ... organization" />
+            <marker date="1509072140295" expanded="true" signature="2959:3016" ph="SELECT count... organization" />
+            <marker date="1509072140295" expanded="true" signature="3423:3531" ph="SELECT * fro... competitorRelation" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2354">
-          <caret line="107" column="21" selection-start-line="107" selection-start-column="21" selection-end-line="107" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1896,26 +1859,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/RelationGen.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/dao/IntimacyDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <marker date="1508241897491" expanded="true" signature="290:361" ph="select teamM... competitionleaderboard" />
-            <marker date="1508241897491" expanded="true" signature="476:630" ph="select ${rel... competitorRelation" />
-            <marker date="1508241897491" expanded="true" signature="713:895" ph="insert into competitorRelation... " />
-            <marker date="1508241897491" expanded="true" signature="982:1122" ph="UPDATE compe... " />
-            <marker date="1508241897491" expanded="true" signature="1212:1343" ph="select count... competitorRelation" />
-            <marker date="1508241897491" expanded="true" signature="1433:1506" ph="SELECT discu... discussioncomment" />
-            <marker date="1508241897491" expanded="true" signature="1601:1658" ph="SELECT discu... discussion" />
-            <marker date="1508241897491" expanded="true" signature="1746:1825" ph="SELECT discu... discussionreply" />
-            <marker date="1508241897491" expanded="true" signature="1940:2033" ph="SELECT comme... ${tableName}" />
-            <marker date="1508241897491" expanded="true" signature="2119:2171" ph="SELECT kerne... kernelcomment" />
-            <marker date="1508241897491" expanded="true" signature="2255:2322" ph="SELECT kerne... kernelreply" />
-            <marker date="1508241897491" expanded="true" signature="2432:2478" ph="SELECT ${col... ${tableName}" />
-            <marker date="1508241897491" expanded="true" signature="2559:2645" ph="SELECT organ... organization" />
-            <marker date="1508241897491" expanded="true" signature="2732:2789" ph="SELECT count... organization" />
-          </folding>
+        <state relative-caret-position="154">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/springmvc/service/CompetitorIntimacy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="189" column="4" selection-start-line="189" selection-start-column="4" selection-end-line="189" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
