@@ -3,17 +3,18 @@ package cn.springmvc.dao;
 import cn.springmvc.model.Competition;
 import cn.springmvc.model.CompetitionLeaderboard;
 import cn.springmvc.model.CompetitorAbility;
-import cn.springmvc.model.Id_Tag;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 
 /**
  * Created by YLT on 2017/9/28.
  */
-public interface CompetitorAbilityDao {
+public interface CompetitorAbilityDao
+{
     List<String> getDescriptions();
 
     void updateAbility(@Param("competitorId") int competitorId, @Param("tagName") String tagName, @Param("score") double score);
@@ -34,8 +35,9 @@ public interface CompetitorAbilityDao {
 
     Double getMaxTag(@Param("list") String list, @Param("tagName") String tagName);
 
+
     //获取对应技能非空的所有人和能力值的集合
-    ArrayList<Id_Tag> getAllNotNullAbility(@Param("tagName") String tagName);
+    List<Map<String, Object>> getAllNotNullAbility2(@Param("tagName") String tagName);
 
     //获取某个人的所有技能
     CompetitorAbility getCompetitorAbilityById(@Param("competitorId") int competitorId);
