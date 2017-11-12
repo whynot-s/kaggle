@@ -1,3 +1,4 @@
 /target/
 .idea
 kaggle-recommendation.iml
+/src/main/resources/conf/
