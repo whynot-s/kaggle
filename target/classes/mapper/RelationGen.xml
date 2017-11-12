@@ -91,6 +91,6 @@
     </insert>
 
     <select id="getAllRelationTime" resultType="java.util.Map">
-        SELECT * from competitorRelation where competitorId1 = ${competitorId1} and competitorId2 = ${competitorId2}
+    		SELECT * from competitorRelation where competitorId1 = ${competitorId1} and competitorId2 = ${competitorId2}
     </select>
 </mapper>

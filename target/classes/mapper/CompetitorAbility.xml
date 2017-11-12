@@ -23,8 +23,7 @@
         where competitorId=${competitorId}
     </select>
 
-    <select id="getAllNotNullAbility" parameterType="String" resultType="cn.springmvc.model.Id_Tag"
-            statementType="STATEMENT">
+    <select id="getAllNotNullAbility2" parameterType="String" resultType="java.util.Map" statementType="STATEMENT">
         select
         competitorId,${tagName} tagScore
         from

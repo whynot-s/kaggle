@@ -2,7 +2,6 @@ package cn.springmvc.service;
 
 import cn.springmvc.dao.CompetitorAbilityDao;
 import cn.springmvc.model.CompetitorAbility;
-import cn.springmvc.model.Id_Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,24 +17,31 @@ public class Recommend {
     @Autowired
     private CompetitorAbilityDao competitorAbilityDao;
 
+    @Autowired
+    private CompetitorIntimacy intimacy;
+
     private String[] tagName = {"`image`", "`text`", "tabular", "`waft`", "`audio`", "`time series`", "`graph`", "`adversarial learning`", "`binary classification`", "`forecasting`", "`multiclass classification`", "`object identification`", "`object detection`", "`regression`", "`duplicate detection`", "`artificial intelligence`", "`object segmentation`", "`object labeling`", "`optimization`", "`ranking`", "`totalScore`"};
-    private int[] book = new int[10];                                          //组合数标记数组
-    private int stuId;
-    private Double maxSum = new Double(0);
+    private int[] book = new int[10];                                          //存储 组合数 数组
+    private int stuId;                                                         //被推荐的人
+    private Double maxSum = new Double(0);                                     // 最优的团队收益度的和
     private String t = "";                                                      //推荐结果
     private ArrayList<CompetitorAbility> allList = null;
-    private HashMap<Integer, CompetitorAbility> map = new HashMap<Integer, CompetitorAbility>();         //竞赛ID-->竞赛对象
+    private HashMap<Integer, CompetitorAbility> map = new HashMap<Integer, CompetitorAbility>();   //竞赛ID-->竞赛对象
     private HashMap<String, Integer> tag = new HashMap<String, Integer>();      //标记竞赛是否需要包含
     private Double tag1rate = 0.0;
     private Double tag2rate = 0.0;
     private Double totalrate = 0.0;
+    private Double intimacyLimits = 0.0;                          //亲密度下限
+
     //测试性能
     private Double time = 0.0;
     private int count = 0;
 
     //range能力相近的上下选择的比例，range>0 && range<=1
-    //要求传入的tags的length和tag的个数相同，也就是用split来生成tags，不要new
-    public String getRecommendTeam(int userId, int teamsize, String[] tags, Double range, Double tag1Rate, Double tag2Rate, Double totalScoreRate) {
+    //注意：tags.length和tag的个数相同，也就是用split来生成tags
+    //userId 被推荐的人
+    //teamsize 团队规模
+    public String getRecommendTeam(int userId, int teamsize, String[] tags, Double range, Double tag1Rate, Double tag2Rate, Double totalScoreRate,Double intimacyLimit) {
         allList = competitorAbilityDao.getAllCompetitorAbility();
         for (int i = 0; i < allList.size(); i++) {
             map.put(allList.get(i).getCompetitorId(), allList.get(i));
@@ -47,6 +53,7 @@ public class Recommend {
         tag2rate = tag2Rate;
         totalrate = totalScoreRate;
         stuId = userId;
+        intimacyLimits = intimacyLimit;
 
         HashSet<Integer> result = new HashSet<Integer>();       //能力相近的人的集合
 
@@ -55,40 +62,34 @@ public class Recommend {
                 System.out.println(tagName[i]);
                 Double score = competitorAbilityDao.getCompetitorAbility(userId, tagName[i]);
                 if (score != null) {
-                    ArrayList<Id_Tag> list = competitorAbilityDao.getAllNotNullAbility(tagName[i]);
+                    List<Map<String,Object>> list = competitorAbilityDao.getAllNotNullAbility2(tagName[i]);
                     int len = list.size();
-                    Id_Tag flesh = new Id_Tag();
-                    flesh.setCompetitorId(userId);
-                    flesh.setTagScore(score);
-
                     Collections.sort(list, new cmp());
                     //这里可以改成二分查找
                     int loc = -1;
                     for (int j = 0; j < len; j++) {
-                        if (Math.abs(list.get(j).getTagScore() - score) < 0.00000001)
+                        if (Math.abs((Double)list.get(j).get("tagScore") - score) < 0.00000001)
                             loc = j;
                     }
                     for (int j = loc + 1; j < len && j < loc + (int) (len * range); j++) {
-                        result.add(list.get(j).getCompetitorId());
+                        result.add((Integer) list.get(j).get("competitorId"));
                     }
                     for (int j = loc - 1; j >= 0 && j > loc - (int) (len * range); j--) {
-                        result.add(list.get(j).getCompetitorId());
+                        result.add((Integer) list.get(j).get("competitorId"));
                     }
                 }
             }
         }
         System.out.println(result.size());
-        int[] results = new int[result.size() + 10];
+        int[] results = new int[result.size() + 10];        //把能力相近的集合转为数组，方便后面处理
         int i = 0;
         Iterator<Integer> iter = result.iterator();
         while (iter.hasNext()) {
             results[i++] = iter.next();
         }
         Long start = System.currentTimeMillis();
-        System.out.println("init: 1s到1.5s (相近人在11980的耗时)");
         dfs(results, teamsize - 1, 0, 0, result.size());
         System.out.println("dfs:" + (System.currentTimeMillis() - start) / 1000.0);
-        System.out.println("getTeamAbility:30s (相近人在11980的耗时)");
         System.out.println("res.add(map.get(Integer.parseInt(str[i]))) :" + time);
         System.out.println("count:" + count);
         //综上，结论：没有耗时的单步但是遍历的量太大（近亿级）
@@ -96,22 +97,24 @@ public class Recommend {
         return t;
     }
 
-    //这里的teamsize是组队人数-1，有一个人已经定了
+    //result 能力相近的人的集合
+    //这里的teamsize是团队规模-1，被推荐者确定在结果中
     //生成组合数序列
     private void dfs(int[] result, int teamsize, int level, int cur, int n) {
         if (level == teamsize) {
-            String team = "(";
+            String team = "(";                          //表示一种可能的团队组合情况
+            String [] teams = new String[teamsize+1];
             for (int i = 0; i < teamsize; i++) {
                 team += result[book[i] - 1] + ",";
+                teams[i] = String.valueOf(result[book[i] - 1]);
             }
             team += stuId;
             team += ")";
-            count++;
+            teams[teamsize] = String.valueOf(stuId);
             ArrayList<CompetitorAbility> list = getTeamAbility(team);
-            if (Qinmi(book)) {
-//                Long start = System.currentTimeMillis();
+            if (Qinmi(teams)) {
+                count++;
                 UpdateProfit(team, teamsize, list);
-//                time += (System.currentTimeMillis()-start)/1000.0;
             }
             return;
         }
@@ -122,21 +125,25 @@ public class Recommend {
     }
 
     //亲密度
-    private boolean Qinmi(int[] book) {
-        return true;
+    private boolean Qinmi(String []teams) {
+        //函数返回值越小，亲密度越高
+        return intimacy.getTeamTotalIntimacy(teams) <= intimacyLimits;
     }
 
-    //这里的teamsize没有包括自己,list就是这几个人的能力
+    //team 团队成员
+    // 这里的teamsize是团队规模-1，被推荐者确定在结果中
+    // list存储这几个人的能力模型
     private void UpdateProfit(String team, int teamsize, ArrayList<CompetitorAbility> list) {
         Double sum = new Double(0);
-        PersonAbility[] persons = new PersonAbility[teamsize + 2];
+        PersonAbility[] persons = new PersonAbility[teamsize + 2];      //团队中的人的能力模型 转化为 数组，方便后面处理
         for (int i = 0; i < teamsize + 1; i++) {
-            persons[i] = new PersonAbility(list.get(i));
+            persons[i] = new PersonAbility(list.get(i));                //转化
         }
+
 
         for (int i = 0; i < tagName.length; i++) {
             if (tag.containsKey(tagName[i])) {
-                //找最大值
+                //找某个tag的最大值
                 Double max = new Double(0);
                 for (int j = 0; j < teamsize + 1; j++) {
                     if (persons[j].tag[i] == null)
@@ -162,8 +169,8 @@ public class Recommend {
         //更新最大值和团队
         if (sum > maxSum) {
             maxSum = sum;
-            t = team;
-            System.out.println(t);
+            t = team;                       //更新team结果
+            System.out.println(t);          //中间结果输出
         }
     }
 
@@ -173,7 +180,7 @@ public class Recommend {
         String[] str = team.substring(1, team.length() - 1).split(",");
         Long start = System.currentTimeMillis();
         for (int i = 0; i < str.length; i++) {
-            res.add(map.get(Integer.parseInt(str[i])));
+            res.add(map.get(Integer.parseInt(str[i])));                     //map的唯一使用，其实这个也可以转化为在mapper那里返回Map
         }
         time += (System.currentTimeMillis() - start) / 1000.0;
         return res;
@@ -181,9 +188,10 @@ public class Recommend {
 
 }
 
-class cmp implements Comparator<Id_Tag> {
-    public int compare(Id_Tag o1, Id_Tag o2) {
-        return o1.getTagScore() >= o2.getTagScore() ? 1 : -1;
+class cmp implements Comparator<Map<String,Object>>{
+
+    public int compare(Map<String, Object> o1, Map<String, Object> o2) {
+        return (Double)o1.get("tagScore") >= (Double)o2.get("tagScore")?1:-1;
     }
 }
 
