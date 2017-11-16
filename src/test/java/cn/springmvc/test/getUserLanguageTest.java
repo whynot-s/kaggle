@@ -36,11 +36,12 @@ public class getUserLanguageTest {
     @Test
     public void main() {
         String[] tags = new String[]{"image", "tabular", "binary classification", "totalScore"};
-        recommend.getRecommendTeam(3757, 2, tags, 0.1, 0.3, 1.0, 0.1,4.0);
+        recommend.getRecommendTeam(3757, 3, tags, 0.1, 0.3, 1.0, 0.1,4.0);
     }
 
     @Test
     public void test() {
-        System.out.println("test");
+        int [] test = new int[5];
+        System.out.println(test.length);
     }
 }
