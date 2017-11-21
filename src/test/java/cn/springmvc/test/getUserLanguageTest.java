@@ -41,6 +41,7 @@ public class getUserLanguageTest {
 
     @Test
     public void test() {
-        System.out.println("test");
+        int [] test = new int[5];
+        System.out.println(test.length);
     }
 }

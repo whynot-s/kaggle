@@ -25,6 +25,36 @@ public class CompetitorAbility {
     private Double ranking;
     private Double totalScore;
 
+<<<<<<< HEAD
+=======
+    public Double getScoreByTagName(String tagName){
+        if (tagName.equals("image"))    return getImage();
+        else if (tagName.equals("text"))  return getText();
+        else if (tagName.equals("tabular")) return getTabular();
+        else if (tagName.equals("waft"))  return getWaft();
+        else if (tagName.equals("audio")) return getAudio();
+        else if (tagName.equals("time series"))   return getTime_series();
+        else if (tagName.equals("graph")) return getGraph();
+        else if (tagName.equals("adversarial learning"))  return getAdversarial_learning();
+        else if (tagName.equals("binary classification")) return getBinary_classification();
+        else if (tagName.equals("forecasting"))   return getForecasting();
+        else if (tagName.equals("multiclass classification")) return getMulticlass_classification();
+        else if (tagName.equals("object identification")) return getObject_identification();
+        else if (tagName.equals("object detection"))  return getObject_detection();
+        else if (tagName.equals("regression"))    return getRegression();
+        else if (tagName.equals("duplicate detection"))   return getDuplicate_detection();
+        else if (tagName.equals("artificial intelligence"))   return getArtificial_intelligence();
+        else if (tagName.equals("object segmentation"))   return getObject_segmentation();
+        else if (tagName.equals("object labeling"))   return getObject_labeling();
+        else if (tagName.equals("optimization"))  return getOptimization();
+        else if (tagName.equals("ranking"))   return getRanking();
+        else if (tagName.equals("totalScore"))    return getTotalScore();
+        else{
+            System.out.println("wrong tagName :"+tagName);
+            return 0.0;
+        }
+    }
+>>>>>>> 2087f6daec2761d61af9963aff428b0273c9d52e
 
     public Double getObject_detection() {
         return object_detection;
