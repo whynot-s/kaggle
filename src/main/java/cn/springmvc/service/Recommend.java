@@ -25,8 +25,8 @@ public class Recommend {
     private int stuId;                                                         //被推荐的人
     private Double maxSum = new Double(0);                                     // 最优的团队收益度的和
     private String t = "";                                                      //推荐结果
-    private ArrayList<CompetitorAbility> allList = null;
-    private HashMap<Integer, CompetitorAbility> map = new HashMap<Integer, CompetitorAbility>();   //竞赛ID-->竞赛对象
+    private ArrayList<CompetitorAbility> allUserAbilityList = null;             //人的能力列表
+    private HashMap<Integer, CompetitorAbility> allUserAbilityMap = new HashMap<Integer, CompetitorAbility>();   //人的能力map，id-->ability
     private HashMap<String, Integer> tag = new HashMap<String, Integer>();      //标记竞赛是否需要包含
     private Double tag1rate = 0.0;
     private Double tag2rate = 0.0;
@@ -42,9 +42,9 @@ public class Recommend {
     //userId 被推荐的人
     //teamsize 团队规模
     public String getRecommendTeam(int userId, int teamsize, String[] tags, Double range, Double tag1Rate, Double tag2Rate, Double totalScoreRate,Double intimacyLimit) {
-        allList = competitorAbilityDao.getAllCompetitorAbility();
-        for (int i = 0; i < allList.size(); i++) {
-            map.put(allList.get(i).getCompetitorId(), allList.get(i));
+        allUserAbilityList = competitorAbilityDao.getAllCompetitorAbility();
+        for (int i = 0; i < allUserAbilityList.size(); i++) {
+            allUserAbilityMap.put(allUserAbilityList.get(i).getCompetitorId(), allUserAbilityList.get(i));
         }
         for (int i = 0; i < tags.length; i++) {
             tag.put(tags[i], 1);
@@ -56,7 +56,9 @@ public class Recommend {
         intimacyLimits = intimacyLimit;
 
         HashSet<Integer> result = new HashSet<Integer>();       //能力相近的人的集合
+        for(String eachTag:tags){
 
+        }
         for (int i = 0; i < tagName.length; i++) {
             if (tag.containsKey(tagName[i])) {
                 System.out.println(tagName[i]);
@@ -90,7 +92,7 @@ public class Recommend {
         Long start = System.currentTimeMillis();
         dfs(results, teamsize - 1, 0, 0, result.size());
         System.out.println("dfs:" + (System.currentTimeMillis() - start) / 1000.0);
-        System.out.println("res.add(map.get(Integer.parseInt(str[i]))) :" + time);
+        System.out.println("res.add(allUserAbilityMap.get(Integer.parseInt(str[i]))) :" + time);
         System.out.println("count:" + count);
         //综上，结论：没有耗时的单步但是遍历的量太大（近亿级）
         System.out.println("result is " + t);
@@ -136,11 +138,8 @@ public class Recommend {
     private void UpdateProfit(String team, int teamsize, ArrayList<CompetitorAbility> list) {
         Double sum = new Double(0);
         PersonAbility[] persons = new PersonAbility[teamsize + 2];      //团队中的人的能力模型 转化为 数组，方便后面处理
-        for (int i = 0; i < teamsize + 1; i++) {
-            persons[i] = new PersonAbility(list.get(i));                //转化
-        }
-
-
+        persons = (PersonAbility[]) list.toArray();
+        
         for (int i = 0; i < tagName.length; i++) {
             if (tag.containsKey(tagName[i])) {
                 //找某个tag的最大值
@@ -180,7 +179,7 @@ public class Recommend {
         String[] str = team.substring(1, team.length() - 1).split(",");
         Long start = System.currentTimeMillis();
         for (int i = 0; i < str.length; i++) {
-            res.add(map.get(Integer.parseInt(str[i])));                     //map的唯一使用，其实这个也可以转化为在mapper那里返回Map
+            res.add(allUserAbilityMap.get(Integer.parseInt(str[i])));                     //allUserAbilityMap的唯一使用，其实这个也可以转化为在allUserAbilityMapper那里返回Map
         }
         time += (System.currentTimeMillis() - start) / 1000.0;
         return res;

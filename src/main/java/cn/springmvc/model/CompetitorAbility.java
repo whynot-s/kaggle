@@ -25,6 +25,7 @@ public class CompetitorAbility {
     private Double ranking;
     private Double totalScore;
 
+
     public Double getObject_detection() {
         return object_detection;
     }
