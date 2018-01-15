@@ -29,20 +29,25 @@ public class calculateIntimacyTest {
     @Autowired
     private Recomend1 recomend;
 
+    @Autowired
+    private  Evaluation evaluation;
+
     @Test
     public void test() {
 //		competitorIntimacy.pairIntimacy();
 //		competitorIntimacy.genTeamIntimacy();
         //competitorIntimacy.allTeamTotalIntimacy();
-        competitorRelation.costGen();
+//        competitorRelation.costGen();
+        evaluation.Evaluate();
     }
 
     @Test
     public void test1(){
         //competitorAbilityGen.scoreToOne();
-        recomend.experiment2();
+//        recomend.experiment2();
        // competitorRelation.insertCollaborationRelation();
       //  competitorRelation.costGen();
+
     }
 
     //	测试最短路径计算正确性

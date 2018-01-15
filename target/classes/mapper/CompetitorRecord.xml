@@ -73,7 +73,7 @@
         WHERE teams.size > 1;
     </select>
 
-    <select id="getTeamMembers" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+    <select id="getTeamMembers" parameterType="java.lang.Object" resultType="java.lang.Integer">
         SELECT competitorId
         FROM
         competitorrecord

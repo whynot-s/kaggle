@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.springmvc.dao.WhoWantCompeteDao">
+
+    <select id="existOrNot" resultType="java.lang.Integer">
+        select count(*)
+        from whowantcompete
+        WHERE competitorId = #{competitorId} and competitionId = #{competitionId}
+    </select>
+
+    <insert id="insert" parameterType="cn.springmvc.model.WhoWantCompete">
+        insert into whowantcompete(
+        competitionId,
+        competitorId,
+        discussionId,
+        sponsor,
+        inOrNot,
+        teamOrNot
+        ) values(
+        #{competitionId},
+        #{competitorId},
+        #{discussionId},
+        #{sponsor},
+        #{inOrNot},
+        #{teamOrNot}
+        )
+    </insert>
+
+    <update id="update" statementType="STATEMENT">
+        UPDATE whowantcompete set ${columnName}=${value}
+        where competitionId = ${competitionId} AND competitorId=${competitorId}
+    </update>
+
+    <select id="getAllWhoWantCompete" resultType="cn.springmvc.model.WhoWantCompete">
+        select *
+        from whowantcompete
+    </select>
+
+
+</mapper>

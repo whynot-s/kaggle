@@ -3,10 +3,12 @@ package cn.springmvc.dao;
 import cn.springmvc.model.CompetitionLeaderboard;
 import cn.springmvc.model.CompetitorRecord;
 import org.apache.ibatis.annotations.Param;
+import org.omg.CORBA.INTERNAL;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by YLT on 2017/12/19.
@@ -41,5 +43,11 @@ public interface CompetitorRecordDao {
 
     //
     List<Integer> getTestCompetitors();
+
+    //获取测试数据中各个team的比赛、排名、队伍的size
+    List<Map<String, Object>> getTeamIDs();
+
+    //根据比赛与排名获得各个team成员的Id
+    List<Integer> getTeamMembers(@Param("competitionId") Object competitionId, @Param("ranking") Object ranking);
 
 }
