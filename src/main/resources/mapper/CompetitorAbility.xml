@@ -48,7 +48,7 @@
 
     <select id="getLeaderBoardByCompetitionId" resultType="cn.springmvc.model.CompetitionLeaderboard">
         select
-        competitionId,ranking
+        competitionId,ranking,teamMember,teamMemberId
         from
         competitionleaderboard
         WHERE competitionId = #{competitionId}

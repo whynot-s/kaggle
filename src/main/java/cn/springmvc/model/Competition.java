@@ -30,6 +30,15 @@ public class Competition {
     private String tag1;
     private String tag2;
     private String tag3;
+    private String tag4;
+
+    public String getTag4() {
+        return tag4;
+    }
+
+    public void setTag4(String tag4) {
+        this.tag4 = tag4;
+    }
 
     public String getTags() {
         return tags;

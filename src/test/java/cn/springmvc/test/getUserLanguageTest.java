@@ -2,10 +2,7 @@ package cn.springmvc.test;
 
 
 import cn.springmvc.dao.CompetitorAbilityDao;
-import cn.springmvc.service.CompetitorIntimacy;
-import cn.springmvc.service.CompetitorRelation;
-import cn.springmvc.service.GetUserLanguage;
-import cn.springmvc.service.Recommend;
+import cn.springmvc.service.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +29,20 @@ public class getUserLanguageTest {
     @Autowired
     private CompetitorIntimacy intimacy;
 
+    @Autowired
+    private CompetitorRecordAnalysis competitorRecordAnalysis;
+
+    @Autowired
+    private TeamFailed teamFailed;
+
+    @Autowired
+    private CompetitorAbilityGen competitorAbilityGen;
+
+    @Autowired
+    private Recomend1 recomend1;
+
+    @Autowired
+    private TestDataGet testDataGet;
 
     @Test
     public void main() {
@@ -41,7 +52,18 @@ public class getUserLanguageTest {
 
     @Test
     public void test() {
-        int [] test = new int[5];
-        System.out.println(test.length);
+        //competitorRecordAnalysis.competitorAnalysis();
+       //teamFailed.discussionMotivationAnalysis();
+        //competitorAbilityGen.totalAbilityImprove();
+       // competitorAbilityGen.totalAbilityGen();
+        //competitiorRelation.costGen();
+        //competitorRecordAnalysis.getCompetitorRecord();
+        //competitiorRelation.socialCostGen();
+        recomend1.experiment();
+        //testDataGet.getCompetitorToTest();
+        //testDataGet.getTeamToTestNumber();
+        //competitorAbilityGen.scoreToOne();
+       // testDataGet.getCompetitorToTest();
+
     }
 }

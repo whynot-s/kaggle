@@ -25,8 +25,6 @@ public class CompetitorAbility {
     private Double ranking;
     private Double totalScore;
 
-<<<<<<< HEAD
-=======
     public Double getScoreByTagName(String tagName){
         if (tagName.equals("image"))    return getImage();
         else if (tagName.equals("text"))  return getText();
@@ -54,8 +52,6 @@ public class CompetitorAbility {
             return 0.0;
         }
     }
->>>>>>> 2087f6daec2761d61af9963aff428b0273c9d52e
-
     public Double getObject_detection() {
         return object_detection;
     }

@@ -2,6 +2,56 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="cn.springmvc.dao.UserDao">
+<mapper namespace="cn.springmvc.dao.DiscussionDao">
+    <select id="getDiscussionName" resultType="java.util.Map">
+        select
+        discussionId,discussionName
+        from
+        discussion
+    </select>
+
+    <select id="getDiscussionById" resultType="cn.springmvc.model.Discussion">
+        select
+        *
+        from
+        discussion
+        WHERE discussionId = #{discussionId}
+    </select>
+
+    <insert id="insertToDiscussionForTeam" parameterType="cn.springmvc.model.Discussion">
+        insert into discussionforteam(
+        discussionId,
+        discussionName,
+        homeLink,
+        discussionAuthorId,
+        discussionAuthorName,
+        sourceName,
+        category,
+        voters,
+        commentsNum,
+        discussionText,
+        kernelOrNot
+        ) values(
+        #{discussionId},
+        #{discussionName},
+        #{homeLink},
+        #{discussionAuthorId},
+        #{discussionAuthorName},
+        #{sourceName},
+        #{category},
+        #{voters},
+        #{commentsNum},
+        #{discussionText},
+        #{kernelOrNot}
+        )
+    </insert>
+
+    <select id="getDiscussionForTeam" resultType="cn.springmvc.model.Discussion">
+        select
+        *
+        from
+        discussionforteam
+        WHERE category = "Competitions"
+    </select>
 
 </mapper>

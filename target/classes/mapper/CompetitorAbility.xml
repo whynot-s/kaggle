@@ -12,14 +12,14 @@
     </select>
 
     <update id="updateAbility" statementType="STATEMENT">
-        UPDATE competitorAbility_copy set ${tagName}=${score} where competitorId=${competitorId}
+        UPDATE competitorAbility_2 set ${tagName}=${score} where competitorId=${competitorId}
     </update>
 
     <select id="getCompetitorAbility" resultType="Double" statementType="STATEMENT">
         select
         ${tagName}
         from
-        competitorAbility_copy
+        competitorAbility_2
         where competitorId=${competitorId}
     </select>
 
@@ -48,7 +48,7 @@
 
     <select id="getLeaderBoardByCompetitionId" resultType="cn.springmvc.model.CompetitionLeaderboard">
         select
-        competitionId,ranking
+        competitionId,ranking,teamMember,teamMemberId
         from
         competitionleaderboard
         WHERE competitionId = #{competitionId}
@@ -60,19 +60,19 @@
 
     <select id="getCompetitions" resultType="cn.springmvc.model.Competition">
         select
-        competitionId,competitionType,competitionStatus,closeTime,teamsNum,tag1,tag2
+        competitionId,competitionType,competitionStatus,closeTime,teamsNum,tag1,tag2,tag4
         from
         competition
     </select>
 
     <select id="userRecordExitOrNot" resultType="java.lang.Integer">
         select count(*)
-        from competitorAbility_copy
+        from competitorAbility_2
         WHERE competitorId = #{competitorId}
     </select>
 
     <insert id="insertUserAbilityRecord" statementType="STATEMENT">
-        insert into competitorAbility_copy(
+        insert into competitorAbility_2(
         competitorId,
         ${tagName}
         ) values(
@@ -84,6 +84,16 @@
         select * from
         competitorAbility_copy
         where competitorId in ${list}
+    </select>
+
+    <select id="getMaxScore" resultType="java.lang.Double" statementType="STATEMENT">
+        select MAX(${tagName}) from
+        competitorAbility_2
+    </select>
+
+    <select id="getCompetitorIds" resultType="java.lang.Integer">
+        select competitorId from
+        competitorAbility_2
     </select>
 
 </mapper>

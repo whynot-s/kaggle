@@ -1,9 +1,12 @@
 package cn.springmvc.service;
 
-import cn.springmvc.dao.RelationGenDao;
+import cn.springmvc.dao.*;
+import cn.springmvc.model.Competition;
+import cn.springmvc.model.CompetitorRecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -17,25 +20,81 @@ public class CompetitorRelation {
     @Autowired
     private RelationGenDao relationGenDao;
 
+    @Autowired
+    private CompetitorRecordDao competitorRecordDao;
+
+    @Autowired
+    private CompetitionDao competitionDao;
+
+    @Autowired
+    private CompetitionLeaderboardDao competitionLeaderboardDao;
+
+    public void socialCostGen(){
+        List<Integer> allCompetitorId1 = relationGenDao.getCompetitor1List();
+        for (int competitorId1:allCompetitorId1) {
+            Integer socialRelationTime1 = relationGenDao.getSocialRelationByCompetitorId(competitorId1);
+            List<Integer> competitorfriend = relationGenDao.getCompetitorFriend(competitorId1);
+            for (int friend : competitorfriend) {
+                System.out.println(competitorId1 + "\t" + friend);
+                int both = relationGenDao.calCost2(competitorId1,friend);
+                if(both == 0){
+                    relationGenDao.updateCost(competitorId1,friend,"cost2",1);
+                }else {
+                    int socialRelationTime2 = relationGenDao.getSocialRelationByCompetitorId(friend);
+                    double cost2 = 1 - ((double) (both)) / (socialRelationTime1 + socialRelationTime2 - both);
+                    relationGenDao.updateCost(competitorId1, friend, "cost2", cost2);
+                }
+            }
+        }
+    }
+
+    public void costGen(){
+        List<Integer> allCompetitorId1 = relationGenDao.getCompetitor1List();
+        for (int competitorId1:allCompetitorId1) {
+            System.out.println(competitorId1);
+            int recordTime1 = competitorRecordDao.getRecordTimeByCompetitorId(competitorId1);
+            List<Map<String,Integer>> collaborationOfCompetitor1 = relationGenDao.getRelationByCompetitorId1(competitorId1);
+            for (Map<String,Integer> collaboration: collaborationOfCompetitor1) {
+                double cost1;
+                int competitorId2 = collaboration.get("competitorId2");
+                Integer collaborationTime = collaboration.get("collaborationTime");
+                if (collaborationTime == null){
+                    cost1 = 1;
+                }else{
+                    int recordTime2 = competitorRecordDao.getRecordTimeByCompetitorId(competitorId2);
+                    cost1 = 1 - ((double)collaborationTime)/(recordTime1 + recordTime2 - collaborationTime);
+                }
+                relationGenDao.updateCost(competitorId1,competitorId2,"cost1",cost1);
+            }
+        }
+    }
+    /*
+    * 根据leaderboard，得到参赛者之间的协作关系
+    * */
     public void insertCollaborationRelation() {
-
-        List<String> allCollaborationRecord = relationGenDao.getCollaborationRecord();
-
-        for (String record : allCollaborationRecord
-                ) {
-            //这里需要注意
-            String[] members = record.split("&");
-            if (members.length > 1) {
-                for (int i = 0; i < members.length - 1; i++) {
-                    for (int j = i + 1; j < members.length; j++) {
-                        updateRelation(Integer.parseInt(members[i]), Integer.parseInt(members[j]), "collaborationTime");
+        List<Integer> competitionIds = competitionDao.getCompetitionIds();
+        for (int competition : competitionIds) {
+            if (competition < 6538) {
+                System.out.println(competition);
+                List<String> allCollaborationRecord = competitionLeaderboardDao.getLeaderBoardByCompetitionId(competition);
+                for (String record : allCollaborationRecord) {
+                    //这里需要注意
+                    String[] members = record.split("&");
+                    if (members.length > 1) {
+                        for (int i = 0; i < members.length - 1; i++) {
+                            for (int j = i + 1; j < members.length; j++) {
+                                updateRelation(Integer.parseInt(members[i]), Integer.parseInt(members[j]), "collaborationTime");
+                            }
+                        }
                     }
                 }
             }
         }
     }
 
-
+    /*
+    * 更新参赛者之间的关系
+    * */
     public void updateRelation(int competitorId1, int competitorId2, String relationName) {
         //忽略了同一个人之间的关系
         if (competitorId1 != competitorId2) {
@@ -154,9 +213,8 @@ public class CompetitorRelation {
         }
     }
 
-    //完善leaderboard表时，为了获得人名与id之间的对应关系
+    //完善leaderboard表时，为了获得人名与id之间的对应关系//工具方法
     public void mapToId() {
-
         List<Map<String, Object>> competitor_2 = relationGenDao.getRelationMap("competitorId", "competitorName", "competitor_2");
         List<Map<String, Object>> competitor = relationGenDao.getRelationMap("competitorId", "competitorName", "competitor");
         List<Map<String, Object>> discussion = relationGenDao.getRelationMap("discussionAuthorId", "discussionAuthorName", "discussion");
@@ -185,8 +243,7 @@ public class CompetitorRelation {
     }
 
     public void merge(Map<Integer, String> MAP, List<Map<String, Object>> map, String column1, String column2) {
-        for (Map<String, Object> map1 : map
-                ) {
+        for (Map<String, Object> map1 : map) {
             int id = Integer.parseInt(map1.get(column1).toString());
             if (MAP.containsKey(id)) {
                 continue;

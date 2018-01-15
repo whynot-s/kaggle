@@ -11,6 +11,13 @@
         competitionleaderboard
     </select>
 
+    <select id="getCollaborationRecordByName" resultType="java.lang.String">
+        select
+        teamMember
+        from
+        competitionleaderboard
+    </select>
+
     <select id="getRelationTime" resultType="java.lang.Integer" statementType="STATEMENT">
         select
         ${relationName}

@@ -1,6 +1,7 @@
 package cn.springmvc.test;
 
-import cn.springmvc.service.CompetitorIntimacy;
+import cn.springmvc.model.CompetitorRecord;
+import cn.springmvc.service.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,12 +17,32 @@ public class calculateIntimacyTest {
 
     @Autowired
     private CompetitorIntimacy competitorIntimacy;
+    @Autowired
+    private CompetitorRelation competitorRelation;
+
+    @Autowired
+    private CompetitorAbilityGen competitorAbilityGen;
+
+    @Autowired
+    private DataPreHandle dataPreHandle;
+
+    @Autowired
+    private Recomend1 recomend;
 
     @Test
     public void test() {
 //		competitorIntimacy.pairIntimacy();
 //		competitorIntimacy.genTeamIntimacy();
-        competitorIntimacy.allTeamTotalIntimacy();
+        //competitorIntimacy.allTeamTotalIntimacy();
+        competitorRelation.costGen();
+    }
+
+    @Test
+    public void test1(){
+        //competitorAbilityGen.scoreToOne();
+        recomend.experiment2();
+       // competitorRelation.insertCollaborationRelation();
+      //  competitorRelation.costGen();
     }
 
     //	测试最短路径计算正确性

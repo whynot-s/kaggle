@@ -45,4 +45,10 @@ public interface CompetitorAbilityDao
     //获取所有人的所有技能
     ArrayList<CompetitorAbility> getAllCompetitorAbility();
 
+    //获取某技能下的最大值
+    double getMaxScore(@Param("tagName") String tagName);
+
+    //得到能力榜上所有参赛者id
+    List<Integer> getCompetitorIds();
+
 }

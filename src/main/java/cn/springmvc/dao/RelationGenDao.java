@@ -10,6 +10,7 @@ import java.util.Map;
  */
 public interface RelationGenDao {
     List<String> getCollaborationRecord();
+    List<String> getCollaborationRecordByName();
 
     Integer getRelationTime(@Param("competitorId1") int competitorId1, @Param("competitorId2") int competitorId2, @Param("relationName") String relationName);
 
@@ -42,4 +43,24 @@ public interface RelationGenDao {
     void insertMapIdToName(@Param("MAP") Map<Integer, String> MAP);
 
     Map<String, Object> getAllRelationTime(@Param("competitorId1") int competitorId1, @Param("competitorId2") int competitorId2);
+
+    List<Integer> getCompetitor1List();
+
+    List<Map<String,Integer>> getRelationByCompetitorId1(@Param("competitorId1") int competitorId1);
+
+    //更新参赛者的沟通代价
+    void updateCost(@Param("competitorId1") int competitorId1, @Param("competitorId2") int competitorId2, @Param("tagName") String tagName, @Param("cost") double cost);
+
+    Integer getSocialRelationByCompetitorId(@Param("competitorId1") int competitorId1);
+
+    //查询与competitorId1有关系的用户
+    List<Integer> getCompetitorFriend(@Param("competitorId1") int competitorId1);
+
+    //计算competitorId1和competitorId2之间的社交关系代价
+    Integer calCost2(@Param("competitorId1") int competitorId1,@Param("competitorId2") int competitorId2);
+
+    //删除competitorId1的关系
+    void deleteRelation(@Param("competitorId1") int competitorId1);
+
+    Double getCost(@Param("competitorId1") int competitorId1,@Param("competitorId2") int competitorId2,@Param("tagName") String tagName);
 }
