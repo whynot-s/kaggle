@@ -46,18 +46,13 @@
         where competitorId=${competitorId}
     </select>
 
-    <select id="getLeaderBoardByCompetitionId" resultType="cn.springmvc.model.CompetitionLeaderboard">
-        select
-        competitionId,ranking,teamMember,teamMemberId
-        from
-        competitionleaderboard
-        WHERE competitionId = #{competitionId}
-    </select>
+
 
     <select id="getAllCompetitorAbility" resultType="cn.springmvc.model.CompetitorAbility">
         select * from competitorAbility_copy
     </select>
 
+<<<<<<< HEAD
     <select id="getCompetitions" resultType="cn.springmvc.model.Competition">
         select
         competitionId,competitionType,competitionStatus,closeTime,teamsNum,tag1,tag2
@@ -65,6 +60,8 @@
         competition
     </select>
 
+=======
+>>>>>>> master
     <select id="userRecordExitOrNot" resultType="java.lang.Integer">
         select count(*)
         from competitorAbility_copy
@@ -86,4 +83,27 @@
         where competitorId in ${list}
     </select>
 
+<<<<<<< HEAD
+=======
+    <select id="getMaxScore" resultType="java.lang.Double" statementType="STATEMENT">
+        select MAX(${tagName}) from
+        competitorAbility_2
+    </select>
+
+    <!--得到能力表中所有参赛者的id-->
+    <select id="getCompetitorIds" resultType="java.lang.Integer">
+        select competitorId from
+        competitorAbility_2
+    </select>
+
+    <select id="getTopKCompetitor" resultType="java.lang.Integer" statementType="STATEMENT">
+        select competitorId from
+        competitorAbility_2
+        limit 10
+        order BY ${tagName} DESC
+    </select>
+
+
+
+>>>>>>> master
 </mapper>

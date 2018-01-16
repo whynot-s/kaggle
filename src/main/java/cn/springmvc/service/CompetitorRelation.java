@@ -76,7 +76,7 @@ public class CompetitorRelation {
         for (int competition : competitionIds) {
             if (competition < 6538) {
                 System.out.println(competition);
-                List<String> allCollaborationRecord = competitionLeaderboardDao.getLeaderBoardByCompetitionId(competition);
+                List<String> allCollaborationRecord = competitionLeaderboardDao.getMemberIdsByCompetitionId(competition);
                 for (String record : allCollaborationRecord) {
                     //这里需要注意
                     String[] members = record.split("&");

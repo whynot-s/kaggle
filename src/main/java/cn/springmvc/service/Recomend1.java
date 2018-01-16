@@ -67,55 +67,10 @@ public class Recomend1 {
         List<Integer> testCompetitors = testDataGet.getCompetitorToTest();
         for (int i = 0; i < testCompetitors.size();i++){
             System.out.println(testCompetitors.get(i));
-            recommendForCompetitor(testCompetitors.get(i), 3, 0.4, 0.5, 0.3, 0.7);
-        }
-        /*List<Integer> allCompetitors = competitorAbilityDao.getCompetitorIds();
-        int size = testCompetitors.size();
-        for (int i = 0; i < 10; i++) {
-            int random = (int) (Math.random() * size);
-            int competitor = testCompetitors.get(random);
-            if (allCompetitors.contains(competitor)) {
-                System.out.println(competitor);
-                recommendForCompetitor(competitor, 3, 0.4, 0.5, 0.3, 0.7);
-            }
-        }*/
-    }
-
-    public void experiment2(){
-        List<Integer> testCompetitors = testDataGet.getCompetitorToTest();
-        for (int i = 0; i < testCompetitors.size();i++){
-            System.out.println(testCompetitors.get(i));
-            recommendForCompetitor_2(testCompetitors.get(i), 2, 0.4, 0.5, 0.3, 0.7);
+            recommendForCompetitor(testCompetitors.get(i), 4, 0.4, 0.5, 0.3, 0.7);
         }
     }
 
-
-    public int[] recommendForCompetitor_2(int competitorId, int teamSize, double Diff, double p, double q, double costPercent) {
-        int[] teamMember = new int[teamSize];
-        teamMember[0] = competitorId;
-        List<Integer> allCompetitors = getRecommendSet(competitorId, Diff);
-
-        for (int i = 1; i < teamSize; i++) {
-            int toChose = -1;
-            double successRate = Double.MIN_VALUE;
-            for (int competitor : allCompetitors) {
-                teamMember[i] = competitor;
-                double tempSuccessRate = getTeamSuccessRate(teamMember, i + 1, p, q, costPercent);
-                if (tempSuccessRate > successRate) {
-                    successRate = tempSuccessRate;
-                    toChose = competitor;
-                }
-            }
-            teamMember[i] = toChose;
-            allCompetitors.remove(allCompetitors.indexOf(toChose));
-        }
-
-        double cost = teamCost.getTeamCost(teamMember, teamSize, costPercent);
-        double diff = abilityDiff.getAbilityDiff(loadTeamAbility(teamMember, teamSize), teamSize);
-        double grow = abilityGrow.getGrowSpace(loadTeamAbility(teamMember, teamSize), teamSize);
-        recommendResultDao.insert2(teamMember[0], teamMember[1], cost, diff, grow);
-        return teamMember;
-    }
     /*
     *推荐流程
     * 被推荐者、团队大小、团队沟通代价系数、团队能力差异系数、cost中协作关系系数
@@ -127,7 +82,7 @@ public class Recomend1 {
 
         for (int i = 1; i < teamSize; i++) {
             int toChose = -1;
-            double successRate = Double.MIN_VALUE;
+            double successRate = -1;
             for (int competitor : allCompetitors) {
                 teamMember[i] = competitor;
                 double tempSuccessRate = getTeamSuccessRate(teamMember, i + 1, p, q, costPercent);
@@ -143,15 +98,14 @@ public class Recomend1 {
         double cost = teamCost.getTeamCost(teamMember, teamSize, costPercent);
         double diff = abilityDiff.getAbilityDiff(loadTeamAbility(teamMember, teamSize), teamSize);
         double grow = abilityGrow.getGrowSpace(loadTeamAbility(teamMember, teamSize), teamSize);
-        recommendResultDao.insert(teamMember[0], teamMember[1], teamMember[2], cost, diff, grow);
-       /* System.out.print("recommend result:\t");
-        for (int member:teamMember) {
-            System.out.print(member + "\t");
+
+        if (teamSize == 2){
+            recommendResultDao.insert2(teamMember[0], teamMember[1], cost, diff, grow,"recommendResult_2");
+        }else if (teamSize == 3){
+            recommendResultDao.insert3(teamMember[0], teamMember[1], teamMember[2], cost, diff, grow,"recommendResult_3");
+        }else if(teamSize == 4){
+            recommendResultDao.insert4(teamMember[0], teamMember[1], teamMember[2],teamMember[3], cost, diff, grow,"recommendResult_4");
         }
-        System.out.println("success rate:" + getTeamSuccessRate(teamMember,teamSize,p,q,costPercent));
-        System.out.println("cost:" + teamCost.getTeamCost(teamMember,teamSize,costPercent));
-        System.out.println("diff:" + abilityDiff.getAbilityDiff(loadTeamAbility(teamMember,teamSize),teamSize));
-        System.out.println("grow" + abilityGrow.getGrowSpace(loadTeamAbility(teamMember,teamSize),teamSize));*/
         return teamMember;
     }
 

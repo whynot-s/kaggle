@@ -45,18 +45,4 @@ public class DataPreHandle {
             }
         }
     }
-
-    public void handleTeamMemberId(){
-        List<Integer> allCompetitions = competitionDao.getCompetitionIds();
-        for (int competition: allCompetitions){
-            List<CompetitionLeaderboard> teams = competitionLeaderboardDao.getLeaderBoardEachCompetition(competition);
-            for (CompetitionLeaderboard team:teams) {
-                if(team.getTeamMemberId().contains("&&")){
-                    competitionLeaderboardDao.update(competition,team.getRanking(),team.getTeamMemberId().replaceAll("&&","&"));
-                }
-            }
-        }
-    }
-
-
 }

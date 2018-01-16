@@ -28,6 +28,7 @@
         where competitorId=${competitorId}
     </select>
 
+    <!--该表中是否存在该记录-->
     <select id="exitOrNot" resultType="java.lang.Integer">
         select count(*)
         from abilityimprove

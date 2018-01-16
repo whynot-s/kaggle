@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.springmvc.dao.RecommendResultDao">
+
+    <insert id="insert3"  statementType="STATEMENT">
+    insert into ${tableName}(
+    member1,
+    member2,
+    member3,
+    cost,
+    diff,
+    grow
+    ) values(
+    ${member1},
+    ${member2},
+    ${member3},
+    ${cost},
+    ${diff},
+    ${grow})
+    </insert>
+
+
+    <insert id="insert2" statementType="STATEMENT">
+        insert into ${tableName}(
+        member1,
+        member2,
+        cost,
+        diff,
+        grow
+        ) values(
+        ${member1},
+        ${member2},
+        ${cost},
+        ${diff},
+        ${grow})
+    </insert>
+
+    <insert id="insert4"  statementType="STATEMENT">
+        insert into ${tableName}(
+        member1,
+        member2,
+        member3,
+        member4,
+        cost,
+        diff,
+        grow
+        ) values(
+        ${member1},
+        ${member2},
+        ${member3},
+        ${member4},
+        ${cost},
+        ${diff},
+        ${grow})
+    </insert>
+
+    <select id="getRecommendResult" resultType="java.util.HashMap" statementType="STATEMENT">
+        select *
+        from ${tableName}
+    </select>
+
+    </mapper>

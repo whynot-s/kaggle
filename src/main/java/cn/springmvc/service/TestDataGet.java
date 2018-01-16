@@ -38,7 +38,7 @@ public class TestDataGet {
     public void getTeamToTestNumber(){
         int [] testCompetitions = new int[]{6538,6539,6565, 6644,6649, 6768,6775,6841,7042,7043,7082,7115,7162,7163,7277,7299,7380, 7391, 7559,7634, 8011,8076, 8078};
         for (int competition:testCompetitions) {
-            ArrayList<CompetitionLeaderboard> leaderboard = competitorRecordDao.getLeaderBoardByCompetitionId(competition);
+            ArrayList<CompetitionLeaderboard> leaderboard = competitionLeaderboardDao.getLeaderBoardByCompetitionId(competition);
             for (CompetitionLeaderboard it : leaderboard) {
                 if(!it.getTeamMemberId().equals("")) {
                     String[] ids = it.getTeamMemberId().split("&");
@@ -64,6 +64,13 @@ public class TestDataGet {
                 allTestCompetitors.remove(i);
             }
         }
+       /* System.out.println(allTestCompetitors.size());
+        for (Integer peple:allTestCompetitors
+             ) {
+            if(competitorAbilityDao.getCompetitorAbility(peple, "totalToOne") > 0.1) {
+                System.out.println(peple + "***" + competitorAbilityDao.getCompetitorAbility(peple, "totalToOne"));
+            }
+        }*/
         for (int i = 0; i < allTestCompetitors.size(); ) {
             if (competitorRecordDao.getRecordTimeByCompetitorIdTest(allTestCompetitors.get(i)) < 3) {
                 allTestCompetitors.remove(i);
@@ -71,8 +78,6 @@ public class TestDataGet {
                 i++;
             }
         }
-
-       // System.out.println(allTestCompetitors.size());
         return allTestCompetitors;
     }
 
@@ -82,7 +87,7 @@ public class TestDataGet {
     * */
     public void removeImpactInAbility(int competitionId) {
         //获取一个竞赛的排名记录
-        ArrayList<CompetitionLeaderboard> leaderboards = competitorAbilityDao.getLeaderBoardByCompetitionId(competitionId);
+        ArrayList<CompetitionLeaderboard> leaderboards = competitionLeaderboardDao.getLeaderBoardByCompetitionId(competitionId);
         Competition competition = competitionDao.getCompetitionById(competitionId);
 
         String tag = "`" + competition.getTag4() + "`";
@@ -127,7 +132,7 @@ public class TestDataGet {
     }
 
     public void deleteCollaborationRelationBycompetitionId(int competitionId) {
-        List<String> collaborationRecord = competitionLeaderboardDao.getLeaderBoardByCompetitionId(competitionId);
+        List<String> collaborationRecord = competitionLeaderboardDao.getMemberIdsByCompetitionId(competitionId);
         for (String record : collaborationRecord) {
             //这里需要注意
             String[] members = record.split("&");

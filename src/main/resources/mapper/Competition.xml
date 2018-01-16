@@ -3,6 +3,14 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="cn.springmvc.dao.CompetitionDao">
+    <!--/获得所有competition的基本信息/-->
+    <select id="getCompetitions" resultType="cn.springmvc.model.Competition">
+        select
+        competitionId,competitionType,competitionStatus,closeTime,teamsNum,tag1,tag2,tag4
+        from
+        competition
+    </select>
+
     <select id="getCompetitionIds" resultType="java.lang.Integer">
         select
         competitionId
@@ -16,6 +24,21 @@
         from
         competition
         WHERE competitionName = #{competitionName}
+    </select>
+
+    <select id="getCompetitionLeaderboardLen" resultType="java.util.HashMap">
+        select
+        competitionId,leaderboardLength
+        from
+        competition
+    </select>
+
+    <select id="getCompetitionById" resultType="cn.springmvc.model.Competition">
+        select
+        competitionId,competitionType,competitionStatus
+        from
+        competition
+        WHERE  competitionId = #{competitionId}
     </select>
 
 </mapper>

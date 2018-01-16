@@ -2,3 +2,4 @@
 .idea/workspace.xml
 kaggle-recommendation.iml
 /src/main/resources/conf/
+/target/

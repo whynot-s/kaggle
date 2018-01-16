@@ -9,9 +9,6 @@ import java.util.Map;
  * Created by YLT on 2017/10/8.
  */
 public interface RelationGenDao {
-    List<String> getCollaborationRecord();
-    List<String> getCollaborationRecordByName();
-
     Integer getRelationTime(@Param("competitorId1") int competitorId1, @Param("competitorId2") int competitorId2, @Param("relationName") String relationName);
 
     void insertRelation(@Param("competitorId1") int competitorId1, @Param("competitorId2") int competitorId2, @Param("relationName") String relationName);

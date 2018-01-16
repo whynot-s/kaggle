@@ -11,7 +11,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class AbilityGrow {
 
-    //获得能力成长空间
+    /*
+    *获得能力成长空间模型
+    */
     public double getGrowSpace(double[] memberAbility, int teamSize) {
         //团队能力值
         double teamAbility;

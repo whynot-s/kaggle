@@ -18,6 +18,7 @@
     </insert>
 
 
+<<<<<<< HEAD
 
     <select id="getLeaderBoardByCompetitionId" resultType="cn.springmvc.model.CompetitionLeaderboard">
         select
@@ -27,6 +28,8 @@
         WHERE competitionId = #{competitionId}
     </select>
 
+=======
+>>>>>>> master
     <select id="getCompetitorIds" resultType="java.lang.Integer">
         select
         DISTINCT competitorId
@@ -50,6 +53,17 @@
         WHERE competitorId = #{competitorId} ORDER BY ranking ASC LIMIT 10
     </select>
 
+<<<<<<< HEAD
+=======
+    <select id="getCompetitorRecordByCompetitionId" parameterType="java.lang.Integer" resultType="cn.springmvc.model.CompetitorRecord">
+        select
+        *
+        from
+        competitorrecord
+        WHERE competitionId = #{competitionId}
+    </select>
+
+>>>>>>> master
     <select id="existOrNot" resultType="java.lang.Integer">
         select count(*)
         from competitorrecord
@@ -62,6 +76,7 @@
         WHERE competitorId = #{competitorId} and competitionId = #{competitionId}
     </select>
 
+<<<<<<< HEAD
     <!--提取测试数据-->
     <select id="getTeamIDs" resultType="java.util.Map">
         SELECT competitionId, ranking, size
@@ -78,5 +93,41 @@
         FROM
         competitorrecord
         WHERE competitionId = #{competitionId} AND ranking = #{ranking}
+=======
+    <update id="updateRankPercent" >
+        UPDATE competitorrecord set rankPercent = #{rankPercent}
+        WHERE competitorId = #{competitorId} and competitionId = #{competitionId}
+    </update>
+
+
+    <select id="getRecordTimeByCompetitorId" resultType="java.lang.Integer">
+    select count(DISTINCT competitionId)
+    from competitorrecord_copy
+    WHERE competitorId = #{competitorId}
+</select>
+
+    <select id="getRecordTimeByCompetitorIdTest" resultType="java.lang.Integer">
+        select count(DISTINCT competitionId)
+        from competitorrecord
+        WHERE competitorId = #{competitorId}
+    </select>
+
+    <select id="getTestCompetitors" resultType="java.lang.Integer">
+        select DISTINCT competitorId
+        from competitorrecord
+        WHERE teamOrNot = 1
+    </select>
+
+    <select id="teamOrNot" resultType="java.util.HashMap">
+        SELECT competitionId,ranking
+        FROM (SELECT competitionId,ranking FROM `competitorrecord` WHERE competitorId = #{competitorId1} UNION ALL SELECT competitionId,ranking FROM `competitorrecord`WHERE competitorId = #{competitorId2}) AS a
+        GROUP BY competitionId,ranking HAVING COUNT(*) > 1;
+    </select>
+
+    <select id="exist" resultType="java.lang.Integer">
+        select count(*)
+        from competitorrecord
+        WHERE competitorId = #{competitorId} and competitionId = #{competitionId} AND ranking = #{ranking}
+>>>>>>> master
     </select>
 </mapper>

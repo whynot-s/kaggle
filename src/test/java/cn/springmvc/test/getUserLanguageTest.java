@@ -24,9 +24,6 @@ public class getUserLanguageTest {
     private Recommend recommend;
 
     @Autowired
-    private CompetitorAbilityDao competitorAbilityDao;
-
-    @Autowired
     private CompetitorIntimacy intimacy;
 
     @Autowired
@@ -44,6 +41,11 @@ public class getUserLanguageTest {
     @Autowired
     private TestDataGet testDataGet;
 
+    @Autowired
+    private IntimacyContrastExperiment intimacyContrastExperiment;
+
+    @Autowired
+    private ResultAnalysis resultAnalysis;
     @Test
     public void main() {
         String[] tags = new String[]{"image", "tabular", "binary classification", "totalScore"};
@@ -58,12 +60,24 @@ public class getUserLanguageTest {
        // competitorAbilityGen.totalAbilityGen();
         //competitiorRelation.costGen();
         //competitorRecordAnalysis.getCompetitorRecord();
+        intimacyContrastExperiment.experiment_4();
         //competitiorRelation.socialCostGen();
-        recomend1.experiment();
+        //recomend1.experiment();
         //testDataGet.getCompetitorToTest();
         //testDataGet.getTeamToTestNumber();
         //competitorAbilityGen.scoreToOne();
        // testDataGet.getCompetitorToTest();
 
+    }
+
+    @Test
+    public void test2() {
+        intimacyContrastExperiment.experiment_3();
+    }
+
+    @Test
+    public void test3() {
+        resultAnalysis.getPRate("recommendResult_2_test",2);
+        //testDataGet.getCompetitorToTest();
     }
 }
