@@ -1,6 +1,7 @@
 package cn.springmvc.service;
 
 import cn.springmvc.dao.CompetitionDao;
+import cn.springmvc.dao.CompetitionLeaderboardDao;
 import cn.springmvc.dao.CompetitorRecordDao;
 import cn.springmvc.dao.CompetitorSoloAndTeamDao;
 import cn.springmvc.model.Competition;
@@ -33,6 +34,9 @@ public class CompetitorRecordAnalysis {
     @Autowired
     private CompetitorSoloAndTeamDao  competitorSoloAndTeamDao;
 
+    @Autowired
+    private CompetitionLeaderboardDao competitionLeaderboardDao;
+
     /*
     * 所有的参赛记录
     * 包括练习性质的竞赛
@@ -42,7 +46,7 @@ public class CompetitorRecordAnalysis {
         List<Integer> allCompetitionIds = competitionDao.getCompetitionIds();
         for (Integer competitionId : allCompetitionIds) {
             System.out.println("competition:" + competitionId);
-            ArrayList<CompetitionLeaderboard> leaderboard = competitorRecordDao.getLeaderBoardByCompetitionId(competitionId);
+            ArrayList<CompetitionLeaderboard> leaderboard = competitionLeaderboardDao.getLeaderBoardByCompetitionId(competitionId);
             for (CompetitionLeaderboard it : leaderboard) {
                 System.out.print("ranking:" + it.getRanking() +"\t");
                 if(!it.getTeamMemberId().equals("")) {
@@ -72,7 +76,7 @@ public class CompetitorRecordAnalysis {
             if (competition.getCompetitionType().equals("playground") || competition.getCompetitionType().equals("getting started") || !competition.getCompetitionStatus().equals("closed")){
                 continue;
             }
-            ArrayList<CompetitionLeaderboard> leaderboard = competitorRecordDao.getLeaderBoardByCompetitionId(competitionId);
+            ArrayList<CompetitionLeaderboard> leaderboard = competitionLeaderboardDao.getLeaderBoardByCompetitionId(competitionId);
             for (CompetitionLeaderboard it : leaderboard) {
                 System.out.print("ranking:" + it.getRanking() +"\t");
                 if(!it.getTeamMemberId().equals("")) {
@@ -155,6 +159,4 @@ public class CompetitorRecordAnalysis {
             competitorSoloAndTeamDao.insertCompetitorSoloAndTeamDao(new CompetitorSoloAndTeam(competitorId,teamRank,soloRank,teamPercent,soloPercent,teamNum,soloNum,teamWin,soloWin));
         }
     }
-
-
 }

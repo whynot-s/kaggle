@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class AbilityDiff {
 
     /*
-    * 获得团队能力差异
+    * 获得团队能力差异:团队能力差异模型
     */
     public double getAbilityDiff(double [] memberAbility, int teamSize){
         if (teamSize < 2) {
@@ -30,5 +30,4 @@ public class AbilityDiff {
             return max - min;
         }
     }
-
 }

@@ -4,20 +4,6 @@
 
 <mapper namespace="cn.springmvc.dao.RelationGenDao">
 
-    <select id="getCollaborationRecord" resultType="java.lang.String">
-        select
-        teamMemberId
-        from
-        competitionleaderboard
-    </select>
-
-    <select id="getCollaborationRecordByName" resultType="java.lang.String">
-        select
-        teamMember
-        from
-        competitionleaderboard
-    </select>
-
     <select id="getRelationTime" resultType="java.lang.Integer" statementType="STATEMENT">
         select
         ${relationName}

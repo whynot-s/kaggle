@@ -4,20 +4,6 @@
 
 <mapper namespace="cn.springmvc.dao.RelationGenDao">
 
-    <select id="getCollaborationRecord" resultType="java.lang.String">
-        select
-        teamMemberId
-        from
-        competitionleaderboard
-    </select>
-
-    <select id="getCollaborationRecordByName" resultType="java.lang.String">
-        select
-        teamMember
-        from
-        competitionleaderboard
-    </select>
-
     <select id="getRelationTime" resultType="java.lang.Integer" statementType="STATEMENT">
         select
         ${relationName}
@@ -100,4 +86,44 @@
     <select id="getAllRelationTime" resultType="java.util.Map">
     		SELECT * from competitorRelation where competitorId1 = ${competitorId1} and competitorId2 = ${competitorId2}
     </select>
+
+    <select id="getCompetitor1List" resultType="java.lang.Integer">
+        SELECT DISTINCT competitorId1 from competitorRelation
+    </select>
+
+    <select id="getRelationByCompetitorId1" resultType="java.util.Map">
+        SELECT competitorId1,competitorId2,collaborationTime,discussionCommentTime,discussionVoteTime,followTime,kernelCommentTime,kernelForkTime,kernelVoteTime,organizationTime from competitorRelation where competitorId1 = ${competitorId1}
+    </select>
+
+    <update id="updateCost" statementType="STATEMENT">
+        UPDATE competitorRelation set ${tagName} = ${cost}
+        WHERE competitorId1 = ${competitorId1} AND competitorId2 = ${competitorId2}
+    </update>
+
+    <select id="getSocialRelationByCompetitorId" resultType="java.lang.Integer">
+        SELECT ifnull (sum(discussionCommentTime),0)+ ifnull (sum(discussionVoteTime),0)+8*ifnull (sum(followTime),0)+2*ifnull (sum(kernelCommentTime),0)+
+        2*ifnull (sum(kernelForkTime),0)+ifnull (sum(kernelVoteTime),0)+8*ifnull (sum(organizationTime),0) from competitorRelation
+        where competitorId1 = #{competitorId1}
+    </select>
+
+    <select id="getCompetitorFriend" resultType="java.lang.Integer">
+        SELECT competitorId2 from competitorRelation
+        where competitorId1 = #{competitorId1}
+    </select>
+
+    <select id="calCost2" resultType="java.lang.Integer">
+        SELECT  ifnull (discussionCommentTime,0)+ ifnull (discussionVoteTime,0) + 8 * ifnull (followTime , 0) + 2 * ifnull ( kernelCommentTime , 0)+
+        2 * ifnull ( kernelForkTime , 0) + ifnull (kernelVoteTime,0)+8 * ifnull (organizationTime,0) from competitorRelation
+        where competitorId1 = #{competitorId1} and competitorId2 = #{competitorId2}
+    </select>
+
+    <delete id="deleteRelation" parameterType="int">
+        delete from competitorRelation where competitorId1 = #{competitorId1}
+    </delete>
+
+    <select id="getCost" resultType="java.lang.Double" statementType="STATEMENT">
+        SELECT ${tagName} from competitorRelation
+        where competitorId1 = ${competitorId1} and competitorId2 = ${competitorId2}
+    </select>
+
 </mapper>

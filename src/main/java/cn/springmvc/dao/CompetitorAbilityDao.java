@@ -19,12 +19,10 @@ public interface CompetitorAbilityDao
 
     void updateAbility(@Param("competitorId") int competitorId, @Param("tagName") String tagName, @Param("score") double score);
 
-    ArrayList<Competition> getCompetitions();
 
     //通过Id获取到某个tag的能力值
     Double getCompetitorAbility(@Param("competitorId") int competitorId, @Param("tagName") String tagName);
 
-    ArrayList<CompetitionLeaderboard> getLeaderBoardByCompetitionId(@Param("competitionId") int competitionId);
 
     int userRecordExitOrNot(@Param("competitorId") int competitorId);
 
@@ -50,5 +48,7 @@ public interface CompetitorAbilityDao
 
     //得到能力榜上所有参赛者id
     List<Integer> getCompetitorIds();
+
+    List<Integer> getTopKCompetitor(@Param("tagName") String tagName);
 
 }

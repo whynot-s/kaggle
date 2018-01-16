@@ -5,6 +5,7 @@ import cn.springmvc.model.CompetitorRecord;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 
@@ -14,8 +15,6 @@ import java.util.List;
 public interface CompetitorRecordDao {
 
     void insertCompetitorRecord(CompetitorRecord competitorRecord);
-
-    ArrayList<CompetitionLeaderboard> getLeaderBoardByCompetitionId(@Param("competitionId") int competitionId);
 
     List<Integer> getCompetitorIds();
 
@@ -41,5 +40,9 @@ public interface CompetitorRecordDao {
 
     //
     List<Integer> getTestCompetitors();
+
+    List<HashMap> teamOrNot(@Param("competitorId1") int competitorId1, @Param("competitorId2") int competitorId2);
+
+    Integer exist(@Param("competitionId") int competitionId, @Param("competitorId") int competitorId,@Param("ranking") int ranking);
 
 }

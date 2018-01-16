@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.springmvc.dao.CompetitionLeaderboardDao">
+    <select id="getMemberIdsByCompetitionId" resultType="java.lang.String">
+        select
+        teamMemberId
+        from
+        competitionleaderboard
+        where competitionId=${competitionId}
+    </select>
+
+    <!--得到某竞赛的所有参赛记录-->
+    <select id="getLeaderBoardByCompetitionId" resultType="cn.springmvc.model.CompetitionLeaderboard">
+        select
+        competitionId,ranking,teamMember,teamMemberId
+        from
+        competitionleaderboard
+        WHERE competitionId = #{competitionId}
+    </select>
+
+
+    <update id="update" >
+        UPDATE competitionleaderboard set teamMemberId =#{teamMemberId} where competitionId=#{competitionId} and ranking = #{ranking}
+    </update>
+
+
+
+</mapper>

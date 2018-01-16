@@ -40,7 +40,7 @@ public class calculateIntimacyTest {
     @Test
     public void test1(){
         //competitorAbilityGen.scoreToOne();
-        recomend.experiment2();
+        recomend.experiment();
        // competitorRelation.insertCollaborationRelation();
       //  competitorRelation.costGen();
     }
