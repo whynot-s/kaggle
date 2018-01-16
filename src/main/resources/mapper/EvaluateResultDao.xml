@@ -6,21 +6,18 @@
 
     <select id="getResult2ById" parameterType="java.lang.Integer" resultType="java.util.Map">
        SELECT member1, member2
-       FROM recommendResult_2
-       WHERE member1 = #{competitorId} OR
-       member2 = #{competitorId}
+       FROM recommendResult_2_test
+       WHERE member1 = #{competitorId}
     </select>
 
     <select id="getResult3ById" parameterType="java.lang.Integer" resultType="java.util.Map">
         SELECT member1, member2
-        FROM recommendResult_3
-        WHERE member1 = #{competitorId} OR
-        member2 = #{competitorId} OR
-        member3 = #{competitorId}
+        FROM recommendResult_3_test
+        WHERE member1 = #{competitorId}
     </select>
 
     <insert id="insertEvaResult" parameterType="java.lang.Object">
-        INSERT INTO Result_Eva
+        INSERT INTO Result_Eva_test
         VALUES(#{competitorId}, #{size}, #{accuracy}, #{coverage})
     </insert>
 
