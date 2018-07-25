@@ -1,3 +1,4 @@
+/*
 package cn.springmvc.service;
 
 import cn.springmvc.dao.CompetitorRecordDao;
@@ -103,3 +104,4 @@ public class Evaluation {
     }
 
 }
+*/
