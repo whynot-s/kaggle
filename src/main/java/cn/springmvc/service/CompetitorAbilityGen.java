@@ -1,19 +1,13 @@
 package cn.springmvc.service;
 
 import cn.springmvc.dao.*;
-import cn.springmvc.model.AbilityImprove;
-import cn.springmvc.model.Competition;
-import cn.springmvc.model.CompetitionLeaderboard;
-import cn.springmvc.model.CompetitorRecord;
+import cn.springmvc.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by YLT on 2017/9/28.
@@ -33,6 +27,9 @@ public class CompetitorAbilityGen {
 
     @Autowired
     private CompetitionLeaderboardDao competitionLeaderboardDao;
+
+    @Autowired
+    private CoffiTableDao coffiTableDao;
 
     //往competition的tag1标签中添加graph标签:已经无用
     public void containsGraph() {
@@ -61,9 +58,10 @@ public class CompetitorAbilityGen {
         }
     }
 
-
     /*
     * 根据所有竞赛，得到参赛者在不同参赛模式下的能力成长
+    * 个人参赛获得的能力提升
+    * 团队参赛获得的能力提升
     * */
     public void totalAbilityImprove(){
         ArrayList<Competition> allCompetitions = competitionDao.getCompetitions();
@@ -72,13 +70,14 @@ public class CompetitorAbilityGen {
                 System.out.println(competition.getCompetitionId() + "#####################");
                 eachCompetitionAbilityImprove(competition);
             }
-
         }
     }
 
     /*
+    调研：团队参赛对能力成长的重要性
     * 某个竞赛下，参赛者获得的能力成长；
     * 比较参赛者在不同参赛模式下的能力成长
+    * 生成abilityimprove表
     * */
     public void eachCompetitionAbilityImprove(Competition competition){
         int competitionId = competition.getCompetitionId();
@@ -123,11 +122,10 @@ public class CompetitorAbilityGen {
         }
     }
 
-    /*
-    * kaggle中竞赛包含1或多个标签
+    /*计算用户能力:
+    * 前期做法：kaggle中竞赛包含1或多个标签
     * 一个竞赛对参赛者的技能增长
     * */
-
     public void eachCompetitionAbility(Competition competition) {
         //获取一个竞赛的排名记录
         ArrayList<CompetitionLeaderboard> leaderboards = competitionLeaderboardDao.getLeaderBoardByCompetitionId(competition.getCompetitionId());
@@ -165,7 +163,6 @@ public class CompetitorAbilityGen {
             e.printStackTrace();
         }
         int Nteams = competition.getTeamsNum();
-
         for (CompetitionLeaderboard leaderboardEach : leaderboards) {
             if (leaderboardEach.getTeamMemberId().equals("")) {
                 continue;
@@ -176,7 +173,6 @@ public class CompetitorAbilityGen {
             System.out.print(rank);
             //得到参与这个竞赛获得名次后，组队中每一个成员在每一个tag下提高的分数
             double score = (100000.0 / Math.sqrt(memberNumber)) * Math.pow(rank, -0.75) * Math.log10(1 + Math.log10(Nteams)) * Math.pow(Math.E, -duration / 500.0);
-
             for (String member : members) {
                 int memberId = Integer.parseInt(member);
                 for (String tag : tag1s) {
@@ -194,7 +190,8 @@ public class CompetitorAbilityGen {
     }
 
     /*
-    * kaggle中竞赛仅包含1个标签
+    计算用户能力:
+    *现在做法：kaggle中竞赛仅包含1个标签
     * 一个竞赛对参赛者的技能增长
     * */
     public void eachCompetitionAbility2(Competition competition) {
@@ -237,7 +234,8 @@ public class CompetitorAbilityGen {
         System.out.println(competition.getCompetitionId() + "end");
     }
 
-    /*用户能力归一化*/
+    /*用户能力归一化
+    * 线性归一化方式*/
     public void scoreToOne(){
         double maxScore = competitorAbilityDao.getMaxScore("totalScore");
         List<Integer> competitorIds = competitorAbilityDao.getCompetitorIds();
@@ -246,10 +244,6 @@ public class CompetitorAbilityGen {
             totalScore = totalScore / maxScore;
             competitorAbilityDao.updateAbility(id,"totalToOne",totalScore);
         }
-    }
-
-    public void scoreToOneMethod2(){
-
     }
 
     public void updateCompetitorAbilityScore(int competitorId, String tagName, double score) {
@@ -264,4 +258,27 @@ public class CompetitorAbilityGen {
             }
         }
     }
+
+    public void competitorHandle(){
+        List<Integer> AllCoffi = coffiTableDao.getCoffiMemberIds("coffiTable_end2_0_6");
+        for (int coffi:AllCoffi){
+            CompetitorAbility ability = competitorAbilityDao.getCompetitorAbilityById(coffi);
+            competitorAbilityDao.insertUserAbilityRecord(ability.getCompetitorId(),"totalScore",ability.getTotalScore());
+        }
+    }
+
+
+    public void competitorHandle2(){
+        List<HashMap<String, Object>> scores = competitorAbilityDao.getCompetitorIdsWithScore();
+
+        for (HashMap<String ,Object>score:scores){
+            int rank = competitorAbilityDao.getRank((Double) score.get("totalScore"));
+            competitorAbilityDao.updateAbility((Integer) score.get("competitorId"),"rank",rank);
+        }
+
+    }
+
+
+
+
 }

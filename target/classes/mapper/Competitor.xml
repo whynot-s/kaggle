@@ -2,6 +2,18 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="cn.springmvc.dao.UserDao">
+<mapper namespace="cn.springmvc.dao.CompetitorDao">
+
+    <select id="getCompetitorId" resultType="java.lang.Integer">
+        select competitorId from
+        competitor_2
+        WHERE competitorName = #{name}
+    </select>
+
+    <select id="getCompetitorName" resultType="java.lang.String">
+        select competitorName from
+        competitor_2
+        WHERE competitorId = #{id}
+    </select>
 
 </mapper>

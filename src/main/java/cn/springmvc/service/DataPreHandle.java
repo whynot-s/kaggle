@@ -1,14 +1,14 @@
 package cn.springmvc.service;
 
-import cn.springmvc.dao.CompetitionDao;
-import cn.springmvc.dao.CompetitionLeaderboardDao;
-import cn.springmvc.dao.CompetitorAbilityDao;
-import cn.springmvc.dao.RelationGenDao;
+import cn.springmvc.dao.*;
 import cn.springmvc.model.CompetitionLeaderboard;
 import cn.springmvc.model.CompetitorAbility;
+import cn.springmvc.model.TeamRecordAnalysis;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 
@@ -24,10 +24,8 @@ public class DataPreHandle {
     private CompetitorAbilityDao competitorAbilityDao;
 
     @Autowired
-    private CompetitionDao competitionDao;
-
-    @Autowired
     private CompetitionLeaderboardDao competitionLeaderboardDao;
+
 
     /*
     * competitorRelation表中删去未参与过竞赛的人，即无能力值的用户
@@ -44,5 +42,16 @@ public class DataPreHandle {
                 System.out.println(competitorId1 + "deleted");
             }
         }
+    }
+
+    public void getNumbet(){
+        List<String> records = competitionLeaderboardDao.getAllLeaderBoardRecord();
+        int count = 0;
+        for (String record:records){
+            if (record.split("&&").length > 1){
+                count ++;
+            }
+        }
+        System.out.println(count);
     }
 }

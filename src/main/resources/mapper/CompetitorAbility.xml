@@ -12,7 +12,7 @@
     </select>
 
     <update id="updateAbility" statementType="STATEMENT">
-        UPDATE competitorAbility_2 set ${tagName}=${score} where competitorId=${competitorId}
+        UPDATE competitorAbility_2_recommendSet set ${tagName}=${score} where competitorId=${competitorId}
     </update>
 
     <select id="getCompetitorAbility" resultType="Double" statementType="STATEMENT">
@@ -42,7 +42,7 @@
 
     <select id="getCompetitorAbilityById" parameterType="int" resultType="cn.springmvc.model.CompetitorAbility">
         select * from
-        competitorAbility_copy
+        competitorAbility_2
         where competitorId=${competitorId}
     </select>
 
@@ -59,7 +59,7 @@
     </select>
 
     <insert id="insertUserAbilityRecord" statementType="STATEMENT">
-        insert into competitorAbility_2(
+        insert into competitorAbility_2_recommendSet(
         competitorId,
         ${tagName}
         ) values(
@@ -84,6 +84,12 @@
         competitorAbility_2
     </select>
 
+    <!--得到能力表中所有参赛者的id和totalToLog-->
+    <select id="getCompetitorIdsWithScore" resultType="java.util.HashMap">
+        select competitorId,totalScore,totalToOne,totalToLog from
+        competitorAbility_2
+    </select>
+
     <select id="getTopKCompetitor" resultType="java.lang.Integer" statementType="STATEMENT">
         select competitorId from
         competitorAbility_2
@@ -91,6 +97,16 @@
         order BY ${tagName} DESC
     </select>
 
+    <select id="getCompetitorsInEachLevel" resultType="java.lang.Integer" >
+        select competitorId from
+        competitorAbility_2
+        WHERE (totalToLog &gt;= #{score1}) AND (totalToLog &lt; #{score2})
+    </select>
 
+    <select id="getRank" resultType="java.lang.Integer" >
+        select COUNT(*) from
+        competitorAbility_2_recommendSet
+        WHERE totalScore &gt;= #{score}
+    </select>
 
 </mapper>

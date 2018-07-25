@@ -14,9 +14,9 @@ public interface CompetitionLeaderboardDao {
 
     ArrayList<CompetitionLeaderboard> getLeaderBoardByCompetitionId(@Param("competitionId") int competitionId);
 
-
-
-
     void update(@Param("competitionId") int competitionId, @Param("ranking")int ranking,@Param("teamMemberId")String teamMemberId);
 
+    ArrayList<String> getAllLeaderBoardRecord();
+
+    ArrayList<String > getTopRankTeam(@Param("ranking") int ranking);
 }

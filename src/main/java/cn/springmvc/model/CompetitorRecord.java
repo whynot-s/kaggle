@@ -7,9 +7,6 @@ public class CompetitorRecord {
     private int competitionId;
     private int competitorId;
     private int ranking;
-
-
-
     private double rankPercent;
     private int teamOrNot;
 

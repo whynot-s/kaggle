@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.springmvc.dao.CoffiTableDao">
+    <insert id="insertCoffiTable" >
+        insert into coffiTable_exp4_mutual(
+        member1,
+        costPercent,
+        diffPercent,
+        growPercent
+        ) values(
+        #{member1},
+        #{costPercent},
+        #{diffPercent},
+        #{growPercent})
+    </insert>
+
+    <select id="getTestCompetitors" resultType="cn.springmvc.model.CoffiTable" statementType="STATEMENT">
+        SELECT  * from ${tableName}
+    </select>
+
+    <select id="getCoffiByCompetitorId" resultType="cn.springmvc.model.CoffiTable">
+        SELECT  * from ${tableName}
+        WHERE member1 = ${competitorId}
+    </select>
+
+    <select id="getCoffiMemberIds" resultType="Integer" statementType="STATEMENT">
+        SELECT  member1 from ${tableName}
+    </select>
+    </mapper>

@@ -139,6 +139,16 @@
                     <path>/</path>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
         </plugins>
         <!--注意：一定要配置这个，否则会出现target里面没有mapper.xml文件-->
         <!--配置Maven 对resource文件 过滤 -->
@@ -161,4 +171,10 @@
             </resource>
         </resources>
     </build>
+    <repositories>
+        <repository>
+            <id>spring-milestone</id>
+            <url>http://repo.spring.io/libs-release</url>
+        </repository>
+    </repositories>
 </project>

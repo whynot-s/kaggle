@@ -52,7 +52,7 @@
     </select>
 
     <select id="findCommenterId" resultType="java.lang.Integer" statementType="STATEMENT">
-        SELECT commenterId from ${tableName} WHERE ${columnName} = ${Id} AND commentNo = ${commentNo}
+        SELECT commenterId from ${tableName} WHERE ${columnName} = kaggle:kaggle-recommendation:jar:1.0-SNAPSHOT AND commentNo = ${commentNo}
     </select>
 
     <select id="getKernelComment" resultType="java.util.Map">
@@ -124,6 +124,14 @@
     <select id="getCost" resultType="java.lang.Double" statementType="STATEMENT">
         SELECT ${tagName} from competitorRelation
         where competitorId1 = ${competitorId1} and competitorId2 = ${competitorId2}
+    </select>
+
+    <select id="allCostBetween" resultType="java.util.HashMap">
+        SELECT competitorId1,competitorId2,cost1,cost2 from competitorRelation
+    </select>
+
+    <select id="getTotalCollaborateTimeByCompetitorId1" resultType="Integer">
+        SELECT sum(collaborationTime) from competitorRelation WHERE competitorId1=#{competitorId1}
     </select>
 
 </mapper>

@@ -2,6 +2,7 @@ package cn.springmvc.dao;
 
 import org.apache.ibatis.annotations.Param;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -60,4 +61,8 @@ public interface RelationGenDao {
     void deleteRelation(@Param("competitorId1") int competitorId1);
 
     Double getCost(@Param("competitorId1") int competitorId1,@Param("competitorId2") int competitorId2,@Param("tagName") String tagName);
+
+    List<HashMap<String,Object>> allCostBetween();
+
+    Integer getTotalCollaborateTimeByCompetitorId1(@Param("competitorId1") int competitorId1);
 }

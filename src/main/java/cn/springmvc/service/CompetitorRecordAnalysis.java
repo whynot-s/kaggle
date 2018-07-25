@@ -38,8 +38,8 @@ public class CompetitorRecordAnalysis {
     private CompetitionLeaderboardDao competitionLeaderboardDao;
 
     /*
-    * 所有的参赛记录
-    * 包括练习性质的竞赛
+    * 所有的参赛记录，包括练习性质的竞赛
+    * 生成所有参赛记录
     * competitorRecord表中为所有竞赛的参赛记录
     * */
     public void getCompetitorRecord() {
@@ -63,37 +63,9 @@ public class CompetitorRecordAnalysis {
         }
     }
 
-    /*
-    * 参与评分的参赛记录
-    * 不包括练习性质的竞赛
-    * 不记得在哪使用了
-    * */
-    public void getCompetitorRecordForScore() {
-        List<Integer> allCompetitionIds = competitionDao.getCompetitionIds();
-        for (Integer competitionId : allCompetitionIds) {
-            System.out.println("competition:" + competitionId);
-            Competition competition = competitionDao.getCompetitionById(competitionId);
-            if (competition.getCompetitionType().equals("playground") || competition.getCompetitionType().equals("getting started") || !competition.getCompetitionStatus().equals("closed")){
-                continue;
-            }
-            ArrayList<CompetitionLeaderboard> leaderboard = competitionLeaderboardDao.getLeaderBoardByCompetitionId(competitionId);
-            for (CompetitionLeaderboard it : leaderboard) {
-                System.out.print("ranking:" + it.getRanking() +"\t");
-                if(!it.getTeamMemberId().equals("")) {
-                    String[] ids = it.getTeamMemberId().split("&");
-                    String[] names = it.getTeamMember().split("&&");
-                    int team = (names.length > 1 ? 1 : 0);
-                    System.out.println(names.length + "\t" + ids.length);
-                    for (String id : ids) {
-                        CompetitorRecord record = new CompetitorRecord(competitionId, Integer.parseInt(id), it.getRanking(), team);
-                        competitorRecordDao.insertCompetitorRecord(record);
-                    }
-                }
-            }
-        }
-    }
-
-    //参赛者参赛结果： 排行榜的前？？百分比
+    /*参赛者参赛结果： 排行榜的前？？百分比
+    competitorrecord中的rankpercent
+     */
     public void getRankPercent(){
         List<HashMap<String,Object>> temp = competitionDao.getCompetitionLeaderboardLen();
         for (HashMap<String,Object> len: temp) {
@@ -109,11 +81,15 @@ public class CompetitorRecordAnalysis {
         }
     }
 
+    /*
+    * 对比团队参赛与个人参赛两种参赛模式下，参赛者的排名情况
+    * 生成competitorSoloAndTeam表
+    * */
     public void competitorAnalysis(){
         List<Integer> allCompetitorIds = competitorRecordDao.getCompetitorIds();
         for (Integer competitorId: allCompetitorIds) {
             System.out.println("competitorId:" + competitorId);
-            List<CompetitorRecord> records = competitorRecordDao.getCompetitorRecordByCompetitorId(competitorId);
+            List<CompetitorRecord> records = competitorRecordDao.getCompetitorRecordByCompetitorId(competitorId,"");
             int soloNum = 0;
             int teamNum = 0;
             int soloRank = 0;
@@ -158,5 +134,29 @@ public class CompetitorRecordAnalysis {
             }
             competitorSoloAndTeamDao.insertCompetitorSoloAndTeamDao(new CompetitorSoloAndTeam(competitorId,teamRank,soloRank,teamPercent,soloPercent,teamNum,soloNum,teamWin,soloWin));
         }
+    }
+
+    public void getPercentOfTeam(int ranking){
+        ArrayList<String> topRecords = competitionLeaderboardDao.getTopRankTeam(ranking);
+        int count = 0;
+        for (String record:topRecords){
+            if (record.split("&&").length > 1){
+                count ++;
+            }
+        }
+        System.out.println(count);
+        System.out.println(topRecords.size() - count);
+    }
+
+    public void getTeamAndSoloNumbers(){
+        ArrayList<String> topRecords = competitionLeaderboardDao.getAllLeaderBoardRecord();
+        int count = 0;
+        for (String record:topRecords){
+            if (record.split("&&").length > 1){
+                count ++;
+            }
+        }
+        System.out.println(count);
+        System.out.println(topRecords.size() - count);
     }
 }

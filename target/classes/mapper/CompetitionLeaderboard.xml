@@ -25,6 +25,24 @@
         UPDATE competitionleaderboard set teamMemberId =#{teamMemberId} where competitionId=#{competitionId} and ranking = #{ranking}
     </update>
 
+    <!--得到所有参赛记录-->
+    <select id="getAllLeaderBoardRecord" resultType="java.lang.String">
+        select
+        teamMember
+        from
+        competitionleaderboard
+    </select>
+    <!-- &lt; 6538-->
+    <!--&gt;= -->
+
+    <!--得到某竞赛的所有参赛记录-->
+    <select id="getTopRankTeam" resultType="java.lang.String">
+        select
+        teamMember
+        from
+        competitionleaderboard
+        WHERE ranking &lt;= #{ranking}
+    </select>
 
 
 </mapper>

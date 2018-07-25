@@ -11,14 +11,16 @@
     member3,
     cost,
     diff,
-    grow
+    grow,
+    successRate
     ) values(
     ${member1},
     ${member2},
     ${member3},
     ${cost},
     ${diff},
-    ${grow})
+    ${grow},
+    ${successRate})
     </insert>
 
 
@@ -28,13 +30,15 @@
         member2,
         cost,
         diff,
-        grow
+        grow,
+        successRate
         ) values(
         ${member1},
         ${member2},
         ${cost},
         ${diff},
-        ${grow})
+        ${grow},
+        ${successRate})
     </insert>
 
     <insert id="insert4"  statementType="STATEMENT">
@@ -45,7 +49,8 @@
         member4,
         cost,
         diff,
-        grow
+        grow,
+        successRate
         ) values(
         ${member1},
         ${member2},
@@ -53,12 +58,37 @@
         ${member4},
         ${cost},
         ${diff},
-        ${grow})
+        ${grow},
+        ${successRate})
     </insert>
 
     <select id="getRecommendResult" resultType="java.util.HashMap" statementType="STATEMENT">
         select *
         from ${tableName}
     </select>
+
+    <update id="updateColumn" statementType="STATEMENT">
+        UPDATE ${tableName} set ${tagName}=${value} where member1=${member1}
+    </update>
+
+    <insert id="insertToTest"  >
+        insert into testPeople(
+        member1
+        ) values(
+        ${member1})
+    </insert>
+
+    <select id="getFromTest" resultType="java.lang.Integer">
+        select member1
+        from testPeople
+    </select>
+
+    <update id="updateToTest" >
+        UPDATE testPeople set totalToLog=#{totalToLog} where member1=#{member1}
+    </update>
+
+    <update id="setRightOrNot" statementType="STATEMENT">
+        UPDATE ${tableName} set rightOrNot=1 where member1=${member1}
+    </update>
 
     </mapper>

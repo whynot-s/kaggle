@@ -11,6 +11,9 @@ import java.util.Map;
 import java.util.Queue;
 
 @Service
+/*
+* 亲密度相关函数
+* */
 public class CompetitorIntimacy {
 
     @Autowired
@@ -109,8 +112,8 @@ public class CompetitorIntimacy {
                 } else {
                     int competitorId2 = Integer.parseInt(teamMembers[j]);
                     Double weights = intimacyDao.getPairIntimacy(competitorId1, competitorId2);
-                    //若两个人亲密度在表中无记录，则设置为4.0
-                    graphWeights[i][j] = weights == null ? 4.0 : weights;
+                    //若两个人亲密度在表中无记录，则设置为1
+                    graphWeights[i][j] = weights == null ? 1 : weights;
                 }
             }
         }
@@ -131,19 +134,42 @@ public class CompetitorIntimacy {
         }
     }
 
+    //根据已读入的带权图计算每个Team中任意两个人的亲密度，并存入TeamIntimacy中，对称方法,对二人组队场景需运行5ms
+    public void calcTeamIntimacy2(double[][] graphWeights, double[][] TeamIntimacy) {
+        for (int i = 0; i < graphWeights.length; i++) {
+            TeamIntimacy[i] = new double[graphWeights.length];
+            for (int j = i; j < graphWeights.length; j++) {
+                //遍历任意两个Team members
+                if (i == j) {
+                    TeamIntimacy[i][j] = 0.0;
+                } else {
+                    TeamIntimacy[i][j] = shortestWeightedPath(i, j, graphWeights);
+                }
+            }
+        }
+        for (int i = 0; i < graphWeights.length; i++)
+            for (int j = 0; j < i; j++)
+                TeamIntimacy[i][j] = TeamIntimacy[j][i];
+    }
+
     //广度优先计算start-->end的最短加权路径，权值为方阵表示
     private double shortestWeightedPath(int start, int end, double[][] weights) {
         double minWeight = Double.MAX_VALUE;
         Queue<Integer> subNodes = new LinkedList<Integer>();
         Queue<Double> minWeights = new LinkedList<Double>();
+        Queue<boolean[]> passed = new LinkedList<boolean[]>();
         subNodes.offer(start);
         minWeights.offer(0.0);
+        boolean[] pass = new boolean[weights.length];
+        pass[start] = true;
+        passed.offer(pass);
         while (!subNodes.isEmpty()) {
             int currentNode = subNodes.poll();
             double currentWeight = minWeights.poll();
+            boolean[] currentPassed = passed.poll();
             for (int i = 0; i < weights[currentNode].length; i++) {
                 //回头路不走，不通的路不走，已经大于等于现有最小权值的路不走（不入队）
-                if (i == currentNode || currentWeight >= minWeight) {
+                if (i == currentNode || currentWeight >= minWeight || currentPassed[i]) {
                     continue;
                     //遇终点判断权值大小，不入队
                 } else if (i == end) {
@@ -154,6 +180,11 @@ public class CompetitorIntimacy {
                 } else {
                     subNodes.offer(i);
                     minWeights.offer(currentWeight + weights[currentNode][i]);
+                    boolean[] tempass = new boolean[currentPassed.length];
+                    for (int j = 0; j < currentPassed.length; j++)
+                        tempass[j] = currentPassed[j];
+                    tempass[i] = true;
+                    passed.offer(tempass);
                 }
             }
         }
@@ -181,10 +212,43 @@ public class CompetitorIntimacy {
         double result = 0.0;
         for (int i = 0; i < teamIntimacy.length; i++) {
             for (int j = 0; j < teamIntimacy.length; j++) {
+                if (teamIntimacy[i][j] > 1) {
+                    teamIntimacy[i][j] = 1;
+                }
                 result += teamIntimacy[i][j];
             }
         }
         return result / (teamIntimacy.length * (teamIntimacy.length - 1));
+    }
+
+    //计算某个member在Team中与他人的亲密度: (N-1)
+    public double calcMemberTotalIntimacy(double[][] teamIntimacy, int index) {
+        double result = 0.0;
+        int teamSize = teamIntimacy[index].length;
+        for (int i = 0; i < teamSize; i++) {
+            if (teamIntimacy[index][i] > 1) {
+                teamIntimacy[index][i] = 1;
+            }
+            result += teamIntimacy[index][i];
+        }
+        return result / (teamSize - 1);
+    }
+
+    //计算某个member在Team中与他人的亲密度: (N-1)
+    public double[] calcMemberTotalIntimacy2(double[][] teamIntimacy) {
+        int length = teamIntimacy.length;
+        double []result = new double[length];
+
+        for (int index = 0; index < length; index ++){
+            for (int i = 0; i < length; i ++){
+                if (teamIntimacy[index][i] > 1){
+                    teamIntimacy[index][i] = 1;
+                }
+                result[index] += teamIntimacy[index][i];
+            }
+            result[index] = result[index]/(length - 1);
+        }
+        return result;
     }
 
     //根据被推荐团队成员的id，得到团队的亲密度

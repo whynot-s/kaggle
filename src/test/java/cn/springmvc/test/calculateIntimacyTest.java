@@ -27,22 +27,26 @@ public class calculateIntimacyTest {
     private DataPreHandle dataPreHandle;
 
     @Autowired
-    private Recomend1 recomend;
+    private Recomend1 recomend1;
+
+    @Autowired
+    private ResultAnalysis resultAnalysis;
+
+    @Autowired
+    private TestDataGet testDataGet;
+
+    @Autowired
+    private KaggleWeb kaggleWeb;
 
     @Test
-    public void test() {
-//		competitorIntimacy.pairIntimacy();
-//		competitorIntimacy.genTeamIntimacy();
-        //competitorIntimacy.allTeamTotalIntimacy();
-        competitorRelation.costGen();
-    }
-
-    @Test
-    public void test1(){
-        //competitorAbilityGen.scoreToOne();
-        recomend.experiment();
-       // competitorRelation.insertCollaborationRelation();
-      //  competitorRelation.costGen();
+    public void  timeTest(){
+        System.out.println(kaggleWeb.recommend("Santi","",2,""));
+        //System.out.println();
+        //recomend1.timeTest();
+        //dataPreHandle.leaderboardHandle();
+       // testDataGet.getTestPeopleTeamSum();
+        // recomend1.getBestResult();
+       // recomend1.preDataLoad();
     }
 
     //	测试最短路径计算正确性

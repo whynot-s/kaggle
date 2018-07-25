@@ -29,6 +29,10 @@ public class CompetitorRelation {
     @Autowired
     private CompetitionLeaderboardDao competitionLeaderboardDao;
 
+    /*
+    * competitorRelation表中，生成人与人之间的社交关系沟通代价
+    * 除以交集
+    * */
     public void socialCostGen(){
         List<Integer> allCompetitorId1 = relationGenDao.getCompetitor1List();
         for (int competitorId1:allCompetitorId1) {
@@ -48,6 +52,32 @@ public class CompetitorRelation {
         }
     }
 
+    /*
+    * competitorRelation表中，生成人与人之间的社交关系沟通代价
+    * 不除以交集
+    * */
+    public void socialCostGen2(){
+        List<Integer> allCompetitorId1 = relationGenDao.getCompetitor1List();
+        for (int competitorId1:allCompetitorId1) {
+            Integer socialRelationTime1 = relationGenDao.getSocialRelationByCompetitorId(competitorId1);
+            List<Integer> competitorfriend = relationGenDao.getCompetitorFriend(competitorId1);
+            for (int friend : competitorfriend) {
+                //System.out.println(competitorId1 + "\t" + friend);
+                int both = relationGenDao.calCost2(competitorId1,friend);
+                if(both == 0){
+                    relationGenDao.updateCost(competitorId1,friend,"cost2",1);
+                }else {
+                    double cost2 = 1 - ((double) (both)) / (socialRelationTime1);
+                    relationGenDao.updateCost(competitorId1, friend, "cost2", cost2);
+                }
+            }
+        }
+    }
+
+    /*
+    * competitorRelation表中，生成人与人之间的组队关系沟通代价
+    * 除以并集
+    * */
     public void costGen(){
         List<Integer> allCompetitorId1 = relationGenDao.getCompetitor1List();
         for (int competitorId1:allCompetitorId1) {
@@ -63,6 +93,30 @@ public class CompetitorRelation {
                 }else{
                     int recordTime2 = competitorRecordDao.getRecordTimeByCompetitorId(competitorId2);
                     cost1 = 1 - ((double)collaborationTime)/(recordTime1 + recordTime2 - collaborationTime);
+                }
+                relationGenDao.updateCost(competitorId1,competitorId2,"cost1",cost1);
+            }
+        }
+    }
+
+    /*
+    * competitorRelation表中，生成人与人之间的组队关系沟通代价
+    * 不除以并集
+    * */
+    public void costGen2(){
+        List<Integer> allCompetitorId1 = relationGenDao.getCompetitor1List();
+        for (int competitorId1:allCompetitorId1) {
+            //int recordTime1 = competitorRecordDao.getRecordTimeByCompetitorId(competitorId1);
+            Integer recordTime1 = relationGenDao.getTotalCollaborateTimeByCompetitorId1(competitorId1);
+            List<Map<String,Integer>> collaborationOfCompetitor1 = relationGenDao.getRelationByCompetitorId1(competitorId1);
+            for (Map<String,Integer> collaboration: collaborationOfCompetitor1) {
+                double cost1;
+                int competitorId2 = collaboration.get("competitorId2");
+                Integer collaborationTime = collaboration.get("collaborationTime");
+                if (collaborationTime == null){
+                    cost1 = 1;
+                }else{
+                    cost1 = 1 - ((double)collaborationTime)/(recordTime1);
                 }
                 relationGenDao.updateCost(competitorId1,competitorId2,"cost1",cost1);
             }
@@ -114,7 +168,9 @@ public class CompetitorRelation {
         }
     }
 
-
+    /*
+    * 得到参赛者之间的协作关系
+    * */
     public void insertOtherRelationTime(String tableName) {
         //筛去了discussionAuthorId和commentId相同的情况，discussion与kernel重合的情况
         if (tableName.equals("discussionComment")) {

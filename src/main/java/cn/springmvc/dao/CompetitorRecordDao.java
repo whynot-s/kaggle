@@ -18,7 +18,7 @@ public interface CompetitorRecordDao {
 
     List<Integer> getCompetitorIds();
 
-    List<CompetitorRecord> getCompetitorRecordByCompetitorId(@Param("competitorId") int competitorId);
+    List<CompetitorRecord> getCompetitorRecordByCompetitorId(@Param("competitorId") int competitorId, @Param("tableName")String tableName);
 
     List<CompetitorRecord> getLimitCompetitorRecordByCompetitorId(@Param("competitorId") int competitorId);
 
@@ -39,10 +39,16 @@ public interface CompetitorRecordDao {
     Integer getRecordTimeByCompetitorIdTest(@Param("competitorId") int competitorId);
 
     //
-    List<Integer> getTestCompetitors();
+    //List<Integer> getTeamCompetitors(@Param("tableName") String tableName);
 
     List<HashMap> teamOrNot(@Param("competitorId1") int competitorId1, @Param("competitorId2") int competitorId2);
 
-    Integer exist(@Param("competitionId") int competitionId, @Param("competitorId") int competitorId,@Param("ranking") int ranking);
+    Integer exist(@Param("tableName") String tableName, @Param("competitionId") int competitionId, @Param("competitorId") int competitorId,@Param("ranking") int ranking);
+
+    List<Integer> getTeamRecordMoreThan();
+
+    List<Integer> getTeamCompetitor(@Param("tableName") String tableName);
+
+    List<Integer> getLeaderBoardRecordMember(@Param("competitionId") int competitionId, @Param("ranking") int ranking);
 
 }

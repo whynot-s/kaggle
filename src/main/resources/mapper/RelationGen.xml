@@ -126,4 +126,12 @@
         where competitorId1 = ${competitorId1} and competitorId2 = ${competitorId2}
     </select>
 
+    <select id="allCostBetween" resultType="java.util.HashMap">
+        SELECT competitorId1,competitorId2,cost1,cost2 from competitorRelation
+    </select>
+
+    <select id="getTotalCollaborateTimeByCompetitorId1" resultType="Integer">
+        SELECT sum(collaborationTime) from competitorRelation WHERE competitorId1=#{competitorId1}
+    </select>
+
 </mapper>

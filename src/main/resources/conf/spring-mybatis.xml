@@ -9,9 +9,9 @@
           init-method="init" destroy-method="close">
         <!-- 基本属性 url、user、password -->
         <property name="url"
-                  value="jdbc:mysql://localhost:3306/kaggle?allowMultiQueries = true&amp;useUnicode=true&amp;characterEncoding=utf-8"/>
+                  value="jdbc:mysql://192.168.7.109:3306/kaggle?allowMultiQueries = true&amp;useUnicode=true&amp;characterEncoding=utf-8"/>
         <property name="username" value="root"/>
-        <property name="password" value="123456"/>
+        <property name="password" value="github"/>
         <!-- 配置初始化大小、最小、最大 -->
         <property name="initialSize" value="1"/>
         <property name="minIdle" value="1"/>
@@ -58,5 +58,7 @@
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
     </bean>
+
+
 
 </beans>

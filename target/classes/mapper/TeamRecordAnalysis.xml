@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.springmvc.dao.TeamRecordAnalysisDao">
+    <insert id="insert" parameterType="cn.springmvc.model.TeamRecordAnalysis">
+        insert into TeamRecordAnalysisAll_Log(
+        member1,
+        teamNo,
+        teamMemberSum,
+        teamMember,
+        cost,
+        diff,
+        grow,
+        successRate
+        ) values(
+        #{member1},
+        #{teamNo},
+        #{teamMemberSum},
+        #{teamMember},
+        #{cost},
+        #{diff},
+        #{grow},
+        #{successRate})
+    </insert>
+
+    <select id="getCompetitorsTeamMoreThan" resultType="java.lang.Integer">
+        SELECT member1 from TeamRecordAnalysisAll
+        where teamNo &gt; 1 GROUP BY  member1
+    </select>
+
+    <select id="getTeamRecordByCompetitorId" resultType="cn.springmvc.model.TeamRecordAnalysis">
+        SELECT * from TeamRecordAnalysis
+        where member1 = #{competitorId}
+    </select>
+
+    <select id="getAllTestCompetitors" resultType="java.lang.Integer">
+        SELECT DISTINCT member1 from TeamRecordAnalysisAll
+    </select>
+
+    <select id="getAvgColumn" resultType="java.lang.Double" statementType="STATEMENT">
+        SELECT  AVG(${tagName}) from TeamRecordAnalysis_test
+    </select>
+
+    <select id="getAllColumnOfCompetitor" resultType="java.lang.Double" statementType="STATEMENT">
+        SELECT  sum(${tagName}) from ${tableName}
+        WHERE member1 = ${member1}
+    </select>
+
+    <select id="getAvgColumnOfCompetitor" resultType="java.lang.Double" statementType="STATEMENT">
+        SELECT  AVG (${tagName}) from ${tableName}
+        WHERE member1 = ${member1}
+    </select>
+
+    <update id="setTeamSum" >
+        UPDATE testPeople set teamSum={SELECT count(*) from TeamRecordAnalysis_scoreToLog WHERE member1 = #{member1}}a where member1= #{member1}
+    </update>
+
+    <select id="getTestPeople" resultType="java.lang.Integer">
+        SELECT member1 from testPeople
+    </select>
+
+    <select id="exist" resultType="java.lang.Integer">
+        select count(*)
+        from TeamRecordAnalysis
+        WHERE member1 = #{member1}
+    </select>
+
+    <select id="getAllTeamRecord" resultType="cn.springmvc.model.TeamRecordAnalysis" statementType="STATEMENT">
+        select *
+        from ${tableName}
+    </select>
+
+    <update id="updateColumnString" statementType="STATEMENT">
+        UPDATE TeamRecord_in_testData set ${columnName} = "${result}" where member1 = ${member1}
+    </update>
+
+    <update id="updateSuccessRate" >
+        UPDATE TeamRecordAnalysisAll set successRate = #{successRate} where member1 = ${member1}
+    </update>
+
+    <update id="updateFeature" >
+        UPDATE TeamRecordAnalysisAll set cost = #{cost}, diff = #{diff}, grow = #{grow} where member1 = ${member1} and teamNo = #{teamNo}
+    </update>
+    </mapper>

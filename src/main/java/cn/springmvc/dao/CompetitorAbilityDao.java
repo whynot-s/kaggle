@@ -6,6 +6,7 @@ import cn.springmvc.model.CompetitorAbility;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -49,6 +50,12 @@ public interface CompetitorAbilityDao
     //得到能力榜上所有参赛者id
     List<Integer> getCompetitorIds();
 
+    List<HashMap<String,Object>>  getCompetitorIdsWithScore();
+
     List<Integer> getTopKCompetitor(@Param("tagName") String tagName);
+
+    List<Integer> getCompetitorsInEachLevel(@Param("score1") double score1, @Param("score2") double score2);
+
+    int getRank(@Param("score")double score);
 
 }

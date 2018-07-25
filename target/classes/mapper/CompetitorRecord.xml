@@ -25,12 +25,12 @@
         competitorrecord
     </select>
 
-    <select id="getCompetitorRecordByCompetitorId" parameterType="java.lang.Integer" resultType="cn.springmvc.model.CompetitorRecord">
+    <select id="getCompetitorRecordByCompetitorId" parameterType="java.lang.Integer" resultType="cn.springmvc.model.CompetitorRecord" statementType="STATEMENT" >
         select
         *
         from
-        competitorrecord
-        WHERE competitorId = #{competitorId}
+        ${tableName}
+        WHERE competitorId = ${competitorId}
     </select>
 
     <select id="getLimitCompetitorRecordByCompetitorId" parameterType="java.lang.Integer" resultType="cn.springmvc.model.CompetitorRecord">
@@ -69,19 +69,25 @@
 
     <select id="getRecordTimeByCompetitorId" resultType="java.lang.Integer">
     select count(DISTINCT competitionId)
-    from competitorrecord_copy
-    WHERE competitorId = #{competitorId}
-</select>
+    from competitorrecord_train
+    WHERE competitorId = #{competitorId} AND teamOrNot = 1
+    </select>
 
     <select id="getRecordTimeByCompetitorIdTest" resultType="java.lang.Integer">
         select count(DISTINCT competitionId)
-        from competitorrecord
+        from competitorrecord_test
         WHERE competitorId = #{competitorId}
     </select>
 
-    <select id="getTestCompetitors" resultType="java.lang.Integer">
+   <!-- <select id="getTeamCompetitors" resultType="java.lang.Integer" statementType="STATEMENT">
         select DISTINCT competitorId
-        from competitorrecord
+        from ${tableName}
+        WHERE teamOrNot = 1
+    </select>-->
+
+    <select id="getTeamCompetitor" resultType="java.lang.Integer" statementType="STATEMENT">
+        select DISTINCT competitorId
+        from ${tableName}
         WHERE teamOrNot = 1
     </select>
 
@@ -91,9 +97,20 @@
         GROUP BY competitionId,ranking HAVING COUNT(*) > 1;
     </select>
 
-    <select id="exist" resultType="java.lang.Integer">
+    <select id="exist" resultType="java.lang.Integer" statementType="STATEMENT">
         select count(*)
-        from competitorrecord
-        WHERE competitorId = #{competitorId} and competitionId = #{competitionId} AND ranking = #{ranking}
+        from ${tableName}
+        WHERE competitorId = ${competitorId} and competitionId = ${competitionId} AND ranking = ${ranking}
     </select>
+
+    <select id="getTeamRecordMoreThan" resultType="java.lang.Integer">
+        select competitorId
+        from (SELECT competitorId, count(*) as num FROM `competitorrecord_train` WHERE teamOrNot = 1 GROUP BY competitorId)a where num > 1;
+    </select>
+
+    <select id="getLeaderBoardRecordMember" resultType="java.lang.Integer">
+        select competitorId
+        from competitorrecord_train where competitionId = #{competitionId} and ranking = #{ranking};
+    </select>
+
 </mapper>
