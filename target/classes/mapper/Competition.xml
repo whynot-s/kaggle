@@ -26,4 +26,19 @@
         WHERE competitionName = #{competitionName}
     </select>
 
+    <select id="getCompetitionLeaderboardLen" resultType="java.util.HashMap">
+        select
+        competitionId,leaderboardLength
+        from
+        competition
+    </select>
+
+    <select id="getCompetitionById" resultType="cn.springmvc.model.Competition">
+        select
+        competitionId,competitionType,competitionStatus
+        from
+        competition
+        WHERE  competitionId = #{competitionId}
+    </select>
+
 </mapper>

@@ -7,7 +7,7 @@
     <select id="getCompetitorId" resultType="java.lang.Integer">
         select competitorId from
         competitor_2
-        WHERE competitorName = #{name}
+        WHERE competitorName = #{name} limit 1
     </select>
 
     <select id="getCompetitorName" resultType="java.lang.String">

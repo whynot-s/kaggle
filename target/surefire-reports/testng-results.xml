@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="5018" started-at="2018-07-25T06:15:58Z" finished-at="2018-07-25T06:16:03Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="5018" started-at="2018-07-25T06:15:58Z" finished-at="2018-07-25T06:16:03Z">
+      <class name="cn.springmvc.test.getUserLanguageTest">
+        <test-method status="PASS" signature="getResult()" name="getResult" duration-ms="4" started-at="2018-07-25T14:16:03Z" finished-at="2018-07-25T14:16:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- cn.springmvc.test.getUserLanguageTest -->
+      <class name="cn.springmvc.test.calculateIntimacyTest">
+        <test-method status="PASS" signature="timeTest()" name="timeTest" duration-ms="4866" started-at="2018-07-25T14:15:58Z" finished-at="2018-07-25T14:16:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- timeTest -->
+      </class> <!-- cn.springmvc.test.calculateIntimacyTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

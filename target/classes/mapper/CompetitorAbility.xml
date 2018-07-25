@@ -12,18 +12,14 @@
     </select>
 
     <update id="updateAbility" statementType="STATEMENT">
-<<<<<<< HEAD
         UPDATE competitorAbility_2_recommendSet set ${tagName}=${score} where competitorId=${competitorId}
-=======
-        UPDATE competitorAbility_copy set ${tagName}=${score} where competitorId=${competitorId}
->>>>>>> 20d7779486bb2f56ff58261c1d3db6af974959ec
     </update>
 
     <select id="getCompetitorAbility" resultType="Double" statementType="STATEMENT">
         select
         ${tagName}
         from
-        competitorAbility_copy
+        competitorAbility_2
         where competitorId=${competitorId}
     </select>
 
@@ -56,28 +52,14 @@
         select * from competitorAbility_copy
     </select>
 
-<<<<<<< HEAD
-    <select id="getCompetitions" resultType="cn.springmvc.model.Competition">
-        select
-        competitionId,competitionType,competitionStatus,closeTime,teamsNum,tag1,tag2
-        from
-        competition
-    </select>
-
-=======
->>>>>>> master
     <select id="userRecordExitOrNot" resultType="java.lang.Integer">
         select count(*)
-        from competitorAbility_copy
+        from competitorAbility_2
         WHERE competitorId = #{competitorId}
     </select>
 
     <insert id="insertUserAbilityRecord" statementType="STATEMENT">
-<<<<<<< HEAD
         insert into competitorAbility_2_recommendSet(
-=======
-        insert into competitorAbility_copy(
->>>>>>> 20d7779486bb2f56ff58261c1d3db6af974959ec
         competitorId,
         ${tagName}
         ) values(
@@ -91,8 +73,6 @@
         where competitorId in ${list}
     </select>
 
-<<<<<<< HEAD
-=======
     <select id="getMaxScore" resultType="java.lang.Double" statementType="STATEMENT">
         select MAX(${tagName}) from
         competitorAbility_2
@@ -129,5 +109,4 @@
         WHERE totalScore &gt;= #{score}
     </select>
 
->>>>>>> master
 </mapper>

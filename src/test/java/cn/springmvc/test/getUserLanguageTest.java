@@ -81,22 +81,24 @@ public class getUserLanguageTest {
 
     @Autowired
     private VarianceGet varianceGet;
-
+/*
     @Autowired
-    private KaggleWeb kaggleWeb;
+    private KaggleWeb kaggleWeb;*/
 
 
 
     @Test
     public void getResult(){
-        /*resultAnalysis.getPRate("recommendResult_2",2);
-        dataPreLoad.dataLoad();
-        tryNewIdea.method1();*/
+        KaggleWeb kaggleWeb = new KaggleWeb();
+        kaggleWeb.recommend("Santi","",2,"");
+        //*resultAnalysis.getPRate("recommendResult_2",2);
+        //dataPreLoad.dataLoad();
+       // tryNewIdea.method1();*//*
         //testDataGet.getTestSet2();
         //resultAnalysis.getPRate("recommendResult_3",3);
-        System.out.println(kaggleWeb.recommendationWeb(543,"",2,""));
+        //System.out.println(kaggleWeb.recommendationWeb(543,"",2,""));
     }
-    @Test
+   /* @Test
     public void test() {
        // coffiGet.getCoffiMethod3(testDataGet.getTestSet5());
         //teamAnalysis.teamFeatureAnalysis();
@@ -111,7 +113,7 @@ public class getUserLanguageTest {
        // coffiGet.getCoffiMethod3();
         //testDataGet.getTestSetTeamRecord(testDataGet.getTestSet4());
         //intimacyContrastExperiment.experimentWithCoffi();
-       /* double[][] weight ={{0.0, 0.0, 0.1, 0.2, 0.4},
+       *//* double[][] weight ={{0.0, 0.0, 0.1, 0.2, 0.4},
                             {0.0, 0.0, 0.0, 0.3, 0.1},
                             {0.1, 0.0, 0.0, 0.1, 0.5},
                             {0.2, 0.3, 0.1, 0.0, 0.5},
@@ -125,7 +127,7 @@ public class getUserLanguageTest {
             }
             System.out.println();
         }
-        System.out.println(competitorIntimacy.calcTeamTotalIntimacy(cal));*/
+        System.out.println(competitorIntimacy.calcTeamTotalIntimacy(cal));*//*
     }
     @Test
     public void test4() {
@@ -153,5 +155,5 @@ public class getUserLanguageTest {
     @Test
     public void test7() {
         competitorAbilityGen.competitorHandle2();
-    }
+    }*/
 }
