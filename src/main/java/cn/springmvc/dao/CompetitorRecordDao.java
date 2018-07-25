@@ -3,11 +3,13 @@ package cn.springmvc.dao;
 import cn.springmvc.model.CompetitionLeaderboard;
 import cn.springmvc.model.CompetitorRecord;
 import org.apache.ibatis.annotations.Param;
+import org.omg.CORBA.INTERNAL;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by YLT on 2017/12/19.
@@ -40,8 +42,15 @@ public interface CompetitorRecordDao {
 
     //
     //List<Integer> getTeamCompetitors(@Param("tableName") String tableName);
+    
+    //获取测试数据中各个team的比赛、排名、队伍的size
+    List<Map<String, Object>> getTeamIDs();
+
+    //根据比赛与排名获得各个team成员的Id
+    List<Integer> getTeamMembers(@Param("competitionId") Object competitionId, @Param("ranking") Object ranking);
 
     List<HashMap> teamOrNot(@Param("competitorId1") int competitorId1, @Param("competitorId2") int competitorId2);
+
 
     Integer exist(@Param("tableName") String tableName, @Param("competitionId") int competitionId, @Param("competitorId") int competitorId,@Param("ranking") int ranking);
 
@@ -50,5 +59,7 @@ public interface CompetitorRecordDao {
     List<Integer> getTeamCompetitor(@Param("tableName") String tableName);
 
     List<Integer> getLeaderBoardRecordMember(@Param("competitionId") int competitionId, @Param("ranking") int ranking);
+
+    Integer exist(@Param("competitionId") int competitionId, @Param("competitorId") int competitorId,@Param("ranking") int ranking);
 
 }

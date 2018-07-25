@@ -61,6 +61,22 @@
         WHERE competitorId = #{competitorId} and competitionId = #{competitionId}
     </select>
 
+    <!--提取测试数据-->
+    <select id="getTeamIDs" resultType="java.util.Map">
+        SELECT competitionId, ranking, size
+        FROM (
+        SELECT competitionId, ranking, count(*) size
+        FROM competitorrecord
+        GROUP BY competitionId, ranking
+        ) teams
+        WHERE teams.size > 1;
+    </select>
+
+    <select id="getTeamMembers" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+        SELECT competitorId
+        FROM
+        competitorrecord
+        WHERE competitionId = #{competitionId} AND ranking = #{ranking}
     <update id="updateRankPercent" >
         UPDATE competitorrecord set rankPercent = #{rankPercent}
         WHERE competitorId = #{competitorId} and competitionId = #{competitionId}
@@ -106,6 +122,9 @@
     <select id="getTeamRecordMoreThan" resultType="java.lang.Integer">
         select competitorId
         from (SELECT competitorId, count(*) as num FROM `competitorrecord_train` WHERE teamOrNot = 1 GROUP BY competitorId)a where num > 1;
+
+        from competitorrecord
+        WHERE competitorId = #{competitorId} and competitionId = #{competitionId} AND ranking = #{ranking}
     </select>
 
     <select id="getLeaderBoardRecordMember" resultType="java.lang.Integer">

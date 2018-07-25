@@ -86,6 +86,7 @@
     <select id="getAllRelationTime" resultType="java.util.Map">
     		SELECT * from competitorRelation where competitorId1 = ${competitorId1} and competitorId2 = ${competitorId2}
     </select>
+<<<<<<< HEAD
 
     <select id="getCompetitor1List" resultType="java.lang.Integer">
         SELECT DISTINCT competitorId1 from competitorRelation
@@ -134,4 +135,6 @@
         SELECT sum(collaborationTime) from competitorRelation WHERE competitorId1=#{competitorId1}
     </select>
 
+=======
+>>>>>>> 20d7779486bb2f56ff58261c1d3db6af974959ec
 </mapper>

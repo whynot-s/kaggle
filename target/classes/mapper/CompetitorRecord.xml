@@ -18,6 +18,18 @@
     </insert>
 
 
+<<<<<<< HEAD
+
+    <select id="getLeaderBoardByCompetitionId" resultType="cn.springmvc.model.CompetitionLeaderboard">
+        select
+        competitionId,ranking,teamMember,teamMemberId
+        from
+        competitionleaderboard
+        WHERE competitionId = #{competitionId}
+    </select>
+
+=======
+>>>>>>> master
     <select id="getCompetitorIds" resultType="java.lang.Integer">
         select
         DISTINCT competitorId
@@ -41,6 +53,8 @@
         WHERE competitorId = #{competitorId} ORDER BY ranking ASC LIMIT 10
     </select>
 
+<<<<<<< HEAD
+=======
     <select id="getCompetitorRecordByCompetitionId" parameterType="java.lang.Integer" resultType="cn.springmvc.model.CompetitorRecord">
         select
         *
@@ -49,6 +63,7 @@
         WHERE competitionId = #{competitionId}
     </select>
 
+>>>>>>> master
     <select id="existOrNot" resultType="java.lang.Integer">
         select count(*)
         from competitorrecord
@@ -61,6 +76,24 @@
         WHERE competitorId = #{competitorId} and competitionId = #{competitionId}
     </select>
 
+<<<<<<< HEAD
+    <!--提取测试数据-->
+    <select id="getTeamIDs" resultType="java.util.Map">
+        SELECT competitionId, ranking, size
+        FROM (
+        SELECT competitionId, ranking, count(*) size
+        FROM competitorrecord
+        GROUP BY competitionId, ranking
+        ) teams
+        WHERE teams.size > 1;
+    </select>
+
+    <select id="getTeamMembers" parameterType="java.lang.Object" resultType="java.lang.Integer">
+        SELECT competitorId
+        FROM
+        competitorrecord
+        WHERE competitionId = #{competitionId} AND ranking = #{ranking}
+=======
     <update id="updateRankPercent" >
         UPDATE competitorrecord set rankPercent = #{rankPercent}
         WHERE competitorId = #{competitorId} and competitionId = #{competitionId}
@@ -99,6 +132,7 @@
 
     <select id="exist" resultType="java.lang.Integer" statementType="STATEMENT">
         select count(*)
+<<<<<<< HEAD
         from ${tableName}
         WHERE competitorId = ${competitorId} and competitionId = ${competitionId} AND ranking = ${ranking}
     </select>
@@ -106,6 +140,11 @@
     <select id="getTeamRecordMoreThan" resultType="java.lang.Integer">
         select competitorId
         from (SELECT competitorId, count(*) as num FROM `competitorrecord_train` WHERE teamOrNot = 1 GROUP BY competitorId)a where num > 1;
+=======
+        from competitorrecord
+        WHERE competitorId = #{competitorId} and competitionId = #{competitionId} AND ranking = #{ranking}
+>>>>>>> master
+>>>>>>> 20d7779486bb2f56ff58261c1d3db6af974959ec
     </select>
 
     <select id="getLeaderBoardRecordMember" resultType="java.lang.Integer">

@@ -39,14 +39,15 @@ public class calculateIntimacyTest {
     private KaggleWeb kaggleWeb;
 
     @Test
-    public void  timeTest(){
-        System.out.println(kaggleWeb.recommend("Santi","",2,""));
-        //System.out.println();
-        //recomend1.timeTest();
-        //dataPreHandle.leaderboardHandle();
-       // testDataGet.getTestPeopleTeamSum();
-        // recomend1.getBestResult();
-       // recomend1.preDataLoad();
+    public void  timeTest() {
+        System.out.println(kaggleWeb.recommend("Santi", "", 2, ""));
+    }
+
+    private  Evaluation evaluation;
+
+    @Test
+    public void test(){
+        evaluation.Evaluate();
     }
 
     //	测试最短路径计算正确性
